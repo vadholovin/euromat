@@ -1,0 +1,90 @@
+/* ==========================================================================
+  #BANNER
+   ========================================================================== */
+
+
+.banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* #Banner-price
+   ========================================================================== */
+
+.banner--price {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+
+/* #Banner-design
+   ========================================================================== */
+
+.banner--design {
+  padding-top: 75px;
+  padding-bottom: 50px;
+}
+
+
+.banner-design__left {
+  width: 66.666666%;
+}
+
+
+.banner-design__right {
+  width: 33.333333%;
+}
+
+
+.banner-design__subtitle {
+  @include fluid-type($min_width, $max_width, 20px, 30px);
+
+  font-weight: bold;
+  line-height: 1.15;
+  max-width: 610px;
+  margin-bottom: 42px;
+}
+
+
+.banner-design__img {
+  position: relative;
+  display: block;
+  width: 395px;
+  max-width: none;
+  margin-top: -46px;
+  right: -112px;
+  filter: drop-shadow(0 30px 16px rgba(0, 0, 0, 0.5));
+}
+
+
+/* #Banner-dealer
+   ========================================================================== */
+
+.banner-dealer {
+
+}
+
+
+.banner-dealer__subtitle {
+
+}
+
+
+.banner-dealer__list {
+
+}
+
+
+.banner-dealer__list-item {
+
+}
+
+
+.banner-dealer__list-item .icon {
+
+}
+
+
+

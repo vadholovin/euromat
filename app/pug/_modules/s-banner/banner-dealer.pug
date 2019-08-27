@@ -1,0 +1,38 @@
+section.banner-dealer(style="background-image: url(img/backgrounds/bg-dealer.jpg)")
+  .container
+    h2.title.title--banner-dealer Станьте нашим дилером
+    p.banner-dealer__subtitle
+      | Специальное предложение для торговых организаций:
+
+    ul.banner-dealer__list
+      li.banner-dealer__list-item
+        span.icon.icon-check-circle
+        | Стабильный рост
+      li.banner-dealer__list-item
+        span.icon.icon-check-circle
+        | Продукция от производителя
+      li.banner-dealer__list-item
+        span.icon.icon-check-circle
+        | Скидки на объем
+    
+    
+    form.form.form--banner-dealer
+      p Заполните форму и получите прайс-лист со скидками
+      .form-control__wrapper
+        label.visuallyhidden(for="client-name") Ваше имя
+        input.form-control(
+          type="text",
+          id="client-name",
+          name="client-name",
+          placeholder="Ваше имя"
+        )
+      .form-control__wrapper
+        label.visuallyhidden(for="client-phone") Номер телефона
+        input.form-control(
+          type="tel",
+          id="client-phone",
+          name="client-phone",
+          placeholder="Номер телефона"
+        )
+      .form-control__wrapper
+        input.button(type="submit" value="Скачать прайс-лист")

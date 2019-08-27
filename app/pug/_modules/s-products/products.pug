@@ -1,0 +1,79 @@
+//- VARS
+-
+  var products = [
+    {
+      img: 'img/content/products/budo.png',
+      title: 'Будо-маты',
+      cost: 'От 590 руб'
+    },
+    {
+      img: 'img/content/products/fight.png',
+      title: 'Борцовский ковер',
+      cost: 'От 860 руб'
+    },
+    {
+      img: 'img/content/products/tatami.png',
+      title: 'Татами',
+      cost: 'От 2 160 руб'
+    },
+    {
+      img: 'img/content/products/roll.png',
+      title: 'Ролл-маты',
+      cost: 'От 1 350 руб'
+    },
+    {
+      img: 'img/content/products/gymnastics.png',
+      title: 'Гимнастические маты',
+      cost: 'От 2 680 руб'
+    },
+    {
+      img: 'img/content/products/wall.png',
+      title: 'Стеновые протекторы',
+      cost: 'От 3 080 руб'
+    },
+    {
+      img: 'img/content/products/ring.png',
+      title: 'Ринг',
+      cost: 'От 77 000 руб'
+    },
+    {
+      img: 'img/content/products/mma.png',
+      title: 'Клетки ММА',
+      cost: 'От 128 000 руб'
+    },
+    {
+      img: 'img/content/products/tile.png',
+      title: 'Резиновая плитка',
+      cost: 'От 1 280 руб'
+    },
+    {
+      img: 'img/content/products/childfloor.png',
+      title: 'Детский пол',
+      cost: 'От 14 000 руб'
+    },
+  ];
+
+
+
+section.products
+  .container.container--wider
+    h2.title.title--products Наша продукция
+
+    ul.products__list
+
+      each val in products
+        li.products-item
+          .products-item__img
+            img(src=val.img, alt="")
+          .products-item__body
+            h3.products-item__title= val.title
+            span.products-item__cost= val.cost
+            a.button.button--products-item(href="#") Скачать прайс
+          .products-item__foot
+            a.products-item__more(href="#") Подробнее
+
+      
+
+
+
+

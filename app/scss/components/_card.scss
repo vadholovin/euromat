@@ -1,0 +1,162 @@
+/* ==========================================================================
+  #CARD
+   ========================================================================== */
+
+.card {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+
+.card--portfolio,
+.card--office,
+.card--team {
+  background-color: #f4f4f4;
+}
+
+
+.card--office,
+.card--team {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.card-media {
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+.card-media__content {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+
+.card--portfolio .card-media__content {
+  padding-top: 43.333333%;
+}
+
+
+.card--reviews .card-media__content {
+  padding-top: 60.8955%;
+  background-color: #555555;
+}
+
+
+.card--office .card-media__content {
+  padding-top: 60.541586%;
+}
+
+
+.card--team .card-media__content {
+  padding-top: 113.716814159%;
+}
+
+
+.card-media__content > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.card-media__content > iframe {
+  display: none;
+}
+
+.card-media__content > img {
+  object-fit: cover;
+}
+
+
+.card-media__btn {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+.card-media__btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, .65);
+}
+
+
+.card-media__btn .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0.8;
+  transition: opacity 0.25s ease-out;
+
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+.card--portfolio .card__foot,
+.card--reviews .card__foot {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+
+.card--office .card__body {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+.card--office .card__title {
+  @include fluid-type($min_width, $max_width, 16px, 24px);
+
+  font-weight: bold;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+
+.card--team .card__body {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+
+.card--team .card__title {
+  font-weight: bold;
+  font-size: rem(16);
+  color: $text-darker;
+  margin-bottom: 0;
+}
+
+
+.card--team .card__text {
+  font-size: rem(14);
+  color: $text-light;
+}
+

@@ -1,0 +1,27 @@
+/* ==========================================================================
+  #SOCIALS
+   ========================================================================== */
+
+.socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.socials--footer .solials-title {
+  margin-bottom: 28px;
+  font-weight: bold;
+  font-size: rem(14);
+}
+
+
+.socials--footer .socials-list__item {
+  margin-right: 48px;
+}
+
+
+.socials--footer .socials-list__item:last-child {
+  margin-right: 0;
+}
+

@@ -1,0 +1,55 @@
+/* ==========================================================================
+  #ABOUT
+   ========================================================================== */
+
+.about {
+  padding-top: 80px;
+  padding-bottom: 66px;
+  background-repeat: no-repeat;
+  background-position:
+    bottom 165px left 0,
+    bottom right;
+}
+
+
+.about__grid {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+.about__grid > [class*=pure-u] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+.about-list__item {
+  width: 50%;
+  min-height: 116px;
+  margin-bottom: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.about-list__item .icon {
+  height: 39px;
+  margin-bottom: 6px;
+}
+
+
+.about-list__item-text {
+  font-weight: bold;
+  font-size: rem(14);
+  line-height: 1.3;
+}
+

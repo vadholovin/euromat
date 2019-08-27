@@ -1,0 +1,29 @@
+include ../_utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible', content="IE = edge")
+    <![endif]-->
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="keywords" content="")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic")
+    link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+
+    <!--[if lt IE 9]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+    <![endif]-->
+  body(class=pageClass)
+    .wrapper
+      include ../_modules/l-header/header
+      main.content
+        block content
+      include ../_modules/l-footer/footer
+    script(src="js/jquery-3.3.1.min.js")
+    script(src="libs/slick/slick.min.js")
+    script(src="js/main.js")
+    block script

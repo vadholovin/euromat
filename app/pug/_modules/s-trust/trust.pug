@@ -1,0 +1,113 @@
+-
+  var images = [
+    {
+      link: 'img/content/unions/img-1.jpg'
+    },
+    {
+      link: 'img/content/unions/img-2.jpg'
+    },
+    {
+      link: 'img/content/unions/img-3.jpg'
+    },
+    {
+      link: 'img/content/unions/img-4.jpg'
+    },
+    {
+      link: 'img/content/unions/img-5.jpg'
+    },
+    {
+      link: 'img/content/unions/img-1.jpg'
+    },
+  ];
+
+
+-
+  var accreditation = [
+    {
+      link: 'img/content/accreditation/rad.png',
+      title: 'Всероссийская универсальная площадка'
+    },
+    {
+      link: 'img/content/accreditation/ast.png',
+      title: `
+      Система торгов
+      <br>
+      Сбербанк -
+      <br>
+      АСТ`
+    },
+    {
+      link: 'img/content/accreditation/tek.png',
+      title: `
+      Федеральная электронная площадка
+      <br>
+      ТЭК-Торг`
+    },
+    {
+      link: 'img/content/accreditation/eetp.png',
+      title: `
+      Единая электронная
+      <br>
+      торг. площадка`
+    },
+    {
+      link: 'img/content/accreditation/oset.png',
+      title: '
+      Общероссийская система электронной торговли'
+    },
+    {
+      link: 'img/content/accreditation/gpb.png',
+      title: `
+      Электронная площадка
+      <br>
+      ГПБ`
+    },
+    {
+      link: 'img/content/accreditation/rts.png',
+      title: `
+      Электронная площадка России`
+    },
+  ];
+
+
+.confidence
+  .container
+    .confidence__grid.pure-g
+      .confidence__col-left.trust.pure-u-1.pure-u-lg-1-2
+        p.section-title.section-title--trust Нам доверяют
+        p.trust-subtitle Наши партнеры – <b>World gym Russia и World-class</b>
+        p.trust-text
+          | С 2013 года в каждом новом городе где открывались фитнесс залы данных сетей в качестве производителей спортивных покрытий, рингов и клеток  для ММА выступает компания «Euromat»
+        ul.trust-logos
+          li.trust-logo
+            img(src="img/partners/world-gym-logo.png", alt="")
+          li.trust-logo
+            img(src="img/partners/world-class-logo.png", alt="")
+        
+        .trust-slider__wrapper
+          p.trust-slider__title
+
+          .trust-slider
+
+            each image in images
+              .trust-slider__item
+                img(src=`${image.link}`, alt="")
+
+          .slider-nav.slider-nav--trust
+            button.slider-nav__prev(title="Назад")
+            button.slider-nav__next(title="Вперед")
+
+
+      .confidence__col-right.pure-u-1.pure-u-lg-1-2
+        p.section-title.section-title--accreditation Аккредитация
+        p.accreditation-text
+          | Мы аккредетованы на всех площадках и
+          | можем учавствовать в качестве поставщика 
+          | на государственных закупках
+
+        ul.accreditation-list
+
+          each item in accreditation
+            li.accreditation-list__item
+              img(src=`${item.link}`, alt="")
+              p.accreditation-list__item-title= item.title

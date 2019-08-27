@@ -1,0 +1,50 @@
+.banner-consult(style="background-image: url(img/backgrounds/bg-consult.jpg);")
+  .container
+    .banner-consult__grid
+      .banner-consult__col-left
+        p.section-title.section-title--banner-consult
+          | Наша продукция подойдет для всех видов боевых искусств
+        p.banner-consult__lead
+          | У вас все еще остались вопросы?
+          br
+          | Нужна консультация специалиста?
+
+      .banner-consult__col-right
+        .banner-consult__form-wrapper
+          form.form.form--banner-consult
+            p
+              | Заполните форму, наш специалист 
+              | свяжется с вами в ближайшее время
+            .form-control__wrapper
+              label.visuallyhidden(for="client-name") Ваше имя
+              input.form-control(
+                type="text",
+                id="client-name",
+                name="client-name",
+                placeholder="Ваше имя"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="client-phone") Номер телефона
+              input.form-control(
+                type="tel",
+                id="client-phone",
+                name="client-phone",
+                placeholder="Номер телефона"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="client-email") E-mail
+              input.form-control(
+                type="email",
+                id="client-email",
+                name="client-email",
+                placeholder="E-mail"
+              )
+            .form-control__wrapper
+              input.button.button--angled(type="submit" value="Оставить заявку")
+
+            .form-agreement__wrapper
+              input.visuallyhidden#client-agreement(
+                type="checkbox", name="client-agreement"
+              )
+              span.form-agree__mask
+              label(for="client-agreement") - Я даю согласие на обработку моих персональных данных

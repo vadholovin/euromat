@@ -1,0 +1,64 @@
+/* ==========================================================================
+  #FOOTER
+   ========================================================================== */
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  background-color: $text-dark;
+}
+
+
+.footer__content {
+  color: #fff;
+}
+
+
+.footer__info {
+  margin-right: auto;
+}
+
+
+.footer-requisites {
+  font-size: rem(14);
+}
+
+
+.footer-requisites__title {
+  margin-bottom: 16px;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+
+.footer-requisites__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.footer-requisites__col {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer-requisites__col--1 {
+  margin-right: 48px;
+}
+
+
+.footer-requisites__col--2 {
+  margin-right: 32px;
+}
+
+
+.footer-requisites__col--3 .footer-requisites__item {
+  margin-top: auto;
+}
+
+
+.footer-requisites__item + .footer-requisites__item {
+  margin-top: 12px;
+}
+

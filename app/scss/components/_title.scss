@@ -1,0 +1,89 @@
+/* ==========================================================================
+  #TITLE
+   ========================================================================== */
+
+.title {
+  @include fluid-type($min_width, $max_width, 32px, 48px);
+
+  margin-top: 0;
+  font-weight: 800;
+  line-height: 1.125;
+  color: $primary-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.title--about {
+  margin-bottom: 60px;
+}
+
+
+.title--banner {
+  @include fluid-type($min_width, $max_width, 28px, 44px);
+
+  text-align: left;
+}
+
+
+.title--banner-price {
+  max-width: 690px;
+  margin-bottom: 40px;
+}
+
+
+.title--products {
+  margin-bottom: 36px;
+}
+
+
+.title--banner-design {
+  @include fluid-type($min_width, $max_width, 28px, 40px);
+
+  margin-bottom: 16px;
+}
+
+
+.title--quality {
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.08;
+}
+
+
+.title--delivery-top {
+  margin-bottom: 44px;
+  text-align: left;
+}
+
+
+.title--delivery-bottom {
+  @include fluid-type($min_width, $max_width, 32px, 56px);
+
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
+.title--portfolio {
+  margin-bottom: 60px;
+}
+
+
+.title--docs {
+  margin-bottom: 50px;
+}
+
+
+.title--reviews {
+  margin-bottom: 55px;
+}
+
+
+.title--team {
+  margin-bottom: 45px;
+}
+
+
+
+

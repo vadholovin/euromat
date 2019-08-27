@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #BUTTON
+   ========================================================================== */
+
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  border: 0;
+  border-radius: 14px;
+  padding: 1.45em;
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background-color: $secondary-color;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out,
+    color 0.3s ease-out;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #ae2d31;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+
+.banner--price .button {
+  width: 360px;
+}
+
+
+.banner--design .button {
+  width: 410px;
+}
+
+
+.delivery .button {
+  width: 318px;
+}
+
+
+.button--call {
+  width: 62px;
+  height: 62px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+
+.header-main .button--call {
+  align-self: flex-end;
+}

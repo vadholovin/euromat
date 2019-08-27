@@ -1,0 +1,56 @@
+/* ==========================================================================
+  #CONTAINER
+   ========================================================================== */
+
+
+.container {
+  width: 100%;
+  padding-left: 28px;
+  padding-right: 28px;
+  margin: 0 auto;
+}
+
+
+@media (min-width: 576px) {
+  .container { max-width: 562px; }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 746px; }
+}
+
+@media (min-width: 992px) {
+  .container { max-width: 986px; }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1420px;
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+
+
+.container--header {
+
+  @media (min-width: 80em) {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1170px;
+  }
+}
+
+
+.container--wider {
+
+  @media (min-width: 80em) {
+    max-width: 1370px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container--fluid {
+  width: 100%;
+}

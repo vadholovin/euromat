@@ -1,0 +1,52 @@
+section.team(style="background-image: url(img/general/pattern-1.png),url(img/general/pattern-2.png);")
+  .container
+    h2.title.title--team Наша команда
+    .team__grid.pure-g
+      .team__col.pure-u-1.pure-u-lg-1-2
+        .card.card--office
+          figure.card-media
+            .card-media__content
+              img(src="img/content/office.jpg", alt="")
+          .card__body
+            h5.card__title Офис компании EUROMAT
+
+      .team__col.pure-u-1.pure-u-lg-1-2
+        .slider__wrapper.slider__wrapper--team
+          .slider.slider--team.js-team-slider
+            .slider-item.slider-item--team
+              .card.card--team
+                figure.card-media
+                  .card-media__content
+                    img(src="img/content/team/img-1.jpg", alt="")
+                .card__body
+                  h5.card__title Фамилия Имя
+                  p.card__text Должность сотрудника
+
+            .slider-item.slider-item--team
+              .card.card--team
+                figure.card-media
+                  .card-media__content
+                    img(src="img/content/team/img-2.jpg", alt="")
+                .card__body
+                  h5.card__title Фамилия Имя
+                  p.card__text Должность сотрудника
+
+            .slider-item.slider-item--team
+              .card.card--team
+                figure.card-media
+                  .card-media__content
+                    img(src="img/content/team/img-2.jpg", alt="")
+                .card__body
+                  h5.card__title Фамилия Имя
+                  p.card__text Должность сотрудника
+
+          .slider-nav.slider-nav--shevrons.slider-nav--team#team-nav
+            button.slider-nav__prev(title="Назад")
+            .slider-counter.js-counter-team
+              span.slider-counter__current 1
+              |
+              | из
+              |
+              span.slider-counter__total
+            button.slider-nav__next(title="Вперед")
+

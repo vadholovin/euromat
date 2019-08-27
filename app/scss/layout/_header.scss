@@ -1,0 +1,110 @@
+/* ==========================================================================
+  #HEADER
+   ========================================================================== */
+
+.header {
+  position: relative;
+}
+
+
+.header-top {
+  background-color: #eee;
+  font-size: rem(14);
+}
+
+
+.header-top__content {
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.header-cities {
+  margin-right: auto;
+}
+
+
+.header-cities .icon {
+  position: relative;
+  top: 2px;
+  margin-right: 14px;
+  vertical-align: baseline;
+}
+
+
+.header-cities__link {
+  font-weight: 600;
+}
+
+
+.header-members {
+  align-items: center;
+}
+
+
+.header-members__text {
+  margin-right: 16px;
+}
+
+
+.header-members__flags {
+  display: flex;
+}
+
+
+.header-members__flags .icon {
+  margin-right: 16px;
+}
+
+
+.header-members__flags .icon:last-child {
+  margin-right: 0;
+}
+
+
+.header-main__content {
+  min-height: 96px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  align-items: center;
+}
+
+
+.header-contacts {
+  margin-right: auto;
+}
+
+
+.header-contacts__item {
+  margin-right: 68px;
+  text-align: center;
+}
+
+
+.header-contacts__item:last-child {
+  margin-right: 0;
+}
+
+
+.header-contacts__link {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: rem(24);
+}
+
+
+.header-contacts__notes {
+  display: block;
+  font-size: rem(15);
+  color: #464646;
+}
+
+
+.header-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  background-color: $primary-color;
+}

@@ -1,0 +1,131 @@
+/* ==========================================================================
+  #DELIVERY
+   ========================================================================== */
+
+.delivery{
+  background-color: #fafafa;
+}
+
+
+.delivery-top {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.delivery-top__lead {
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+
+.delivery-top__offer {
+  max-width: 350px;
+  margin-bottom: 52px;
+  font-weight: bold;
+}
+
+.delivery-list,
+.delivery-top__notes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 780px;
+}
+
+
+.delivery-list__col,
+.delivery-top__notes-col {
+  width: 50%;
+  // padding-left: 70px;
+  padding-left: 8%;
+}
+
+
+.delivery-list__item {
+  display: flex;
+  align-items: flex-start;
+  min-height: 6em;
+  margin-bottom: 24px;
+  font-size: rem(14);
+}
+
+
+.delivery-list__item-num {
+  position: relative;
+  display: inline-block;
+  margin-right: 15px;
+  padding-bottom: 4px;
+  flex: none;
+  font-weight: 800;
+  font-size: rem(21);
+  line-height: 1.15;
+  color: $secondary-color;
+}
+
+.delivery-list__item-num:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 0;
+  border-top: 3px solid $secondary-color;
+  transform: skewX(-45deg);
+}
+
+
+.delivery-list__item-text {
+  max-width: 270px;
+  font-weight: 500;
+}
+
+
+.delivery-top__divider {
+  width: 710px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  border-color: rgba(3, 3, 3, .1);
+}
+
+
+.delivery-top__notes {
+  color: $text-light;
+  font-size: rem(13);
+}
+
+
+.delivery-top__notes-col li + li {
+  margin-top: 4px;
+}
+
+
+.delivery-bottom {
+  padding-top: 85px;
+  padding-bottom: 118px;
+  background-repeat: no-repeat;
+  background-position: top 35% right 2.3958%;
+  background-size: 35.625% auto;
+
+  @media (min-width: 100em) {
+    background-position: top 12px right 2.3958%;
+  }
+}
+
+
+.delivery-bottom__content {
+  width: 66.666666%;
+}
+
+
+.delivery-bottom__offer {
+  @include fluid-type($min_width, $max_width, 18px, 24px);
+
+  margin-bottom: 36px;
+  font-weight: bold;
+}
+
+
+
+
+
