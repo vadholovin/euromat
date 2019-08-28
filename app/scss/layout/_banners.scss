@@ -101,4 +101,43 @@
 }
 
 
+/* #Banner-consult
+   ========================================================================== */
+
+.banner-consult__grid {
+  display: flex;
+}
+
+
+.banner-consult__col-left {
+  width: 60%;
+  flex-shrink: 0;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+
+.banner-consult__col-right {
+  width: 45.614%;
+  flex-shrink: 0;
+}
+
+
+.banner-consult__lead {
+  font-weight: 600;
+  font-size: rem(24);
+}
+
+
+.banner-consult__form-wrapper {
+  position: relative;
+  right: -70px;
+  height: 100%;
+  transform: skewX(-30deg);
+  padding: 56px 70px 56px 90px;
+  background-color: $primary-color;
+}
+
+
+
 

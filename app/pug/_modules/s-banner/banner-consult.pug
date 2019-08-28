@@ -12,7 +12,7 @@
       .banner-consult__col-right
         .banner-consult__form-wrapper
           form.form.form--banner-consult
-            p
+            p.form-lead
               | Заполните форму, наш специалист 
               | свяжется с вами в ближайшее время
             .form-control__wrapper
@@ -39,12 +39,13 @@
                 name="client-email",
                 placeholder="E-mail"
               )
-            .form-control__wrapper
-              input.button.button--angled(type="submit" value="Оставить заявку")
+            .form-control__wrapper.form-control__wrapper--last
+              input.button(type="submit" value="Оставить заявку")
 
-            .form-agreement__wrapper
-              input.visuallyhidden#client-agreement(
-                type="checkbox", name="client-agreement"
+            .form__acceptance-wrapper
+              input.visuallyhidden#client-acceptance(
+                type="checkbox", name="client-acceptance"
               )
-              span.form-agree__mask
-              label(for="client-agreement") - Я даю согласие на обработку моих персональных данных
+              label.form__acceptance-label(for="client-acceptance")
+                span.form__acceptance-mask
+                | - Я даю согласие на обработку моих персональных данных

@@ -7,6 +7,7 @@
   width: 100%;
   border: 0;
   border-radius: 0;
+  font-weight: 500;
   font-size: rem(14);
   line-height: 1.15;
   color: $text-darker;
@@ -15,12 +16,39 @@
 
   &::placeholder {
     color: $text-darker;
+    font-weight: 500;
   }
 
   &:focus {
     outline: none;
     background-color: #fff;
   }
+}
+
+
+.form__acceptance-mask {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+
+input:checked ~ label .form__acceptance-mask:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 10px;
+  background-image: url(../img/icons/sprites/sprite.png);
+  background-repeat: no-repeat;
+  background-position: -158px -118px;
+  background-size: 212px 193px;
 }
 
 
@@ -64,6 +92,63 @@
   padding: 1.4286em 1.57em;
   border-radius: 12px;
 }
+
+
+/* #Banner-consult form
+   ========================================================================== */
+
+.form--banner-consult .form-lead {
+  font-weight: bold;
+  margin-bottom: 22px;
+  transform: skewX(30deg);
+  color: #fff;
+}
+
+
+.form--banner-consult .form-control__wrapper {
+  margin-bottom: 23px;
+  background-color: #d7d7d7;
+}
+
+
+.form--banner-consult .form-control__wrapper--last {
+  margin-bottom: 30px;
+  background-color: $secondary-color;
+}
+
+
+.form--banner-consult .form-control {
+  height: 45px;
+  padding-left: 32px;
+  padding-right: 32px;
+  line-height: 45px;
+  transform: skewX(30deg);
+  background-color: transparent;
+
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+
+.form--banner-consult .form__acceptance-label {
+  display: flex;
+  transform: skewX(30deg);
+  font-weight: 500;
+  font-size: rem(12);
+  color: #ccc;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.form--banner-consult .form__acceptance-mask {
+  flex: none;
+  margin-right: 8px;
+}
+
 
 
 
