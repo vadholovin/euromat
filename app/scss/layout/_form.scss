@@ -1,162 +1,70 @@
-/*------------------------------------*\
-  #FORM
-\*------------------------------------*/
+/* ==========================================================================
+   #FORM
+   ========================================================================== */
 
-.form {
+.form-control {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  font-size: rem(14);
+  line-height: 1.15;
+  color: $text-darker;
+  background-color: #d7d7d7;
+  box-shadow: none;
 
-  &__wrapper {
-
-    &--contacts:not(:last-child),
-    &--advice:not(:last-child) {
-      margin-bottom: 20px;
-
-      @media (min-width: 80em) {
-        margin-bottom: 30px;
-      }
-    }
-
-    &--modal {
-      max-width: 350px;
-      margin-bottom: 20px;
-
-      @media (min-width: 62em) {
-        margin-bottom: 36px;
-      }
-    }
+  &::placeholder {
+    color: $text-darker;
   }
 
-  &__input,
-  &__textarea {
-    @include fluid-type($min_width, $max_width, 18px, 28px);
-
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: none;
-    border-bottom: 2px solid $silver;
-    border-radius: 0;
-    font-weight: bold;
-    line-height: 1.5;
-    color: inherit;
-    background: none;
-    box-shadow: none;
-
-    &::placeholder {
-      color: $silver;
-    }
-
-    &:focus {
-      outline: none;
-      border-bottom-color: $primary-color;
-    }
-  }
-
-  &__fieldset {
-
-    &--contacts,
-    &--advice {
-      width: 100%;
-      max-width: 440px;
-      margin-bottom: 50px;
-      
-      @media (min-width: 62em) {
-        margin-bottom: 100px;
-      }
-
-      @media (min-width: 80em) {
-        margin-bottom: 120px;
-      }
-
-      @media (min-width: 90em) {
-        margin-bottom: 175px;
-      }
-    }
-  }
-
-  &__notes {
-    margin-bottom: 40px;
-    font-size: rem(16);
-
-    @media (min-width: 62em) {
-      margin-bottom: 0;
-    }
-  }
-
-  &--footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: 48em) {
-      flex-direction: row;
-      align-items: flex-end;
-    }
-
-    > * {
-      margin-bottom: 35px;
-
-      @media (min-width: 48em) {
-        
-        &:not(:last-child) {
-          margin-right: 38px;
-        }
-      }
-      
-    }
-  }
-
-  &--contacts {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: 62em) {
-      align-items: flex-end;
-    }
-
-    @media (min-width: 80em) {
-      align-items: flex-start;
-    }
-  }
-
-  &--modal {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-  }
-
-  &--advice {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 865px;
-
-
-    @media (min-width: 80em) {
-      align-self: flex-end;
-    }
-  }
-
-  &__module {
-
-    &--left {
-
-      .form--modal & {
-        max-width: 670px;
-        margin-right: auto;
-      }
-    }
-
-    &--right {
-
-      .form--modal & {
-
-        @media (max-width: 35.99em) {
-          width: 100%;
-          text-align: center;
-        }
-      }
-    }
+  &:focus {
+    outline: none;
+    background-color: #fff;
   }
 }
+
+
+
+/* #Banner-dealer form
+   ========================================================================== */
+
+.form--banner-dealer p {
+  font-weight: bold;
+  font-size: rem(14);
+  color: #666;
+  margin-bottom: 12px;
+}
+
+
+.form-content--banner-dealer {
+  display: flex;
+  align-items: center;
+}
+
+
+.form-control__wrapper--banner-dealer {
+  margin-right: 14px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:first-child {
+    width: 304px;
+  }
+
+  &:nth-child(2) {
+    width: 252px;
+  }
+}
+
+
+.form-control--banner-dealer {
+  padding: 1.4286em 1.57em;
+  border-radius: 12px;
+}
+
+
+
+

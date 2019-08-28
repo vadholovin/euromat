@@ -1,6 +1,6 @@
 section.banner-dealer(style="background-image: url(img/backgrounds/bg-dealer.jpg)")
   .container
-    h2.title.title--banner-dealer Станьте нашим дилером
+    h2.title.title--banner.title--banner-dealer Станьте нашим дилером
     p.banner-dealer__subtitle
       | Специальное предложение для торговых организаций:
 
@@ -18,21 +18,22 @@ section.banner-dealer(style="background-image: url(img/backgrounds/bg-dealer.jpg
     
     form.form.form--banner-dealer
       p Заполните форму и получите прайс-лист со скидками
-      .form-control__wrapper
-        label.visuallyhidden(for="client-name") Ваше имя
-        input.form-control(
-          type="text",
-          id="client-name",
-          name="client-name",
-          placeholder="Ваше имя"
-        )
-      .form-control__wrapper
-        label.visuallyhidden(for="client-phone") Номер телефона
-        input.form-control(
-          type="tel",
-          id="client-phone",
-          name="client-phone",
-          placeholder="Номер телефона"
-        )
-      .form-control__wrapper
-        input.button(type="submit" value="Скачать прайс-лист")
+      .form-content.form-content--banner-dealer
+        .form-control__wrapper.form-control__wrapper--banner-dealer
+          label.visuallyhidden(for="client-name") Ваше имя
+          input.form-control.form-control--banner-dealer(
+            type="text",
+            id="client-name",
+            name="client-name",
+            placeholder="Ваше имя"
+          )
+        .form-control__wrapper.form-control__wrapper--banner-dealer
+          label.visuallyhidden(for="client-phone") Номер телефона
+          input.form-control.form-control--banner-dealer(
+            type="tel",
+            id="client-phone",
+            name="client-phone",
+            placeholder="Номер телефона"
+          )
+        .form-control__wrapper.form-control__wrapper--banner-dealer
+          input.button(type="submit" value="Скачать прайс-лист")

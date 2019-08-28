@@ -63,27 +63,41 @@
    ========================================================================== */
 
 .banner-dealer {
-
+  padding-top: 56px;
+  padding-bottom: 40px;
 }
 
 
 .banner-dealer__subtitle {
-
+  font-weight: 500;
+  font-size: rem(20);
+  margin-bottom: 20px;
 }
 
 
 .banner-dealer__list {
-
+  display: flex;
+  margin-bottom: 50px;
 }
 
 
 .banner-dealer__list-item {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: $secondary-color;
+  margin-right: 35px;
+}
 
+
+.banner-dealer__list-item:last-child {
+  margin-right: 0;
 }
 
 
 .banner-dealer__list-item .icon {
-
+  flex: none;
+  margin-right: 8px;
 }
 
 
