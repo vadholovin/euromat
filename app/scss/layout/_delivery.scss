@@ -9,7 +9,14 @@
 
 .delivery-top {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
+  background-repeat: no-repeat;
+  background-position: bottom 20px left 50%;
+
+  @media (min-width: 110em) {
+    padding-bottom: 50px;
+    background-position: top 35px left 96.1%;
+  }
 }
 
 
@@ -101,7 +108,7 @@
 
 
 .delivery-bottom {
-  padding-top: 85px;
+  padding-top: 50px;
   padding-bottom: 118px;
   background-repeat: no-repeat;
   background-position: top 35% right 2.3958%;
@@ -109,6 +116,10 @@
 
   @media (min-width: 100em) {
     background-position: top 12px right 2.3958%;
+  }
+
+  @media (min-width: 110em) {
+    padding-top: 85px;
   }
 }
 

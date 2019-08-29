@@ -31,19 +31,42 @@
 }
 
 
-.slider-nav--shevrons .slider-nav__prev:after,
-.slider-nav--shevrons .slider-nav__next:after {
+.slider-nav__prev:after,
+.slider-nav__next:after {
   content: '';
   position: absolute;
   display: inline-block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 21px;
-  height: 31px;
   background: url('../img/icons/sprites/sprite-arrows.png');
   background-repeat: no-repeat;
   background-size: 36px 114px;
+}
+
+
+.slider-counter {
+  margin-left: 22px;
+  margin-right: 22px;
+  font-weight: bold;
+  font-size: rem(14);
+  color: $text-darker;
+}
+
+
+.slider-counter__current {
+  font-size: rem(24);
+  color: $secondary-color;
+}
+
+
+/* #Slider-nav--shevrons
+   ========================================================================== */
+
+.slider-nav--shevrons .slider-nav__prev:after,
+.slider-nav--shevrons .slider-nav__next:after {
+  width: 21px;
+  height: 31px;
 }
 
 
@@ -56,6 +79,31 @@
   background-position: -2px -46px;
 }
 
+
+/* #Slider-nav--arrows
+   ========================================================================== */
+
+.slider-nav--arrows .slider-nav__prev:after,
+.slider-nav--arrows .slider-nav__next:after {
+  width: 32px;
+  height: 18px;
+}
+
+
+.slider-nav--arrows .slider-nav__prev:after {
+  background-position: -2px -2px;
+}
+
+
+.slider-nav--arrows .slider-nav__next:after {
+  background-position: -2px -24px;
+}
+
+
+/* #Slider--portfolio
+   #Slider--reviews
+   #Slider--team
+   ========================================================================== */
 
 .slider--portfolio,
 .slider--reviews {
@@ -145,18 +193,51 @@
 }
 
 
-.slider-counter {
-  margin-left: 22px;
-  margin-right: 22px;
-  font-weight: bold;
-  font-size: rem(14);
-  color: $text-darker;
+/* #Slider--trust
+   ========================================================================== */
+
+.slider__wrapper--trust {
+  margin-right: 30px;
 }
 
 
-.slider-counter__current {
-  font-size: rem(24);
-  color: $secondary-color;
+.slider--trust {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 960px;
+  margin-bottom: 15px;
+}
+
+
+.slider-item--trust {
+  margin-left: 16px;
+  text-align: center;
+}
+
+
+.slider-item--trust img {
+  display: inline-block;
+  filter: grayscale(1);
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+
+.slider-nav--trust {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  display: flex;
+  width: 144px;
+  justify-content: space-between;
+
+  > * {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 

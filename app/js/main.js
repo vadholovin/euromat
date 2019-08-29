@@ -29,6 +29,27 @@ jQuery(document).ready(function($) {
 
 
 /**
+ * #Trust Slider
+ */
+jQuery(document).ready(function($) {
+  var slickEl = $('.js-trust-slider');
+
+  slickEl.slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    prevArrow: $('#trust-nav .slider-nav__prev'),
+    nextArrow: $('#trust-nav .slider-nav__next'),
+    pauseOnHover: false,
+    pauseOnFocus: false,
+  });
+});
+
+
+
+
+/**
  * #Reviews Slider
  */
 jQuery(document).ready(function($) {
