@@ -101,3 +101,10 @@
   text-align: left;
 }
 
+.title--contacts {
+  @include fluid-type($min_width, $max_width, 32px, 36px);
+
+  color: rgba(255, 255, 255, .6);
+  transform: skewX(30deg);
+  margin-bottom: 62px;
+}

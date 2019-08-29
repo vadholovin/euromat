@@ -1,0 +1,80 @@
+/* ==========================================================================
+   #CONTACTS
+   ========================================================================== */
+
+.contacts__inner {
+  position: relative;
+}
+
+
+.contacts__block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45.614%;
+  height: 540px;
+  transform: skewX(-30deg);
+  padding: 116px 40px 50px 60px;
+  background-color: $primary-color;
+  z-index: 100;
+}
+
+
+.contacts-list__item {
+  margin-bottom: 36px;
+  transform: skewX(30deg);
+  color: #fff;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.contacts-list__item-link {
+  display: inline-block;
+  margin-right: 16px;
+  font-weight: bold;
+}
+
+
+.contacts-list__item-link--phone {
+  @include fluid-type($min_width, $max_width, 22px, 30px);
+}
+
+
+.contacts-list__item-link--email {
+  @include fluid-type($min_width, $max_width, 18px, 22px);
+}
+
+
+.contacts-list__item-link--lighter {
+  font-weight: 500;
+}
+
+
+.contacts-list__item-info {
+  font-size: rem(14);
+}
+
+
+.contacts-list__item-info--address {
+  font-size: rem(16);
+}
+
+
+.map {
+  position: relative;
+  height: 540px;
+  overflow: hidden;
+}
+
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
