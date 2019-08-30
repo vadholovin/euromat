@@ -18,7 +18,10 @@
   @include fluid-type($min_width, $max_width, 28px, 42px);
 
   margin-bottom: 12px;
-  text-align: left;
+
+  @media (min-width: 62em) {
+    text-align: left;
+  }
 }
 
 

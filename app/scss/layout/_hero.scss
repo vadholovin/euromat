@@ -11,27 +11,48 @@
 
 
 .hero__top {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 
 .hero__text {
-  width: 57.36842105263158%;
-  margin-top: 135px;
-  margin-right: 7%;
+  width: 100%;
+  margin-top: 72px;
+  text-align: center;
+
+  @media (min-width: 62em) {
+    width: 57.36842105263158%;
+    margin-top: 135px;
+    margin-right: 7%;
+    text-align: left;
+  }
 }
 
 
 .hero__subtitle {
   font-weight: 600;
-  font-size: rem(20);
+  font-size: rem(16);
   margin-bottom: 48px;
+
+  @media (min-width: 80em) {
+    font-size: rem(20);
+  }
 }
 
 
 .hero-widget {
-  margin-top: 40px;
   width: 324px;
+  flex-shrink: 0;
+
+
+  @media (max-width: 61.99em) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 62em) {
+    margin-top: 40px;
+  }
 }
 
 
@@ -109,9 +130,17 @@
 .hero-slider__item-title {
   display: block;
   font-weight: 800;
-  font-size: rem(15);
+  font-size: rem(13);
   line-height: 1.125;
   text-transform: uppercase;
+
+  @media (min-width: 36em) {
+    font-size: rem(14);
+  }
+
+  @media (min-width: 62em) {
+    font-size: rem(15);
+  }
 }
 
 
