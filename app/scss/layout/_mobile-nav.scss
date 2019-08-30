@@ -1,0 +1,140 @@
+/*------------------------------------*\
+  #MOBILE-NAV
+\*------------------------------------*/
+
+.mobile-nav {
+  display: none;
+
+  @media (max-width: 61.99em) {
+    display: block;
+  }
+
+  &.is-visible {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+}
+
+
+.mobile-nav__content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  width: 320px;
+  height: 100%;
+  background-color: #fff;
+  transform: translate3d(-200%,0,0);
+  -webkit-overflow-scrolling: touch;
+  transition: transform .5s;
+
+  &.is-visible {
+    transform: translate3d(0,0,0);
+    transition: all .5s;
+    box-shadow: 2px 0 6px rgba(51, 51, 51, .26);
+  }
+}
+
+
+.mobile-nav__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    transform 0s ease-in-out .2s,
+    opacity .2s ease-in-out;
+  overflow: auto;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity .2s ease-in-out;
+  }
+}
+
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.side-menu__head {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: 72px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+}
+
+
+.side-menu__close {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.15;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:after {
+    content: '\2573';
+  }
+}
+
+
+.side-menu__body {
+  padding-left: 24px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.side-menu__module {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid #dedede;
+}
+
+
+.menu-info__item {
+  margin-bottom: 12px;
+  font-size: rem(14);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.menu-info__item-link {
+  display: block;
+  font-weight: bold;
+}
+
+
+.menu-info__item-notes {
+  display: block;
+}
+
+

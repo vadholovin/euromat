@@ -5,6 +5,34 @@ jQuery(document).ready(function($) {
 });
 
 
+/**
+ * #Menu
+ */
+jQuery(document).ready(function($) {
+  $('.hamburger').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('is-active');
+    if ($('.mobile-nav').is('[hidden]')) {
+      $('.mobile-nav').removeAttr('hidden');
+    } else {
+      $('.mobile-nav').attr('hidden', '');
+    }
+
+    $('.mobile-nav, .mobile-nav__content, .mobile-nav__overlay').toggleClass('is-visible');
+
+    $('html, body').toggleClass('is-overflowed');
+  });
+
+  $('.side-menu__close, .mobile-nav__overlay').click(function(e) {
+    e.preventDefault();
+    $('.hamburger').toggleClass('is-active');
+    $('.mobile-nav, .mobile-nav__content, .mobile-nav__overlay').removeClass('is-visible');
+    $('.mobile-nav').attr('hidden', '');
+    $('html, body').removeClass('is-overflowed');
+  });
+});
+
+
 
 
 /**

@@ -9,7 +9,11 @@
 
 .header-top {
   background-color: #eee;
-  font-size: rem(14);
+  display: none;
+
+  @media (min-width: 62em) {
+    display: block;
+  }
 }
 
 
@@ -22,6 +26,7 @@
 
 .header-cities {
   margin-right: auto;
+  font-size: rem(14);
 }
 
 
@@ -39,17 +44,43 @@
 
 
 .header-members {
+  font-size: rem(14);
+}
+
+
+.header-members--primary {
+  display: flex;
   align-items: center;
 }
 
 
-.header-members__text {
-  margin-right: 16px;
+.header-members--primary .header-members__text {
+
+  @media (min-width: 62em) {
+    margin-right: 16px;
+  }
+}
+
+
+.header-members--mobile .header-members__text {
+  margin-bottom: 12px;
 }
 
 
 .header-members__flags {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.header-members--primary {
+  display: none;
+
+  @media (min-width: 62em) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 
@@ -64,47 +95,76 @@
 
 
 .header-main__content {
-  min-height: 96px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  height: 72px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   align-items: center;
+  
+
+  @media (min-width: 62em) {
+    min-height: 96px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 }
 
 
 .header-contacts {
-  margin-right: auto;
+  display: none;
+
+  @media (min-width: 62em) {
+    display: flex;
+    margin-right: auto;
+  }
 }
 
 
 .header-contacts__item {
-  margin-right: 68px;
+  margin-right: 48px;
   text-align: center;
-}
 
+  @media (min-width: 80em) {
+    margin-right: 56px;
+  }
 
-.header-contacts__item:last-child {
-  margin-right: 0;
+  @media (min-width: 100em) {
+    margin-right: 68px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 
 .header-contacts__link {
+  @include fluid-type($min_width, $max_width, 16px, 24px);
+
   display: block;
   margin-bottom: 4px;
   font-weight: bold;
-  font-size: rem(24);
 }
 
 
 .header-contacts__notes {
   display: block;
-  font-size: rem(15);
+  font-size: rem(14);
   color: #464646;
+
+  @media (min-width: 100em) {
+    font-size: rem(15);
+  }
 }
 
 
 .header-bottom {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   color: #fff;
   background-color: $primary-color;
+  display: none;
+
+  @media (min-width: 48em) {
+    display: block;
+  }
 }

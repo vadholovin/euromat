@@ -8,8 +8,35 @@
 }
 
 .brand-wrapper--header {
-  width: 316px;
-  height: 54px;
+  width: 150px;
+  height: 31px;
+  margin-right: auto;
+
+
+  @media (min-width: 48em) {
+    width: 180px;
+  }
+
+  @media (min-width: 62em) {
+    width: 200px;
+    height: 34px;
+  }
+
+  @media (min-width: 80em) {
+    width: 280px;
+    height: 48px;
+  }
+
+  @media (min-width: 100em) {
+    width: 316px;
+    height: 54px;
+  }
+}
+
+
+.brand-wrapper--mobile {
+  width: 150px;
+  height: 31px;
   margin-right: auto;
 }
 

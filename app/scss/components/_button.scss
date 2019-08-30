@@ -75,7 +75,21 @@
 
 
 .header-main .button--call {
-  align-self: flex-end;
+  
+
+  @media (max-width: 61.99em) {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+
+    .icon {
+      transform: scale(0.7);
+    }
+  }
+
+  @media (min-width: 62em) {
+    align-self: flex-end;
+  }
 }
 
 

@@ -2,14 +2,14 @@ header.header
   .header-top
     .container.container--header
       .header-top__content.d-flex-wrapped
-        .header-cities
+        .header-cities.header-cities--primary
           span.icon.icon-placeholder
           span.header-cities__label Ваше местоположение:
           |
           |
           span.header-cities__link Москва
 
-        .header-members.d-flex-wrapped
+        .header-members.header-members--primary
           p.header-members__text
             | Официальные представители в России и странах СНГ
           .header-members__flags
@@ -29,13 +29,21 @@ header.header
               scrset="img/general/logo.png 1x, img/general/logo@2x.png 1.5x, img/general/logo@2x.png 2x, img/general/logo@2x.png 3x,"
               alt="логотип Euromat"
             )
-        ul.header-contacts.d-flex-wrapped
+        ul.header-contacts
           li.header-contacts__item
             a.header-contacts__link(href="tel:+74995262525") +7 (499) 526-25-25
             span.header-contacts__notes Режим работы: Круглосуточно
           li.header-contacts__item
             a.header-contacts__link(href="mailto:euromat@info.ru") Euromat@info.ru
             span.header-contacts__notes Напишите нам на почту
+        
+        button.hamburger.hamburger--spring(
+          type='button',
+          aria-label='Menu',
+          aria-controls='navigation'
+        )
+          span.hamburger-box
+            span.hamburger-inner
         
         button.button.button--call(
           title="Заказать обратный звонок"
@@ -45,4 +53,7 @@ header.header
   .header-bottom
     .container.container--wider
       include ../l-menu/menu-header
+  
+  include ../l-menu/menu-mobile
+  
 
