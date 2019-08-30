@@ -97,7 +97,11 @@
 
 
 .title--docs {
-  margin-bottom: 50px;
+  margin-bottom: 48px;
+
+  @media (min-width: 80em) {
+    margin-bottom: 50px;
+  }
 }
 
 
@@ -121,8 +125,12 @@
 
 
 .title--trust {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   text-align: left;
+
+  @media (min-width: 62em) {
+    margin-bottom: 28px;
+  }
 }
 
 

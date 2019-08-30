@@ -3,7 +3,12 @@
    ========================================================================== */
 
 .confidence {
-  padding-top: 80px;
+  padding-top: 64px;
+  padding-bottom: 20px;
+
+  @media (min-width: 80em) {
+    padding-top: 80px;
+  }
 }
 
 
@@ -15,8 +20,12 @@
 
 .confidence__col-left {
   padding-left: 15px;
-  // padding-right: 80px;
-  padding-right: 7%;
+  padding-right: 15px;
+
+  @media (min-width: 62em) {
+    padding-right: 7%;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -31,8 +40,12 @@
 
 .trust-subtitle {
   font-weight: 500;
-  font-size: rem(22);
+  font-size: rem(18);
   margin-bottom: 6px;
+
+  @media (min-width: 62em) {
+    font-size: rem(22);
+  }
 
   b {
     font-weight: bold;
@@ -41,20 +54,31 @@
 
 
 .trust-text {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
+
+  @media (min-width: 80em) {
+    margin-bottom: 48px;
+  }
 }
 
 
 .trust-logos {
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 60px;
 }
 
 
 .trust-logo {
   display: inline-block;
-  margin-right: 50px;
+  margin-right: 24px;
+
+  @media (min-width: 48em) {
+    margin-right: 50px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 
@@ -63,6 +87,10 @@
   font-size: rem(20);
   text-transform: uppercase;
   margin-bottom: 36px;
+
+  @media (max-width: 35.99em) {
+    text-align: center;
+  }
 }
 
 
@@ -70,8 +98,12 @@
    ========================================================================== */
 
 .accreditation-text {
-  margin-bottom: 86px;
+  margin-bottom: 48px;
   font-weight: bold;
+
+  @media (min-width: 80em) {
+    margin-bottom: 86px;
+  }
 }
 
 
@@ -84,12 +116,16 @@
 
 
 .accreditation-list__item {
-  width: 25%;
+  width: 33.333333%;
   margin-bottom: 36px;
   padding-left: 8px;
   padding-right: 8px;
   font-size: rem(10);
   text-align: center;
+
+  @media (min-width: 36em) {
+    width: 25%;
+  }
 }
 
 

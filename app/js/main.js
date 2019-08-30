@@ -114,7 +114,7 @@ jQuery(document).ready(function($) {
           arrows: false,
         },
       },
-    ]
+    ],
   });
 });
 
@@ -136,6 +136,20 @@ jQuery(document).ready(function($) {
     nextArrow: $('#trust-nav .slider-nav__next'),
     pauseOnHover: false,
     pauseOnFocus: false,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ]
   });
 });
 
