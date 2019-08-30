@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .title {
-  @include fluid-type($min_width, $max_width, 32px, 48px);
+  @include fluid-type($min_width, $max_width, 28px, 48px);
 
   margin-top: 0;
   font-weight: 800;
@@ -64,8 +64,6 @@
 
 
 .title--quality {
-  @include fluid-type($min_width, $max_width, 28px, 48px);
-
   margin-bottom: 20px;
   text-align: left;
   line-height: 1.08;
@@ -90,7 +88,11 @@
 
 
 .title--portfolio {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
+
+  @media (min-width: 90em) {
+    margin-bottom: 60px;
+  }
 }
 
 

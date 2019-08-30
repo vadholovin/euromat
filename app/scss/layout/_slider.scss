@@ -115,6 +115,11 @@
 .slider--reviews {
   margin-left: -20px;
   margin-right: -20px;
+
+  @media (min-width: 48em) and (max-width: 79.99em) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 
@@ -122,6 +127,15 @@
 .slider-item--reviews {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+
+.slider-nav--portfolio,
+.slider-nav--reviews {
+
+  @media (max-width: 47.99em) {
+    display: none;
+  }
 }
 
 
@@ -138,14 +152,22 @@
 .slider-nav--portfolio .slider-nav__prev,
 .slider-nav--reviews .slider-nav__prev {
   left: 0;
-  transform: translate(-150%, -50%);
+  transform: translate(0%, -50%);
+
+  @media (min-width: 80em) {
+    transform: translate(-150%, -50%)
+  }
 }
 
 
 .slider-nav--portfolio .slider-nav__next,
 .slider-nav--reviews .slider-nav__next {
   right: 0;
-  transform: translate(150%, -50%);
+  transform: translate(0%, -50%);
+
+  @media (min-width: 80em) {
+    transform: translate(150%, -50%);
+  }
 }
 
 

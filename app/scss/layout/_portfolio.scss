@@ -3,9 +3,14 @@
    ========================================================================== */
 
 .portfolio {
-  padding-top: 70px;
-  padding-bottom: 90px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   background-repeat: no-repeat;
   background-position: bottom 165px left 0;
+
+  @media (min-width: 80em) {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
 }
 
