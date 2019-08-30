@@ -64,6 +64,8 @@
 
 
 .title--quality {
+  @include fluid-type($min_width, $max_width, 28px, 48px);
+
   margin-bottom: 20px;
   text-align: left;
   line-height: 1.08;
