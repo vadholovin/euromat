@@ -153,8 +153,14 @@
 
 .title--contacts {
   @include fluid-type($min_width, $max_width, 32px, 36px);
+  
+  margin-bottom: 48px;
+  text-align: left;
 
-  color: rgba(255, 255, 255, .6);
-  transform: skewX(30deg);
-  margin-bottom: 62px;
+  @media (min-width: 80em) {
+    margin-bottom: 62px;
+    transform: skewX(30deg);
+    text-align: center;
+    color: rgba(255, 255, 255, .6);
+  }
 }

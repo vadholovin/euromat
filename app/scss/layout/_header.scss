@@ -94,6 +94,21 @@
 }
 
 
+.header-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+
+  @media (min-width: 62em) {
+    position: relative;
+  }
+}
+
+
 .header-main__content {
   height: 72px;
   padding-top: 12px;
@@ -166,5 +181,10 @@
 
   @media (min-width: 48em) {
     display: block;
+    margin-top: 72px;
+  }
+
+  @media (min-width: 62em) {
+    margin-top: 0;
   }
 }

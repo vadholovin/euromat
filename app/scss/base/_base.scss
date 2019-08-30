@@ -137,3 +137,10 @@ del {
   text-decoration: line-through;
 }
 
+.content {
+  padding-top: 72px;
+
+  @media (min-width: 62em) {
+    padding-top: 0;
+  }
+}
