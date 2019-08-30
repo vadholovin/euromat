@@ -149,7 +149,7 @@ jQuery(document).ready(function($) {
           slidesToShow: 3,
         },
       },
-    ]
+    ],
   });
 });
 
@@ -171,6 +171,30 @@ jQuery(document).ready(function($) {
     nextArrow: $('#reviews-nav .slider-nav__next'),
     pauseOnHover: false,
     pauseOnFocus: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          arrows: false,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          arrows: false,
+        },
+      },
+    ],
   });
 });
 
