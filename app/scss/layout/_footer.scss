@@ -15,7 +15,25 @@
 
 
 .footer__info {
+  position: relative;
   margin-right: auto;
+
+  @media (max-width: 35.99em) {
+    width: 100%;
+    padding-bottom: 24px;
+    margin-bottom: 36px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 160px;
+      height: 1px;
+      border-top: 1px solid #fff;
+    }
+  }
 }
 
 
@@ -32,8 +50,11 @@
 
 
 .footer-requisites__list {
-  display: flex;
-  flex-wrap: wrap;
+
+  @media (min-width: 62em) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 
@@ -44,7 +65,11 @@
 
 
 .footer-requisites__col--1 {
-  margin-right: 48px;
+  margin-right: 32px;
+
+  @media (min-width: 62em) {
+    margin-right: 48px;
+  }
 }
 
 
