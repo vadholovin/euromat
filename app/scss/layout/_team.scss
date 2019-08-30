@@ -4,7 +4,7 @@
 
 .team {
   padding-top: 55px;
-  padding-bottom: 110px;
+  padding-bottom: 64px;
   background-repeat: no-repeat;
   background-position:
     bottom 165px left 0,
@@ -12,6 +12,14 @@
   background-size:
     auto,
     658px auto;
+
+  @media (min-width: 80em) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: 90em) {
+    padding-bottom: 110px;
+  }
 }
 
 
@@ -24,5 +32,13 @@
 .team__col {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.team__col-left {
+  margin-bottom: 56px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
+  }
 }
 
