@@ -15,7 +15,11 @@
 
 .banner--price {
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 64px;
+
+  @media (min-width: 80em) {
+    padding-bottom: 80px;
+  }
 }
 
 

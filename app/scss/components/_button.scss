@@ -11,7 +11,7 @@
   border-radius: 14px;
   padding: 1.45em;
   font-weight: bold;
-  font-size: rem(16);
+  font-size: rem(15);
   line-height: 1.15;
   letter-spacing: 0.02em;
   color: #fff;
@@ -39,6 +39,10 @@
   &:active {
     box-shadow: none;
   }
+
+  @media (min-width: 48em) {
+    font-size: rem(16);
+  }
 }
 
 
@@ -52,7 +56,11 @@
 
 
 .banner--price .button {
-  width: 360px;
+  
+
+  @media (min-width: 48em) {
+    width: 360px;
+  }
 }
 
 
