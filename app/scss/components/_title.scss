@@ -26,7 +26,11 @@
 
 
 .title--about {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
+
+  @media (min-width: 90em) {
+    margin-bottom: 60px;
+  }
 }
 
 

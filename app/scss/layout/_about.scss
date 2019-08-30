@@ -3,12 +3,21 @@
    ========================================================================== */
 
 .about {
-  padding-top: 80px;
-  padding-bottom: 66px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   background-repeat: no-repeat;
   background-position:
     bottom 165px left 0,
     bottom right;
+
+  @media (min-width: 80em) {
+    padding-top: 72px;
+  }
+
+  @media (min-width: 100em) {
+    padding-top: 80px;
+    padding-bottom: 66px;
+  }
 }
 
 
@@ -29,15 +38,22 @@
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+
+  @media (max-width: 61.99em) {
+    margin-bottom: 20px;
+  }
 }
 
 
 .about-list__item {
   width: 50%;
-  min-height: 116px;
   margin-bottom: 35px;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media (min-width: 90em) {
+    min-height: 116px;
+  }
 }
 
 

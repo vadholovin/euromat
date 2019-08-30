@@ -5,9 +5,27 @@
 
 
 .video-box__wrapper--about {
-  width: 670px;
   border-radius: 20px;
   overflow: hidden;
+
+
+  @media (min-width: 90em) {
+    width: 670px;
+  }
+
+  @media (max-width: 61.99em) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 47.99em) {
+    width: 90%;
+  }
+
+  @media (max-width: 35.99em) {
+    width: 100%;
+  }
 }
 
 
@@ -78,6 +96,11 @@
   transform: translate(-50%, -50%);
   opacity: 0.8;
   transition: opacity 0.25s ease-out;
+
+
+  @media (max-width: 35.99em) {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
 
 
   &:hover {
