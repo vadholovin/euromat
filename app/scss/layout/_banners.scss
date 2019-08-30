@@ -151,36 +151,76 @@
 
 .banner-consult__grid {
   display: flex;
+
+  @media (max-width: 47.99em) {
+    flex-wrap: wrap;
+  }
 }
 
 
 .banner-consult__col-left {
-  width: 60%;
+  width: 100%;
   flex-shrink: 0;
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: 64px;
+  padding-bottom: 48px;
+  padding-right: 30px;
+
+  @media (min-width: 48em) {
+    width: 50%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: 62em) {
+    width: 60%;
+    padding-top: 100px;
+  }
 }
 
 
 .banner-consult__col-right {
-  width: 45.614%;
+  width: 100%;
   flex-shrink: 0;
+
+  @media (min-width: 48em) {
+    width: 50%;
+  }
+
+  @media (min-width: 62em) {
+    width: 40%;
+  }
+
+  @media (min-width: 80em) {
+    width: 45.614%;
+  }
 }
 
 
 .banner-consult__lead {
   font-weight: 600;
-  font-size: rem(24);
+  font-size: rem(18);
+
+  @media (min-width: 80em) {
+    font-size: rem(24);
+  }
 }
 
 
 .banner-consult__form-wrapper {
   position: relative;
-  right: -70px;
   height: 100%;
-  transform: skewX(-30deg);
-  padding: 56px 70px 56px 90px;
+  padding: 44px 36px;
   background-color: $primary-color;
+
+  @media (min-width: 80em) {
+    transform: skewX(-30deg);
+    padding: 56px 70px 56px 90px;
+  }
+
+
+  @media (min-width: 100em) {
+    right: -70px;
+  }
 }
 
 

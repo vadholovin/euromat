@@ -120,8 +120,16 @@ input:checked ~ label .form__acceptance-mask:after {
 .form--banner-consult .form-lead {
   font-weight: bold;
   margin-bottom: 22px;
-  transform: skewX(30deg);
   color: #fff;
+}
+
+.form--banner-consult .form-lead,
+.form--banner-consult .form-control,
+.form--banner-consult .form__acceptance-label {
+
+  @media (min-width: 80em) {
+    transform: skewX(30deg);
+  }
 }
 
 
@@ -143,7 +151,6 @@ input:checked ~ label .form__acceptance-mask:after {
   padding-right: 32px;
   border: 0;
   line-height: 45px;
-  transform: skewX(30deg);
   background-color: transparent;
 
   &:focus {
@@ -154,7 +161,6 @@ input:checked ~ label .form__acceptance-mask:after {
 
 .form--banner-consult .form__acceptance-label {
   display: flex;
-  transform: skewX(30deg);
   font-weight: 500;
   font-size: rem(12);
   color: #ccc;
