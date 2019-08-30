@@ -139,8 +139,12 @@
 
 
 .form--banner-dealer .button {
-  width: 276px;
+  width: 100%;
   font-size: 14px;
+
+  @media (min-width: 48em) {
+    width: 276px;
+  }
 }
 
 

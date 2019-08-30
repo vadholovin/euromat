@@ -85,8 +85,15 @@ input:checked ~ label .form__acceptance-mask:after {
 
 
 .form--banner-dealer .form-content {
-  display: flex;
-  align-items: center;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 48em) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
 }
 
 
@@ -99,11 +106,19 @@ input:checked ~ label .form__acceptance-mask:after {
   }
 
   &:first-child {
-    width: 304px;
+    width: 100%;
+
+    @media (min-width: 48em) {
+      width: 304px;
+    }
   }
 
   &:nth-child(2) {
-    width: 252px;
+    width: 100%;
+
+    @media (min-width: 48em) {
+      width: 252px;
+    }
   }
 }
 

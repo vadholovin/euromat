@@ -115,14 +115,21 @@
 
 .banner-dealer__subtitle {
   font-weight: 500;
-  font-size: rem(20);
+  font-size: rem(16);
   margin-bottom: 20px;
+
+  @media (min-width: 62em) {
+    font-size: rem(20);
+  }
 }
 
 
 .banner-dealer__list {
-  display: flex;
   margin-bottom: 50px;
+
+  @media (min-width: 62em) {
+    display: flex;
+  }
 }
 
 
@@ -132,6 +139,14 @@
   font-weight: bold;
   color: $secondary-color;
   margin-right: 35px;
+
+  @media (max-width: 61.99em) {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 
