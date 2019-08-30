@@ -104,7 +104,10 @@
 
 
 .delivery .button {
-  width: 318px;
+
+  @media (min-width: 36em) {
+    width: 318px;
+  }
 }
 
 

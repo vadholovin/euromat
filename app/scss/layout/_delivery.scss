@@ -12,10 +12,24 @@
   padding-bottom: 200px;
   background-repeat: no-repeat;
   background-position: bottom 20px left 50%;
+  background-size: 120px auto;
+
+  @media (min-width: 62em) {
+    background-size: auto;
+  }
 
   @media (min-width: 110em) {
     padding-bottom: 50px;
     background-position: top 35px left 96.1%;
+  }
+}
+
+
+.delivery-top__left {
+  margin-bottom: 56px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
   }
 }
 
@@ -28,32 +42,58 @@
 
 .delivery-top__offer {
   max-width: 350px;
-  margin-bottom: 52px;
+  margin-bottom: 40px;
   font-weight: bold;
+
+  @media (min-width: 80em) {
+    margin-bottom: 52px;
+  }
 }
 
 .delivery-list,
 .delivery-top__notes {
   display: flex;
   flex-wrap: wrap;
-  width: 780px;
+
+  @media (min-width: 90em) {
+    width: 780px;
+  }
 }
 
 
 .delivery-list__col,
 .delivery-top__notes-col {
-  width: 50%;
-  // padding-left: 70px;
-  padding-left: 8%;
+  width: 100%;
+  
+
+  @media (min-width: 36em) {
+    width: 50%;
+    padding-left: 5%;
+  }
+
+  @media (min-width: 90em) {
+    padding-left: 8%;
+  }
+}
+
+
+.delivery-top__notes-col-left {
+
+  @media (max-width: 35.99em) {
+    margin-bottom: 12px;
+  }
 }
 
 
 .delivery-list__item {
   display: flex;
   align-items: flex-start;
-  min-height: 6em;
   margin-bottom: 24px;
   font-size: rem(14);
+
+  @media (min-width: 36em) {
+    min-height: 6em;
+  }
 }
 
 
@@ -88,11 +128,18 @@
 
 
 .delivery-top__divider {
-  width: 710px;
   margin-top: 0;
   margin-bottom: 40px;
-  margin-left: 60px;
   border-color: rgba(3, 3, 3, .1);
+
+  @media (min-width: 36em) {
+    margin-left: 30px;
+  }
+
+  @media (min-width: 62em) {
+    width: 710px;
+    margin-left: 60px;
+  }
 }
 
 
@@ -109,10 +156,21 @@
 
 .delivery-bottom {
   padding-top: 50px;
-  padding-bottom: 118px;
+  padding-bottom: 250px;
   background-repeat: no-repeat;
-  background-position: top 35% right 2.3958%;
-  background-size: 35.625% auto;
+  background-position: bottom 30px left 50%;
+  background-size: 320px auto;
+
+  @media (min-width: 48em) {
+    padding-bottom: 300px;
+    background-size: 440px auto;
+  }
+
+  @media (min-width: 62em) {
+    padding-bottom: 118px;
+    background-size: 35.625% auto;
+    background-position: top 35% right 2.3958%;
+  }
 
   @media (min-width: 100em) {
     background-position: top 12px right 2.3958%;
@@ -125,7 +183,21 @@
 
 
 .delivery-bottom__content {
-  width: 66.666666%;
+
+  @media (max-width: 61.99em) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (min-width: 62em) {
+    width: 60%;
+  }
+
+  @media (min-width: 80em) {
+    width: 66.666666%;
+  }
 }
 
 
