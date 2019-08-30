@@ -90,7 +90,16 @@
 
 
 .banner--design .button {
-  width: 410px;
+
+  @media (max-width: 35.99em) {
+    .extra-text {
+      display: none;
+    }
+  }
+
+  @media (min-width: 48em) {
+    width: 410px;
+  }
 }
 
 
