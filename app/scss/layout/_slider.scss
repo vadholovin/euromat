@@ -101,9 +101,15 @@
 
 
 /* #Slider--portfolio
+   #Slider--hero
    #Slider--reviews
    #Slider--team
    ========================================================================== */
+
+.slider--hero {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
 .slider--portfolio,
 .slider--reviews {
@@ -119,6 +125,7 @@
 }
 
 
+.slider-nav--hero > *,
 .slider-nav--portfolio > *,
 .slider-nav--reviews > * {
   position: absolute;
@@ -139,6 +146,18 @@
 .slider-nav--reviews .slider-nav__next {
   right: 0;
   transform: translate(150%, -50%);
+}
+
+
+.slider-nav--hero .slider-nav__prev {
+  left: 0;
+  transform: translate(0%, -50%);
+}
+
+
+.slider-nav--hero .slider-nav__next {
+  right: 0;
+  transform: translate(0%, -50%);
 }
 
 

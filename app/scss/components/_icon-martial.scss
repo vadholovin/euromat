@@ -1,0 +1,119 @@
+/* ==========================================================================
+   #ICON-MARTIAL
+   ========================================================================== */
+
+.icon-martial {
+  display: inline-block;
+  background-image: url(../img/icons/sprites/sprite-martial.png);
+  background-repeat: no-repeat;
+  background-size: 328px 328px;
+
+
+  /* Retina-specific stuff*/
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    background-image: url(../img/icons/sprites/sprite-martial@2x.png);
+  }
+}
+
+
+.icon-martial-aikido {
+  width: 78px;
+  height: 78px;
+  background-position: -2px -2px;
+}
+
+.icon-martial-boxing {
+  width: 78px;
+  height: 78px;
+  background-position: -84px -2px;
+}
+
+.icon-martial-freestyle {
+  width: 78px;
+  height: 78px;
+  background-position: -166px -2px;
+}
+
+.icon-martial-grappling {
+  width: 78px;
+  height: 78px;
+  background-position: -248px -2px;
+}
+
+.icon-martial-greek {
+  width: 78px;
+  height: 78px;
+  background-position: -2px -84px;
+}
+
+.icon-martial-gymnastics {
+  width: 78px;
+  height: 78px;
+  background-position: -84px -84px;
+}
+
+.icon-martial-hand-to-hand {
+  width: 78px;
+  height: 78px;
+  background-position: -166px -84px;
+}
+
+.icon-martial-judo {
+  width: 78px;
+  height: 78px;
+  background-position: -248px -84px;
+}
+
+.icon-martial-jujitsu {
+  width: 78px;
+  height: 78px;
+  background-position: -2px -166px;
+}
+
+.icon-martial-karate {
+  width: 78px;
+  height: 78px;
+  background-position: -84px -166px;
+}
+
+.icon-martial-kudo {
+  width: 78px;
+  height: 78px;
+  background-position: -166px -166px;
+}
+
+.icon-martial-mma {
+  width: 78px;
+  height: 78px;
+  background-position: -248px -166px;
+}
+
+.icon-martial-taekwondo {
+  width: 78px;
+  height: 78px;
+  background-position: -2px -248px;
+}
+
+.icon-martial-thai {
+  width: 78px;
+  height: 78px;
+  background-position: -84px -248px;
+}
+
+.icon-martial-ushu {
+  width: 78px;
+  height: 78px;
+  background-position: -166px -248px;
+}
+
+.icon-martial-yoga {
+  width: 78px;
+  height: 78px;
+  background-position: -248px -248px;
+}

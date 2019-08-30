@@ -5,7 +5,7 @@
 .form-control {
   display: block;
   width: 100%;
-  border: 0;
+  border: 1px solid #d7d7d7;
   border-radius: 0;
   font-weight: 500;
   font-size: rem(14);
@@ -13,6 +13,7 @@
   color: $text-darker;
   background-color: #d7d7d7;
   box-shadow: none;
+  transition: 0.25s ease-out;
 
   &::placeholder {
     color: $text-darker;
@@ -52,8 +53,27 @@ input:checked ~ label .form__acceptance-mask:after {
 }
 
 
+/* #Form--hero-widget
+   ========================================================================== */
 
-/* #Banner-dealer form
+.form--hero-widget .form-control__wrapper {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 22px;
+  }
+}
+
+
+.form--hero-widget .form-control {
+  padding: 0.75em 0.923em;
+  border-radius: 16px;
+  font-size: rem(13);
+}
+
+
+
+/* #Form--banner-dealer
    ========================================================================== */
 
 .form--banner-dealer p {
@@ -64,13 +84,13 @@ input:checked ~ label .form__acceptance-mask:after {
 }
 
 
-.form-content--banner-dealer {
+.form--banner-dealer .form-content {
   display: flex;
   align-items: center;
 }
 
 
-.form-control__wrapper--banner-dealer {
+.form--banner-dealer .form-control__wrapper {
   margin-right: 14px;
   margin-bottom: 20px;
 
@@ -88,13 +108,13 @@ input:checked ~ label .form__acceptance-mask:after {
 }
 
 
-.form-control--banner-dealer {
+.form--banner-dealer .form-control {
   padding: 1.4286em 1.57em;
   border-radius: 12px;
 }
 
 
-/* #Banner-consult form
+/* #Form--banner-consult
    ========================================================================== */
 
 .form--banner-consult .form-lead {
@@ -121,6 +141,7 @@ input:checked ~ label .form__acceptance-mask:after {
   height: 45px;
   padding-left: 32px;
   padding-right: 32px;
+  border: 0;
   line-height: 45px;
   transform: skewX(30deg);
   background-color: transparent;

@@ -8,6 +8,27 @@ jQuery(document).ready(function($) {
 
 
 /**
+ * #Hero Slider
+ */
+jQuery(document).ready(function($) {
+  var slickEl = $('.js-hero-slider');
+
+  slickEl.slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    prevArrow: $('#hero-nav .slider-nav__prev'),
+    nextArrow: $('#hero-nav .slider-nav__next'),
+    pauseOnHover: false,
+    pauseOnFocus: false,
+  });
+});
+
+
+
+
+/**
  * #Portfolio Slider
  */
 jQuery(document).ready(function($) {
