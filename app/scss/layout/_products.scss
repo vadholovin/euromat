@@ -4,7 +4,11 @@
 
 .products {
   padding-top: 64px;
-  padding-bottom: 60px;
+  padding-bottom: 24px;
+
+  @media (min-width: 80em) {
+    padding-bottom: 60px;
+  }
 }
 
 
@@ -22,12 +26,13 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  width: 245px;
-  min-height: 314px;
+  width: calc(50% - 20px);
+  min-height: 272px;
   overflow: hidden;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 40px;
+  padding-top: 42px;
   border-radius: 10px;
   background-color: #f4f4f4;
   transition:
@@ -39,14 +44,27 @@
     background-color: #fff;
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
   }
+
+
+  @media (min-width: 36em) {
+    width: 245px;
+    min-height: 314px;
+  }
 }
 
 
 .products-item__img {
-  height: 176px;
-  padding: 42px 8px 15px 8px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96px;
+  padding: 0 8px 15px 8px;
   transition: opacity 0.3s ease-out;
+
+
+  @media (min-width: 36em) {
+    height: 132px;
+  }
 }
 
 .products-item:hover .products-item__img {
@@ -60,6 +78,7 @@
 
 
 .products-item__body {
+  margin-bottom: 16px;
   padding: 6px;
   text-align: center;
 }
@@ -67,19 +86,29 @@
 
 .products-item__title {
   font-weight: bold;
-  font-size: rem(16);
+  font-size: rem(13);
   line-height: 1.3;
   color: $text-darker;
   text-transform: uppercase;
-  white-space: nowrap;
+  text-overflow: ellipsis;
   margin-bottom: 4px;
+
+  @media (min-width: 36em) {
+    white-space: nowrap;
+    font-size: rem(16);
+  }
 }
 
 
 .products-item__cost {
   font-weight: bold;
-  font-size: rem(18);
+  font-size: rem(15);
   color: $secondary-color;
+
+  @media (min-width: 36em) {
+    white-space: nowrap;
+    font-size: rem(18);
+  }
 }
 
 
@@ -113,24 +142,5 @@
 }
 
 
-.products-item .button {
-  position: absolute;
-  top: 82px;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  width: 87.7551%;
-  padding: 1.3em;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease-out;
-  z-index: -10;
-}
 
-
-.products-item:hover .button {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-50%, 0%);
-  z-index: 10;
-}
 

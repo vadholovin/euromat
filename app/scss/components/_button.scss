@@ -64,6 +64,31 @@
 }
 
 
+.products-item .button {
+  position: absolute;
+  top: 82px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 1.3em;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-out;
+  z-index: -10;
+
+  @media (min-width: 36em) {
+    width: 87.7551%;
+  }
+}
+
+
+.products-item:hover .button {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+}
+
+
 .banner--design .button {
   width: 410px;
 }
