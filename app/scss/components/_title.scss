@@ -187,10 +187,21 @@
   @include fluid-type($min_width, $max_width, 28px, 56px);
 
   margin-bottom: 10px;
+
+  @media (min-width: 36em) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+
+.title--banner-sale .bigger {
+  margin-right: 24px;
 }
 
 .title--banner-sale .smaller {
   @include fluid-type($min_width, $max_width, 14px, 20px);
 
+  display: block;
   text-transform: none;
 }
