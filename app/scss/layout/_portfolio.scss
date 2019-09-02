@@ -14,3 +14,21 @@
   }
 }
 
+
+.portfolio-slider__item {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+
+.portfolio-slider__item > * {
+  transition: 0.3s ease-out;
+}
+
+
+.portfolio-slider__item.slick-center .card {
+  transform: scale(1.12);
+}
+

@@ -94,6 +94,40 @@
 }
 
 
+.trust-slider {
+  margin-bottom: 8px;
+
+  @media (min-width: 62em) {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 700px;
+  }
+
+  @media (min-width: 80em) {
+    width: 960px;
+  }
+}
+
+
+.trust-slider__item {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  text-align: center;
+}
+
+
+.trust-slider__item img {
+  display: inline-block;
+  filter: grayscale(1);
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+
 /* #Accreditation
    ========================================================================== */
 

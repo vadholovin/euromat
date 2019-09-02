@@ -27,11 +27,11 @@
   display: flex;
   flex-direction: column;
   width: calc(50% - 20px);
-  min-height: 272px;
+  min-height: 260px;
   overflow: hidden;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-top: 42px;
   border-radius: 10px;
   background-color: #f4f4f4;
@@ -49,6 +49,10 @@
   @media (min-width: 36em) {
     width: 245px;
     min-height: 314px;
+  }
+
+  @media (min-width: 62em) {
+    margin-bottom: 40px;
   }
 }
 

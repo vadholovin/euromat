@@ -1,4 +1,4 @@
-let plumber = require('gulp-plumber'),
+const plumber = require('gulp-plumber'),
   pug = require('gulp-pug'),
   pugInheritance = require('gulp-pug-inheritance'),
   changed = require('gulp-changed'),
@@ -6,7 +6,7 @@ let plumber = require('gulp-plumber'),
   gulpif = require('gulp-if'),
   filter = require('gulp-filter');
 
-const SOURCE_DIR = 'app/pug';
+const SOURCE_DIR = 'app/pug/';
 const SOURCE = 'app/pug/**/*.pug';
 const DESTINATION = 'dist'; 
 

@@ -186,7 +186,7 @@
 .slider--portfolio .slick-list,
 .slider--reviews .slick-list,
 .slider--team .slick-list {
-  padding-bottom: 10px;
+  padding-bottom: 10px !important;
 }
 
 
@@ -255,41 +255,6 @@
     margin-right: 30px;
   }
 }
-
-
-.slider--trust {
-  margin-bottom: 8px;
-
-  @media (min-width: 62em) {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 700px;
-  }
-
-  @media (min-width: 80em) {
-    width: 960px;
-  }
-}
-
-
-.slider-item--trust {
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  text-align: center;
-}
-
-
-.slider-item--trust img {
-  display: inline-block;
-  filter: grayscale(1);
-
-  &:hover {
-    filter: grayscale(0);
-  }
-}
-
 
 .slider-nav--trust {
   display: flex;

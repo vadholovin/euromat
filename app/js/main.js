@@ -39,9 +39,9 @@ jQuery(document).ready(function($) {
  * #Hero Slider
  */
 jQuery(document).ready(function($) {
-  var slickEl = $('.js-hero-slider');
+  var slider = $('.js-hero-slider');
 
-  slickEl.slick({
+  slider.slick({
     slidesToShow: 6,
     slidesToScroll: 1,
     infinite: true,
@@ -71,6 +71,16 @@ jQuery(document).ready(function($) {
       },
     ],
   });
+
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickPrev');
+    } else {
+      $(this).slick('slickNext');
+    }
+  }));
 });
 
 
@@ -80,9 +90,9 @@ jQuery(document).ready(function($) {
  * #Portfolio Slider
  */
 jQuery(document).ready(function($) {
-  var slickEl = $('.js-portfolio-slider');
+  var slider = $('.js-portfolio-slider');
 
-  slickEl.slick({
+  slider.slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
@@ -91,6 +101,8 @@ jQuery(document).ready(function($) {
     nextArrow: $('#portfolio-nav .slider-nav__next'),
     pauseOnHover: false,
     pauseOnFocus: false,
+    centerMode: true,
+    centerPadding: '0px',
     responsive: [
       {
         breakpoint: 992,
@@ -116,6 +128,16 @@ jQuery(document).ready(function($) {
       },
     ],
   });
+
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickPrev');
+    } else {
+      $(this).slick('slickNext');
+    }
+  }));
 });
 
 
@@ -125,9 +147,9 @@ jQuery(document).ready(function($) {
  * #Trust Slider
  */
 jQuery(document).ready(function($) {
-  var slickEl = $('.js-trust-slider');
+  var slider = $('.js-trust-slider');
 
-  slickEl.slick({
+  slider.slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     infinite: true,
@@ -151,6 +173,16 @@ jQuery(document).ready(function($) {
       },
     ],
   });
+
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickPrev');
+    } else {
+      $(this).slick('slickNext');
+    }
+  }));
 });
 
 
@@ -160,9 +192,9 @@ jQuery(document).ready(function($) {
  * #Reviews Slider
  */
 jQuery(document).ready(function($) {
-  var slickEl = $('.js-reviews-slider');
+  var slider = $('.js-reviews-slider');
 
-  slickEl.slick({
+  slider.slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
@@ -196,6 +228,16 @@ jQuery(document).ready(function($) {
       },
     ],
   });
+
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickPrev');
+    } else {
+      $(this).slick('slickNext');
+    }
+  }));
 });
 
 
@@ -205,18 +247,18 @@ jQuery(document).ready(function($) {
  * #Team Slider
  */
 jQuery(document).ready(function($) {
-  var slickEl = $('.js-team-slider'),
+  var slider = $('.js-team-slider'),
       current = $('.js-counter-team .slider-counter__current'),
       total = $('.js-counter-team .slider-counter__total'),
       eventSet = 'init reInit afterChange';
 
-  slickEl.on(eventSet, function(event, slick, currentSlide) {
+  slider.on(eventSet, function(event, slick, currentSlide) {
     var i = (currentSlide ? currentSlide : 0) + 1;
     current.text(i);
     total.text(slick.slideCount);
   });
 
-  slickEl.slick({
+  slider.slick({
     slidesToShow: 2,
     slidesToScroll: 1,
     infinite: true,
@@ -226,10 +268,51 @@ jQuery(document).ready(function($) {
     pauseOnHover: false,
     pauseOnFocus: false,
   });
+
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickPrev');
+    } else {
+      $(this).slick('slickNext');
+    }
+  }));
 });
 
 
 
 
+/**
+ * #Map
+ */
+/*
+(function() {
+  ymaps.ready(function() {
+    var centerPoint = (window.innerWidth  < 1280) ?
+      [55.678707, 37.343568] : [55.678707, 37.3478];
 
+    var myMap = new ymaps.Map('map', {
+          center: centerPoint,
+          zoom: 16,
+          controls: ['zoomControl']
+        }),
+        myPlacemark = new ymaps.Placemark([55.678707, 37.343568], {}, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: '../img/icons/place.png',
+          // Размеры метки.
+          iconImageSize: [47, 63],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-30, -70]
+        });
 
+    myMap.geoObjects
+      .add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
+  });
+})();
+*/

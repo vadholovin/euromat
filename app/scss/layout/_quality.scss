@@ -4,7 +4,7 @@
 
 .quality {
   padding-top: 64px;
-  padding-bottom: 60px;
+  padding-bottom: 64px;
 
 
   @media (min-width: 100em) {
@@ -55,22 +55,14 @@
 .quality__list {
   font-size: rem(14);
 
-  @media (min-width: 36em) {
+  // @media (min-width: 36em) {
     display: flex;
-  }
+  // }
 }
 
 
 .quality__item {
-
-  @media (max-width: 35.99em) {
-    margin-bottom: 24px;
-    text-align: center;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  margin-right: 16px;
 
   @media (min-width: 36em) {
     margin-right: 24px;

@@ -162,3 +162,12 @@
     transform: skewX(30deg);
   }
 }
+
+
+.banner-sale .button {
+  
+
+  @media (min-width: 48em) {
+    width: 318px;
+  }
+}
