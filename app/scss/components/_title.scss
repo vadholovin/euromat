@@ -184,7 +184,7 @@
 
 
 .title--banner-sale {
-  @include fluid-type($min_width, $max_width, 28px, 56px);
+  @include fluid-type($min_width, $max_width, 24px, 56px);
 
   margin-bottom: 10px;
 
@@ -204,4 +204,16 @@
 
   display: block;
   text-transform: none;
+}
+
+
+.title--banner-quality {
+  @include fluid-type($min_width, $max_width, 28px, 50px);
+
+  margin-bottom: 16px;
+  text-align: center;
+
+  @media (min-width: 48em) {
+    text-align: left;
+  }
 }
