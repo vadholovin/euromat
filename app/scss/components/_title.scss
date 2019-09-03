@@ -239,3 +239,31 @@
   text-align: center;
   margin-bottom: 46px;
 }
+
+
+.title--budo-features {
+  margin-bottom: 36px;
+
+  @media (min-width: 36em) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @media (min-width: 80em) {
+    margin-bottom: 44px;
+  }
+}
+
+
+.title--budo-features .bigger {
+  display: block;
+  margin-right: 16px;
+}
+
+
+.title--budo-features .smaller {
+  @include fluid-type($min_width, $max_width, 16px, 24px);
+
+  display: block;
+  color: $text-darker;
+}
