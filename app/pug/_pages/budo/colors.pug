@@ -1,0 +1,64 @@
+-
+  var colors = [
+    {
+      title: 'Красно-синие',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Желто-синие',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Желто-зеленые',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Желто-черные',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Красно-зеленые',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Черно-красные',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Черно-серые',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Черно-белые',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+    {
+      title: 'Оранжево-фиолетовые',
+      image: 'img/content/budo-colors/img-1.png'
+    },
+  ];
+
+
+section.budo-colors(style="background-image: url(img/general/pattern-1.png), url(img/general/pattern-3.png);")
+  .container
+    h2.title.title--budo-colors Цветовые решения
+
+    ul.budo-colors__list
+      each color in colors
+        li.budo-colors__item
+          .card.card--budo-colors
+            figure.card-media
+              .card-media__content
+                img(src=color.image, alt="")
+            .card__foot
+              img(src="img/general/card-logo.png", alt="")
+          h2.budo-colors__item-title= color.title
+
+    .budo-colors__foot
+      .budo-colors__foot-text
+        p.budo-colors__foot-heading
+          | Вы можете заказать индивидуальный цвет будо-матов
+        p.budo-colors__foot-subheading
+          | Оставьте заявку и наш специалист свяжется с вами для подробной консультации
+
+      button.button Оставить заявку

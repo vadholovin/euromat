@@ -217,3 +217,19 @@
     text-align: left;
   }
 }
+
+
+.title--budo-colors {
+  @include fluid-type($min_width, $max_width, 24px, 46px);
+
+  margin-bottom: 40px;
+}
+
+
+.title--budo-benefits {
+  margin-bottom: 48px;
+  
+  @media (min-width: 80em) {
+    margin-bottom: 64px;
+  }
+}

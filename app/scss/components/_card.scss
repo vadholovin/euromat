@@ -15,7 +15,8 @@
 
 .card--portfolio,
 .card--office,
-.card--team {
+.card--team,
+.card--budo-colors {
   background-color: #f4f4f4;
 }
 
@@ -25,6 +26,16 @@
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+
+.card--budo-colors {
+
+  @media (min-width: 36em) {
+    padding-top: 21px;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
 }
 
 
@@ -50,6 +61,12 @@
 
 .card--reviews .card-media__content {
   padding-top: 60.8955%;
+  background-color: #555555;
+}
+
+
+.card--budo-colors .card-media__content {
+  padding-top: 54.4585987%;
   background-color: #555555;
 }
 
@@ -123,6 +140,16 @@
 .card--reviews .card__foot {
   padding-top: 14px;
   padding-bottom: 14px;
+}
+
+.card--budo-colors .card__foot {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  @media (min-width: 36em) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 }
 
 

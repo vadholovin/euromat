@@ -56,7 +56,7 @@
 
 
 .banner--price .button {
-  
+
 
   @media (min-width: 48em) {
     width: 360px;
@@ -120,7 +120,7 @@
 
 
 .header-main .button--call {
-  
+
 
   @media (max-width: 61.99em) {
     width: 44px;
@@ -165,9 +165,18 @@
 
 
 .banner-sale .button {
-  
+
 
   @media (min-width: 48em) {
     width: 318px;
+  }
+}
+
+
+.budo-colors__foot .button {
+
+
+  @media (min-width: 48em) {
+    width: 360px;
   }
 }

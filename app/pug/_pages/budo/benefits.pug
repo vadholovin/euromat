@@ -1,0 +1,63 @@
+-
+  var benefits = [
+    {
+      text:`Будо-маты совершенно
+        <br>
+        безвредны`
+    },
+    {
+      text:`Каждая сторона мата
+        <br>
+        является рабочей`
+    },
+    {
+      text:`Вся продукция проходит
+        <br> 
+        обязательную сертификацию`
+    },
+    {
+      text:`Возможность укладки
+        <br>
+        покрытия с различным рисунком`
+    },
+    {
+      text:`Минимизируют риск получения
+        <br>
+        травм во время занятий спортом`
+    },
+    {
+      text:`Текстура поверхности
+        <br>
+        обеспечивает минимальное
+        <br>
+        скольжение`
+    },
+    {
+      text:`Весьма мобильны за счет
+        <br>
+        простоты в монтаже`
+    },
+    {
+      text:`Покрытие легко отмывается, 
+        для этого можно использовать 
+        химические средства`
+    },
+  ]
+
+
+section.budo-benefits(style="background-image: url(img/general/pattern-1.png), url(img/general/pattern-3.png);")
+  .container
+    h2.title.title--budo-benefits Преимущества наших матов
+    .budo-benefits__grid
+      .budo-benefits__col-left
+        ul.budo-benefits__list
+          each benefit in benefits
+            li.budo-benefits__item
+              span.icon.icon-check-circle
+              p.budo-benefits__item-text!= benefit.text
+
+      .budo-benefits__col-right
+        img.budo-benefits__img(
+          src="img/content/budo/budo-img.png",
+          alt=""
+        )

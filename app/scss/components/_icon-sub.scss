@@ -1,0 +1,90 @@
+/* ==========================================================================
+   #ICON-SUB
+   ========================================================================== */
+
+.icon-sub {
+  display: inline-block;
+  font-size: 0;
+  background-image: url(../img/icons/sprites/sprite-sub.png);
+  background-repeat: no-repeat;
+  background-size: 157px 119px;
+
+
+  /* Retina-specific stuff*/
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    background-image: url(../img/icons/sprites/sprite-sub@2x.png);
+  }
+}
+
+
+.icon-sub-ball {
+  width: 29px;
+  height: 29px;
+  background-position: -2px -2px;
+}
+
+.icon-sub-ballerina {
+  width: 30px;
+  height: 30px;
+  background-position: -35px -2px;
+}
+
+.icon-sub-cubes {
+  width: 30px;
+  height: 30px;
+  background-position: -69px -2px;
+}
+
+.icon-sub-floor {
+  width: 26px;
+  height: 26px;
+  background-position: -2px -36px;
+}
+
+.icon-sub-gym {
+  width: 35px;
+  height: 28px;
+  background-position: -32px -36px;
+}
+
+.icon-sub-mall {
+  width: 32px;
+  height: 28px;
+  background-position: -71px -36px;
+}
+
+.icon-sub-punch {
+  width: 30px;
+  height: 30px;
+  background-position: -2px -68px;
+}
+
+.icon-sub-puzzle-part {
+  width: 26px;
+  height: 26px;
+  background-position: -36px -68px;
+}
+
+.icon-sub-religion {
+  width: 23px;
+  height: 37px;
+  background-position: -66px -68px;
+}
+
+.icon-sub-running {
+  width: 36px;
+  height: 28px;
+  background-position: -103px -2px;
+}
+
+.icon-sub-teddy-bear {
+  width: 26px;
+  height: 26px;
+  background-position: -107px -34px;
+}
