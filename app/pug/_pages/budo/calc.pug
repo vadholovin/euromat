@@ -1,0 +1,220 @@
+-
+  var colors_1 = [
+    {
+      img: 'img/content/budo/colors/red-blue.png',
+      title: 'Красно-синие'
+    },
+    {
+      img: 'img/content/budo/colors/yellow-blue.png',
+      title: 'Желто-синие'
+    },
+    {
+      img: 'img/content/budo/colors/yellow-green.png',
+      title: 'Желто-зеленые'
+    },
+    
+  ];
+
+-
+  var colors_2 = [
+    {
+      img: 'img/content/budo/colors/black-green.png',
+      title: 'Черно-зеленые'
+    },
+    {
+      img: 'img/content/budo/colors/orange-violet.png',
+      title: 'Оранжево-фиолетовые'
+    },
+    {
+      img: 'img/content/budo/colors/black-white.png',
+      title: 'Черно-белые'
+    },
+    {
+      img: 'img/content/budo/colors/black-red.png',
+      title: 'Черно-красные'
+    },
+    {
+      img: 'img/content/budo/colors/yellow-black.png',
+      title: 'Желто-черные'
+    },
+    {
+      img: 'img/content/budo/colors/white.png',
+      title: 'Белые'
+    },
+  ];
+
+
+section.budo-calc
+  .container
+    h2.title.title--budo-calc Расчет стоимости покрытия
+
+    .budo-calc__content
+      form.budo-calculator
+        .budo-calculator__top
+          .budo-calculator__top-grid.pure-g
+            .budo-calculator__top-left.pure-u-1.pure-u-lg-7-12
+              .budo-calculator__top-row
+                p.budo-calculator__top-title
+                  | Укажите площадь покрытия (м2):
+                p.budo-calculator__top-subtitle
+                  | Чем больше площадь, тем ниже цена
+
+                .quantity.quantity--budo-calculator
+                  button.quantity__btn.quantity__btn--minus
+                    | -
+                  input.quantity__input#square(
+                    type='text',
+                    name='square',
+                    placeholder='1',
+                    pattern='[0-9]*'
+                  )
+                  button.quantity__btn.quantity__btn--plus
+                    | +
+
+              .budo-calculator__top-row
+                p.budo-calculator__top-title
+                  | Укажите толщину матов:
+                .control-group.control-group--budo-calculator
+                  .control-item
+                    input.visuallyhidden#thickness-1(
+                      type="radio",
+                      name="thickness",
+                      value="1",
+                      checked
+                    )
+                    label.control-item__label(for="thickness-1") 1 см
+
+                  .control-item
+                    input.visuallyhidden#thickness-2(
+                      type="radio",
+                      name="thickness",
+                      value="1.5",
+                    )
+                    label.control-item__label(for="thickness-2") 1,5 см
+
+                  .control-item
+                    input.visuallyhidden#thickness-3(
+                      type="radio",
+                      name="thickness",
+                      value="2",
+                    )
+                    label.control-item__label(for="thickness-3") 2 см
+
+                  .control-item
+                    input.visuallyhidden#thickness-4(
+                      type="radio",
+                      name="thickness",
+                      value="2.5",
+                    )
+                    label.control-item__label(for="thickness-4") 2,5 см
+
+                  .control-item
+                    input.visuallyhidden#thickness-5(
+                      type="radio",
+                      name="thickness",
+                      value="4",
+                    )
+                    label.control-item__label(for="thickness-5") 4 см
+
+
+            .budo-calculator__top-right.pure-u-1.pure-u-lg-5-12
+              p.budo-calculator__top-title  Характеристики
+              ul.budo-calculator__top-list
+                li <b>Толщина:</b> 2,5 см (двухцветные, двухсторонние)
+                li <b>Крепление:</b> Ласточкин хвост
+                li <b>Размер:</b> 100х100 см
+                li <b>Жесткость:</b> 40 ШОР (200кг/м3)
+                li <b>Фактура:</b> Циновка
+                li <b>Производство:</b> Россия
+
+        .budo-calculator__sale
+          p.budo-calculator__title Ликвидация склада
+          .budo-calculator__sale-row
+            .budo-calculator__sale-item
+              b 2 см:
+              span.del 1120 руб
+              b.highlight 920 руб
+            .budo-calculator__sale-item
+              b 4 см:
+              span.del 1720 руб
+              b.highlight 1520 руб
+
+            button.button
+              | Оформить заказ со скидкой
+
+        .budo-calculator__colors
+          p.budo-calculator__title Выберите цвет
+          .pure-g
+            .pure-u-1.pure-u-lg-1-2
+              p.budo-calculator__colors-subtitle популярный цвет
+
+              ul.budo-colors__list.budo-colors__list--budo-calculator
+                each color in colors_1
+                  li.budo-colors__item
+                    .card.card--budo-calculator
+                      figure.card-media
+                        .card-media__content
+                          img(src=color.img, alt="")
+                      .card__foot
+                        img(src="img/general/card-logo.png", alt="")
+                    p.budo-colors__item-title= color.title
+                
+              .budo-calculator__colors-notes
+                p.bigger
+                  | Хочу индивидуальный цвет
+                p.smaller.highlight
+                  | Доступно при заказе от 50 м<sup>2</sup>
+
+            .pure-u-1.pure-u-lg-1-2
+              p.budo-calculator__colors-subtitle
+                span.bigger Эксклюзивный цвет
+                span.smaller.highlight (Заказ от 50 м<sup>2</sup>)
+              ul.budo-colors__list.budo-colors__list--budo-calculator
+                each color in colors_2
+                  li.budo-colors__item
+                    .card.card--budo-calculator
+                      figure.card-media
+                        .card-media__content
+                          img(src=color.img, alt="")
+                      .card__foot
+                        img(src="img/general/card-logo.png", alt="")
+                    p.budo-colors__item-title= color.title
+
+        .budo-calculator__foot
+          p.budo-calculator__title
+            | Вышлем расчет на вашу почту прямо сейчас
+          .budo-calculator__foot-row
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-name") Ваше имя
+              input.form-control(
+                type="text",
+                id="calc-name",
+                name="calc-name",
+                placeholder="Ваше имя"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-email") Ваш e-mail
+              input.form-control(
+                type="text",
+                id="calc-email",
+                name="calc-email",
+                placeholder="Ваш e-mail"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-phone") Номер телефона
+              input.form-control(
+                type="tel",
+                id="calc-phone",
+                name="calc-phone",
+                placeholder="Номер телефона"
+              )
+            button.button(type="submit") Рассчитать стоимость
+
+
+          p.budo-calculator__title
+            | Нужна консультация специалиста?
+            button.button.button--call(
+              title="Заказать обратный звонок"
+            )
+              span.icon.icon-phone
+

@@ -52,13 +52,16 @@
 .budo-features__set-item {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 50%;
   margin-bottom: 40px;
   padding-left: 15px;
   padding-right: 15px;
+  text-align: center;
 
   @media (min-width: 36em) {
     flex-wrap: nowrap;
+    text-align: left;
   }
 }
 
