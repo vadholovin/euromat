@@ -180,3 +180,16 @@
     width: 360px;
   }
 }
+
+
+.budo-audience .button {
+  font-size: rem(13);
+
+  @media (min-width: 24em) {
+    font-size: rem(14);
+  }
+
+  @media (min-width: 80em) {
+    width: 362px;
+  }
+}
