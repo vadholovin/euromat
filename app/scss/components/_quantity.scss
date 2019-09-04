@@ -3,27 +3,49 @@
    ========================================================================== */
 
 .quantity {
-
+  display: flex;
 }
 
 
 .quantity__btn {
-
+  width: 52px;
+  border: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 30px;
+  color: $primary-color;
+  background-color: #eee;
 }
 
 
-.quantity__btn--minus {
+.quantity__btn,
+.quantity__input {
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+}
 
+
+
+.quantity__btn--minus {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 
 .quantity__btn--plus {
-
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 
 .quantity__input {
-
+  width: 120px;
+  border: 0;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: #fbfbfb;
+  box-shadow: none;
 }
 
 

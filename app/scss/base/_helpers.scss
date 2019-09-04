@@ -88,6 +88,29 @@
 }
 
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+
 .button-wrapper {
   text-align: center;
 }
+
+
+.del {
+  position: relative;
+  color: $text-light;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid $secondary-color;
+  }
+}
+

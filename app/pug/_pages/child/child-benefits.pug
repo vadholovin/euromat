@@ -1,0 +1,64 @@
+-
+  var benefits = [
+    {
+      text:`Пожаробезопасен`
+    },
+    {
+      text:`Покрытие не скользит
+        <br>
+        и не обжигает при трении`
+    },
+    {
+      text:`Эффект теплого пола
+        <br>
+        приятное на ощупь`
+    },
+    {
+      text:`Два цвета с обоих сторон
+        <br>
+        дольше служит, свой дизайн пола`
+    },
+    {
+      text:`Присоединения креплений
+        <br>
+        перехода почти не видно`
+    },
+    {
+      text:`Не собирает пыль и
+        <br>
+        легко моется`
+    },
+    {
+      text:`Износостойкий материал
+        <br>
+        прослужит более 15 лет`
+    },
+    {
+      text:`Хорошо поглощает удары
+        <br>
+        при падении`
+    },
+  ]
+
+
+section.child-benefits
+  .container
+    h2.title.title--child-benefits
+      | Преимущества детского пола
+    .child-benefits__grid
+      .child-benefits__col-left
+        ul.child-benefits__list
+          each benefit in benefits
+            li.child-benefits__item
+              span.icon.icon-check-circle
+              p.child-benefits__item-text!= benefit.text
+
+      .child-benefits__col-right
+        img.child-benefits__img(
+          src="img/content/child/child-img.png",
+          alt=""
+        )
+
+    .flex-center
+      button.button
+        | Оставить заявку <span>на рассчет детского пола</span>

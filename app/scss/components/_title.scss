@@ -74,7 +74,7 @@
 .title--quality {
   margin-bottom: 16px;
   text-align: left;
-  
+
 
   @media (min-width: 62em) {
     margin-bottom: 20px;
@@ -137,7 +137,7 @@
 
 
 .title--banner-dealer {
-  
+
   @media (max-width: 61.99em) {
     margin-bottom: 8px;
   }
@@ -170,7 +170,7 @@
 
 .title--contacts {
   @include fluid-type($min_width, $max_width, 24px, 36px);
-  
+
   margin-bottom: 48px;
   text-align: left;
 
@@ -228,7 +228,7 @@
 
 .title--budo-benefits {
   margin-bottom: 48px;
-  
+
   @media (min-width: 80em) {
     margin-bottom: 64px;
   }
@@ -271,4 +271,22 @@
 
 .title--budo-calc {
   margin-bottom: 40px;
+}
+
+
+.title--child-about {
+  margin-bottom: 38px;
+
+  @media (min-width: 36em) {
+    text-align: left;
+  }
+}
+
+
+.title--child-benefits {
+  margin-bottom: 48px;
+
+  @media (min-width: 80em) {
+    margin-bottom: 64px;
+  }
 }

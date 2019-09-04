@@ -8,7 +8,7 @@
   vertical-align: middle;
   user-select: none;
   border: 0;
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 1.45em;
   font-weight: bold;
   font-size: rem(15);
@@ -42,6 +42,7 @@
 
   @media (min-width: 48em) {
     font-size: rem(16);
+    border-radius: 14px;
   }
 }
 
@@ -198,4 +199,54 @@
 .budo-features .button {
   width: 225px;
   margin-left: 32px;
+}
+
+.budo-calculator__sale .button {
+  font-size: rem(12);
+  border-radius: 8px;
+
+  @media (min-width: 90em) {
+    width: 300px;
+  }
+}
+
+
+.budo-calculator__foot-row .button {
+  font-size: rem(14);
+  border-radius: 8px;
+  padding: 1.4em;
+
+  @media (min-width: 90em) {
+    width: 276px;
+  }
+}
+
+
+.budo-calculator__title .button--call {
+  margin-left: 30px;
+}
+
+
+.child-benefits .button {
+
+  @media (min-width: 48em) {
+    width: 530px;
+  }
+}
+
+
+.child-benefits .button span {
+  
+
+  @media (max-width: 35.99em) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
 }
