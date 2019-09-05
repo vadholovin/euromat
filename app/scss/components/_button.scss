@@ -47,6 +47,30 @@
 }
 
 
+.button--call {
+  width: 62px;
+  height: 62px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+
+.button-extra-text {
+
+  @media (max-width: 35.99em) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+}
+
+
 .form--hero-widget .button {
   width: 100%;
   font-size: rem(15);
@@ -92,11 +116,6 @@
 
 .banner--design .button {
 
-  @media (max-width: 35.99em) {
-    .extra-text {
-      display: none;
-    }
-  }
 
   @media (min-width: 48em) {
     width: 410px;
@@ -109,14 +128,6 @@
   @media (min-width: 36em) {
     width: 318px;
   }
-}
-
-
-.button--call {
-  width: 62px;
-  height: 62px;
-  padding: 0;
-  vertical-align: middle;
 }
 
 
@@ -201,6 +212,7 @@
   margin-left: 32px;
 }
 
+
 .budo-calculator__sale .button {
   font-size: rem(12);
   border-radius: 8px;
@@ -235,18 +247,17 @@
 }
 
 
-.child-benefits .button span {
-  
+.mat-about .button {
 
-  @media (max-width: 35.99em) {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
+  @media (min-width: 62em) {
+    width: 360px;
+  }
+}
+
+
+.content-box--mat-options .content-box__bottom .button {
+
+  @media (min-width: 80em) {
+    width: 460px;
   }
 }

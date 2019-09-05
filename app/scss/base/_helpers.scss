@@ -82,9 +82,35 @@
   color: $secondary-color;
 }
 
-.d-flex-wrapped {
+.d-flex-wrapped,
+.flex-wrapped {
   display: flex;
   flex-wrap: wrap;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+
+.fx-wrap {
+  flex-wrap: wrap;
+}
+
+
+.jc-between {
+  justify-content: space-between;
+}
+
+
+.jc-center {
+  justify-content: center;
+}
+
+
+.ai-center {
+  align-items: center;
 }
 
 

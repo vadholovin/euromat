@@ -1,0 +1,70 @@
+-
+  var colors = [
+    {
+      title: 'Цвет 011',
+      subtitle: 'Красный',
+      image: 'img/content/mat/colors/mat-red.png'
+    },
+    {
+      title: 'Цвет 012',
+      subtitle: 'Оранжевый',
+      image: 'img/content/mat/colors/mat-orange.png'
+    },
+    {
+      title: 'Цвет 013',
+      subtitle: 'Желтый',
+      image: 'img/content/mat/colors/mat-yellow.png'
+    },
+    {
+      title: 'Цвет 014',
+      subtitle: 'Бежевый',
+      image: 'img/content/mat/colors/mat-beige.png'
+    },
+    {
+      title: 'Цвет 015',
+      subtitle: 'Белый',
+      image: 'img/content/mat/colors/mat-white.png'
+    },
+    {
+      title: 'Цвет 016',
+      subtitle: 'Синий',
+      image: 'img/content/mat/colors/mat-blue.png'
+    },
+    {
+      title: 'Цвет 017',
+      subtitle: 'Светло-синий',
+      image: 'img/content/mat/colors/mat-lightblue.png'
+    },
+    {
+      title: 'Цвет 018',
+      subtitle: 'Зеленый',
+      image: 'img/content/mat/colors/mat-green.png'
+    },
+    {
+      title: 'Цвет 019',
+      subtitle: 'Серый',
+      image: 'img/content/mat/colors/mat-grey.png'
+    },
+    {
+      title: 'Цвет 020',
+      subtitle: 'Черный',
+      image: 'img/content/mat/colors/mat-black.png'
+    },
+  ];
+
+
+section.mat-colors(style="background-image: url(img/general/pattern-3.png);")
+  .container
+    h2.title.title--mat-colors Цветовые решения
+
+    ul.mat-colors__list
+      each color in colors
+        li.mat-colors__item
+          .card.card--mat-colors
+            figure.card-media
+              .card-media__content
+                img(src=color.image, alt="")
+            .card__foot
+              img(src="img/general/card-logo.png", alt="")
+          p.mat-colors__item-title= color.title
+          p.mat-colors__item-subtitle= color.subtitle

@@ -290,3 +290,22 @@
     margin-bottom: 64px;
   }
 }
+
+
+.title--mat-about {
+  margin-bottom: 16px;
+
+  @media (min-width: 62em) {
+    text-align: left;
+  }
+}
+
+
+.title--mat-colors {
+
+}
+
+
+.title--mat-options {
+  margin-bottom: 30px;
+}

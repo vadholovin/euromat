@@ -1,0 +1,105 @@
+/* ==========================================================================
+   #CONTENT-BOX
+   ========================================================================== */
+
+.content-box {
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+.content-box__module {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.content-box__inner {
+  width: 100%;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.content-box__label {
+  display: block;
+  font-weight: bold;
+}
+
+
+/* #content-box--mat-options
+   ========================================================================== */
+
+.content-box--mat-options .content-box__top {
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+
+
+.content-box--mat-options .content-box__bottom {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  text-align: center;
+
+
+  @media (min-width: 62em) {
+    text-align: left;
+  }
+}
+
+
+.content-box--mat-options .content-box__top-col {
+  margin-bottom: 16px;
+}
+
+
+.content-box--mat-options .content-box__label {
+  margin-right: 10px;
+}
+
+
+.content-box--mat-options .content-box__top-row,
+.content-box--mat-options .content-box__bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.content-box--mat-options .content-box__bottom-row {
+
+
+  @media (max-width: 61.99em) {
+    justify-content: center;
+  }
+}
+
+
+.content-box--mat-options .content-box__top-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.content-box--mat-options .content-box__bottom-notes {
+  margin-bottom: 16px;
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: 1.25;
+  color: $primary-color;
+  text-transform: uppercase;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 80em) {
+    font-size: rem(20);
+  }
+}
+
