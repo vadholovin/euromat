@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #PRODUCT-CALC
+   ========================================================================== */
+
+.product-calc {
+  padding-top: 64px;
+  padding-bottom: 60px;
+  background-color: #f4f4f4;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @media (min-width: 80em) {
+    padding-bottom: 80px;
+  }
+}

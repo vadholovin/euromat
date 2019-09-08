@@ -1,0 +1,269 @@
+-
+  var equipment = [
+    {
+      image: 'https://via.placeholder.com/125x77',
+      title: `Покрышка
+      <br>
+      + маты`
+    },
+    {
+      image: 'https://via.placeholder.com/125x77',
+      title: `Покрышка
+        <br>
+        (без мата)`
+    },
+    {
+      image: 'https://via.placeholder.com/125x77',
+      title: `Маты
+      <br>
+      (под покрышку)`
+    },
+  ];
+-
+  var thickness = [
+    {
+      title: '1 х 2 х 00.3 м'
+    },
+    {
+      title: '1 х 2 х 00.4 м'
+    },
+    {
+      title: '1 х 2 х 00.5 м'
+    },
+    {
+      title: '1 х 2 х 00.6 м'
+    },
+  ];
+-
+  var design = [
+    {
+      image: 'img/content/carpet/features/classic.png',
+      title: 'Классика'
+    },
+    {
+      image: 'img/content/carpet/features/fias.png',
+      title: 'fias'
+    },
+    {
+      image: 'img/content/carpet/features/uww.png',
+      title: 'uww'
+    },
+    {
+      image: 'img/content/carpet/features/monochrome.png',
+      title: 'Одноцветный'
+    },
+  ];
+-
+  var material = [
+    {
+      image: 'img/content/carpet/features/matte.png',
+      title: 'Матовая'
+    },
+    {
+      image: 'img/content/carpet/features/gloss.png',
+      title: 'Глянцевая'
+    },
+  ];
+-
+  var mount = [
+    {
+      image: 'img/content/carpet/features/cringle.png',
+      title: 'Люверсы'
+    },
+    {
+      image: 'img/content/carpet/features/pocket.png',
+      title: 'Карманы'
+    },
+    {
+      image: 'img/content/carpet/features/velcro.png',
+      title: 'Велькро'
+    },
+  ];
+-
+  var mat = [
+    {
+      image: 'img/content/carpet/features/start.jpg',
+      title: 'Старт'
+    },
+    {
+      image: 'img/content/carpet/features/standard.jpg',
+      title: 'Стандарт'
+    },
+    {
+      image: 'img/content/carpet/features/pro.jpg',
+      title: 'Профи'
+    },
+    {
+      image: 'img/content/carpet/features/expert.jpg',
+      title: 'Эксперт'
+    },
+  ];
+
+
+section.product-calc.product-calc--carpet-calc
+  .container
+    h2.title.title--carpet-calc
+      | Калькулятор стоимости борцовского ковра
+
+    .content-box.content-box--carpet-calc
+      .content-box__body.content-box__module
+        .content-box__inner
+          h3.content-box__title Выбор татами за 5 шагов
+
+          .content-box__inner-module
+            .pure-g.negative-m-3
+              .pure-u-1.pure-u-lg-1-2
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 1. Укажите площадь покрытия (м<sup>2</sup>):
+                  .quantity.quantity--carpet-calc
+                    button.quantity__btn.quantity__btn--minus -
+                    input.quantity__input#square(
+                      type='text',
+                      name='square',
+                      placeholder='1',
+                      pattern='[0-9]*'
+                    )
+                    button.quantity__btn.quantity__btn--plus +
+                  p.content-box__notes.highlight
+                    | Чем больше площадь, тем ниже цена
+
+                  p.carpet-calc__variants-title
+                    | Стандартные варианты исполнения  на производстве:
+                  ul.carpet-calc__variants
+                    li.carpet-calc__variants-item
+                      | 6х6 м
+                    li.carpet-calc__variants-item
+                      | 8х8 м
+                    li.carpet-calc__variants-item
+                      | 10х10 м
+                    li.carpet-calc__variants-item
+                      | 12х12 м
+
+
+                  .content-box__unit
+                    p.content-box__label
+                      | Шаг 2. Выберите нужную комплектацию
+                    ul.card-list.card-list--carpet-equipment.negative-m-2
+                      each item in equipment
+                        li.card-list__item
+                          .card.card--bg
+                            figure.card-media
+                              .card-media__content
+                                img(src=item.image, alt="")
+                            .card__foot
+                              img(src="img/general/card-logo.png", alt="")
+                          .card-list__item-foot
+                            span.card-list__item-title!= item.title
+
+                  .content-box__unit
+                    p.content-box__label
+                      | Шаг 3. Выберите толщину матов:
+                    .control-group
+                      each item, index in thickness
+                        .control-item
+                          input.visuallyhidden(
+                            type="radio",
+                            name="thickness",
+                            id= "thickness-" + (index+1),
+                            value= item.value,
+                          )
+                          label.control-item__label(
+                            for="thickness-" + (index+1)
+                          )=  item.title
+
+              .pure-u-1.pure-u-lg-1-2
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 4.Выберите вариант оформления покрышки:
+                  ul.image-box__list.image-box__list--carpet-design
+                    each item in design
+                      .image-box
+                        .image-box__img
+                          img(
+                            src= item.image,
+                            alt=""
+                          )
+                        .image-box__foot
+                          span.image-box__title= item.title
+
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг.5 Выберите тип ткани:
+                  ul.image-box__list.image-box__list--carpet-material
+                    each item in material
+                      .image-box
+                        .image-box__img
+                          img(
+                            src= item.image,
+                            alt=""
+                          )
+                        .image-box__foot
+                          span.image-box__title= item.title
+
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 6. Выберите тип крепления:
+                  ul.image-box__list.image-box__list--carpet-mount
+                    each item in mount
+                      .image-box
+                        .image-box__img
+                          img(
+                            src= item.image,
+                            alt=""
+                          )
+                        .image-box__foot
+                          span.image-box__title= item.title
+
+            .content-box__unit
+              p.content-box__label.ta-center
+                | Шаг 7. Маты под борцовскую покрышку
+              ul.card-list.card-list--carpet-equipment.negative-m-2
+                each item in mat
+                  li.card-list__item
+                    .card.card--bg
+                      figure.card-media
+                        .card-media__content
+                          img(src=item.image, alt="")
+                      .card__foot
+                        img(src="img/general/card-logo.png", alt="")
+                    .card-list__item-foot
+                      span.card-list__item-title= item.title
+
+      .content-box__foot.content-box__module
+        .content-box__inner
+          h3.content-box__title
+            | Вышлем расчет на вашу почту прямо сейчас
+          .content-box__controls-row
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-name") Ваше имя
+              input.form-control(
+                type="text",
+                id="calc-name",
+                name="calc-name",
+                placeholder="Ваше имя"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-email") Ваш e-mail
+              input.form-control(
+                type="text",
+                id="calc-email",
+                name="calc-email",
+                placeholder="Ваш e-mail"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-phone") Номер телефона
+              input.form-control(
+                type="tel",
+                id="calc-phone",
+                name="calc-phone",
+                placeholder="Номер телефона"
+              )
+            button.button(type="submit") Рассчитать стоимость
+
+          h3.content-box__title
+            | Нужна консультация специалиста?
+            button.button.button--call(
+              title="Заказать обратный звонок"
+            )
+              span.icon.icon-phone

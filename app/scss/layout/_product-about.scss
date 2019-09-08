@@ -1,0 +1,108 @@
+/* ==========================================================================
+   #.PRODUCT-ABOUT
+   ========================================================================== */
+
+.product-about {
+  position: relative;
+  padding-top: 36px;
+  padding-bottom: 60px;
+  font-weight: 500;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: left -350px bottom -400px;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+
+.product-about__lead {
+  margin-bottom: 24px;
+}
+
+
+.product-about__content {
+  padding-bottom: 20px;
+}
+
+
+.product-about__content p,
+.product-about__img {
+  margin-bottom: 24px;
+}
+
+
+.product-about__heading {
+  font-size: rem(18);
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+
+.product-about__foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(183, 183, 183, 0.4);
+
+  @media (min-width: 90em) {
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+
+.product-about__foot-content {
+  width: 100%;
+  margin-bottom: 32px;
+
+  @media (min-width: 90em) {
+    margin-bottom: 0;
+    max-width: 730px;
+  }
+}
+
+
+.product-about__foot-heading {
+  font-weight: bold;
+  font-size: rem(20);
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+
+.product-about__foot-subheading {
+  font-weight: 600;
+}
+
+
+
+/* #product-about--carpet
+   ========================================================================== */
+
+.product-about--carpet .product-about__img {
+  position: relative;
+  display: block;
+  width: 280px;
+  max-width: 598px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 62em) {
+    margin-left: 20px;
+    margin-right: 0;
+    float: right;
+    width: 31.14583333vw;
+    
+  }
+
+  @media (min-width: 80em) {
+    margin-right: -75px;
+  }
+}
+
+
+.product-about--carpet .product-about__lead {
+  max-width: 1120px;
+}

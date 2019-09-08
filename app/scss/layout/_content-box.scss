@@ -42,6 +42,7 @@
   color: $primary-color;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
 
@@ -57,6 +58,13 @@
   @media (min-width: 62em) {
     flex-direction: row;
   }
+}
+
+
+.content-box__foot {
+  padding-top: 24px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 
@@ -149,13 +157,6 @@
 }
 
 
-.content-box--tatami-calc .content-box__foot {
-  padding-top: 24px;
-  padding-bottom: 10px;
-  border-top: 1px solid rgba(0, 0, 0, .1);
-}
-
-
 .content-box--tatami-calc .content-box__title {
   margin-bottom: 24px;
 }
@@ -172,4 +173,12 @@
   color: $text-darker;
   text-transform: uppercase;
   text-align: center;
+}
+
+
+/* #content-box--carpet-calc
+   ========================================================================== */
+
+.content-box--carpet-calc {
+  
 }

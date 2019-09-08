@@ -272,6 +272,15 @@
 }
 
 
+.product-about__foot .button {
+
+
+  @media (min-width: 62em) {
+    width: 360px;
+  }
+}
+
+
 .content-box__controls-row .button {
   font-size: rem(14);
   border-radius: 8px;

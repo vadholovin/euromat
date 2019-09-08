@@ -338,3 +338,20 @@
     margin-bottom: 50px;
   }
 }
+
+
+.title--banner-equipment {
+  @include fluid-type($min_width, $max_width, 24px, 36px);
+
+  margin-bottom: 32px;
+  max-width: 840px;
+}
+
+
+.title--tatami-about {
+  margin-bottom: 12px;
+
+  @media (min-width: 62em) {
+    text-align: left;
+  }
+}

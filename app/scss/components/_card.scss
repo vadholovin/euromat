@@ -20,7 +20,13 @@
 
 
 .card-list__item-title {
+  display: block;
   font-weight: bold;
+}
+
+
+.card-list__item-subtitle {
+  display: block;
 }
 
 
