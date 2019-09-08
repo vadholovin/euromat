@@ -82,6 +82,10 @@
   color: $secondary-color;
 }
 
+.ta-center {
+  text-align: center;
+}
+
 .d-flex-wrapped,
 .flex-wrapped {
   display: flex;
@@ -140,3 +144,37 @@
   }
 }
 
+.negative-m-1 {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+
+.negative-m-1 > * {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+
+.negative-m-2 {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+
+.negative-m-2 > * {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+.negative-m-3 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+.negative-m-3 > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}

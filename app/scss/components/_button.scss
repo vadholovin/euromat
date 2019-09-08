@@ -261,3 +261,38 @@
     width: 460px;
   }
 }
+
+
+.tatami-about__foot .button {
+
+
+  @media (min-width: 62em) {
+    width: 360px;
+  }
+}
+
+
+.content-box__controls-row .button {
+  font-size: rem(14);
+  border-radius: 8px;
+  padding: 1.4em;
+
+  @media (min-width: 90em) {
+    width: 276px;
+  }
+}
+
+
+.content-box__title .button--call {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 48em) {
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 0;
+  }
+}

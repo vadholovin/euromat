@@ -23,9 +23,40 @@
 }
 
 
+.content-box__unit {
+  margin-bottom: 40px;
+}
+
+
 .content-box__label {
   display: block;
   font-weight: bold;
+}
+
+
+.content-box__title {
+  @include fluid-type($min_width, $max_width, 18px, 22px);
+
+  font-weight: bold;
+  line-height: 1.15;
+  color: $primary-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.content-box__controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 36px;
+
+
+  @media (min-width: 62em) {
+    flex-direction: row;
+  }
 }
 
 
@@ -103,3 +134,42 @@
   }
 }
 
+
+
+/* #content-box--tatami-calc
+   ========================================================================== */
+
+.content-box--tatami-calc .content-box__body {
+  padding-top: 36px;
+  padding-bottom: 36px;
+
+  @media (min-width: 80em) {
+    padding-bottom: 48px;
+  }
+}
+
+
+.content-box--tatami-calc .content-box__foot {
+  padding-top: 24px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+
+.content-box--tatami-calc .content-box__title {
+  margin-bottom: 24px;
+}
+
+
+.content-box--tatami-calc .content-box__label {
+  margin-bottom: 16px;
+}
+
+
+.content-box--tatami-calc .content-box__label--bigger {
+  margin-bottom: 28px;
+  font-size: rem(18);
+  color: $text-darker;
+  text-transform: uppercase;
+  text-align: center;
+}

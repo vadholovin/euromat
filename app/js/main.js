@@ -282,6 +282,18 @@ jQuery(document).ready(function($) {
 
 
 
+/**
+ * #Fancybox init
+ */
+jQuery(document).ready(function($) {
+  $('[data-fancybox]').fancybox({
+    buttons: [
+      'close',
+    ],
+  });
+});
+
+
 
 /**
  * #Map

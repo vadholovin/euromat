@@ -219,3 +219,31 @@ input:checked ~ label .form__acceptance-mask:after {
   border: 0;
   background-color: #eee;
 }
+
+
+/* #content-box__controls-row
+   ========================================================================== */
+
+.content-box__controls-row .form-control__wrapper {
+  width: 100%;
+  max-width: 240px;
+  margin-bottom: 12px;
+
+  @media (min-width: 62em) {
+    max-width: 210px;
+    margin-right: 12px;
+  }
+
+  @media (min-width: 80em) {
+    margin-bottom: 0;
+  }
+}
+
+
+.content-box__controls-row .form-control {
+  padding: 18px 16px 18px 20px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #eee;
+}
+

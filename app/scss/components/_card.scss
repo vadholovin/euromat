@@ -13,10 +13,22 @@
 }
 
 
+.card-list__item-foot {
+  padding-top: 16px;
+  text-align: center;
+}
+
+
+.card-list__item-title {
+  font-weight: bold;
+}
+
+
 .card--portfolio,
 .card--office,
 .card--team,
-.card--budo-colors {
+.card--budo-colors,
+.card--bg {
   background-color: #f4f4f4;
 }
 
@@ -86,7 +98,7 @@
 }
 
 
-.card-media__content > * {
+.card-media__content>* {
   position: absolute;
   top: 0;
   left: 0;
@@ -95,11 +107,11 @@
 }
 
 
-.card-media__content > iframe {
+.card-media__content>iframe {
   display: none;
 }
 
-.card-media__content > img {
+.card-media__content>img {
   object-fit: cover;
 }
 
@@ -149,6 +161,7 @@
 
 .card__foot img {
   display: block;
+  width: 78%;
 }
 
 
@@ -227,9 +240,12 @@
 
 
 .card--mat-options {
-  padding-top: 12px;
-  padding-right: 18px;
-  padding-left: 18px;
+
+  @media (min-width: 62em) {
+    padding-top: 12px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
 }
 
 
@@ -240,6 +256,181 @@
 
 
 .card--mat-options .card__foot {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  @media (min-width: 62em) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+
+.card--mat-colors .card-media__content {
+  padding-top: 58.62%;
+  background-color: #eee;
+}
+
+
+.card--mat-colors .card__foot {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+
+/* #card-list--tatami-sorts
+   ========================================================================== */
+
+.card-list--tatami-sorts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.card-list--tatami-sorts .card {
+
+
+  @media (min-width: 36em) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+
+.card-list--tatami-sorts .card-media__content {
+  padding-top: 44.9%;
+}
+
+
+.card-list--tatami-sorts .card-list__item {
+  width: 50%;
+  max-width: 300px;
+}
+
+
+.card-list--tatami-sorts .card-list__item-title {
+  text-transform: uppercase;
+
+  @media (min-width: 36em) {
+    font-size: rem(18);
+  }
+}
+
+
+.card-list--tatami-sorts .card-list__item-subtitle {
+  font-size: rem(14);
+  line-height: 1.2;
+}
+
+
+.card-list--tatami-sorts .card__foot {
+
+  @media (min-width: 36em) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+
+/* #card-list--tatami-colors
+   ========================================================================== */
+
+.card-list--tatami-colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+
+.card-list--tatami-colors .card-list__item {
+  width: 50%;
+  max-width: 156px;
+  margin-bottom: 16px;
+
+  @media (min-width: 80em) {
+    width: 33.333333%;
+  }
+}
+
+
+.card-list--tatami-colors .card-media__content {
+  padding-top: 54.8387%;
+}
+
+
+.card-list--tatami-colors .card-list__item-foot {
+  padding-top: 12px;
+  font-size: rem(13);
+}
+
+
+/* #card-list--tatami-backs
+   ========================================================================== */
+
+.card-list--tatami-backs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -21px;
+  margin-right: -21px;
+  margin-left: -2.142857%;
+  margin-right: -2.142857%;
+}
+
+
+.card-list--tatami-backs .card {
+
+  @media (min-width: 48em) {
+    padding-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+.card-list--tatami-backs .card-list__item {
+  width: 50%;
+  max-width: calc(300px + 4.285714%);
+  margin-bottom: 24px;
+  padding-left: 2.142857%;
+  padding-right: 2.142857%;
+
+  @media (min-width: 36em) {
+    width: 33.333333%;
+  }
+}
+
+
+.card-list--tatami-backs .card-media__content {
+  padding-top: 44.9%;
+}
+
+
+.card-list--tatami-backs .card-list__item-foot {
+
+
+  @media (min-width: 48em) {
+    padding-top: 12px;
+  }
+}
+
+.card-list--tatami-backs .card-list__item-title {
+  text-transform: uppercase;
+  font-size: rem(14);
+
+  @media (min-width: 48em) {
+    font-size: rem(18);
+  }
+}
+
+
+.card-list--tatami-backs .card-list__item-subtitle {
+  font-size: rem(14);
+  line-height: 1.2;
+
+  @media (min-width: 36em) {
+    font-size: rem(16);
+  }
 }

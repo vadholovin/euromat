@@ -1,0 +1,330 @@
+-
+  var densities = [
+    {
+      value: '160',
+      label: '160 кг/м<sup>2</sup>'
+    },
+    {
+      value: '180',
+      label: '160 кг/м<sup>2</sup>'
+    },
+    {
+      value: '200',
+      label: '200 кг/м<sup>2</sup>'
+    },
+    {
+      value: '220',
+      label: '220 кг/м<sup>2</sup>'
+    },
+    {
+      value: '240',
+      label: '240 кг/м<sup>2</sup>'
+    },
+  ];
+
+-
+  var sizes = [
+    {
+      value: '1',
+      label: '1 х 1 х 0.04 м'
+    },
+    {
+      value: '2',
+      label: '1 х 2 х 0.04 м'
+    },
+  ];
+
+-
+  var sorts = [
+    {
+      image: 'img/content/tatami/material/img-4.jpg',
+      title: 'ППЭ',
+      subtitle: 'Пенополиэтилен высокого качества'
+    },
+    {
+      image: 'img/content/tatami/material/img-3.jpg',
+      title: 'ПВВ',
+      subtitle: 'Поролон вторичного вспенивания'
+    },
+  ];
+
+-
+  var colors_1 = [
+    {
+      image: 'img/content/tatami/colors/red.png',
+      title: 'Цвет 001',
+      subtitle: 'Красный'
+    },
+    {
+      image: 'img/content/tatami/colors/yellow.png',
+      title: 'Цвет 002',
+      subtitle: 'Желтый'
+    },
+    {
+      image: 'img/content/tatami/colors/olive.png',
+      title: 'Цвет 003',
+      subtitle: 'Оливковый'
+    },
+    {
+      image: 'img/content/tatami/colors/green.png',
+      title: 'Цвет 004',
+      subtitle: 'Зеленый'
+    },
+    {
+      image: 'img/content/tatami/colors/darkblue.png',
+      title: 'Цвет 005',
+      subtitle: 'Темно-синий'
+    },
+    {
+      image: 'img/content/tatami/colors/lightblue.png',
+      title: 'Цвет 005',
+      subtitle: 'Светло-синий'
+    },
+    {
+      image: 'img/content/tatami/colors/white.png',
+      title: 'Цвет 007',
+      subtitle: 'Белый'
+    },
+    {
+      image: 'img/content/tatami/colors/grey.png',
+      title: 'Цвет 008',
+      subtitle: 'Серый'
+    },
+    {
+      image: 'img/content/tatami/colors/black.png',
+      title: 'Цвет 009',
+      subtitle: 'Черный'
+    },
+  ];
+
+-
+  var colors_2 = [
+    {
+      image: 'img/content/colors/red.png',
+      title: 'Цвет 011',
+      subtitle: 'Красный'
+    },
+    {
+      image: 'img/content/colors/yellow.png',
+      title: 'Цвет 012',
+      subtitle: 'Желтый'
+    },
+    {
+      image: 'img/content/colors/beige.png',
+      title: 'Цвет 013',
+      subtitle: 'Бежевый'
+    },
+    {
+      image: 'img/content/colors/blue.png',
+      title: 'Цвет 014',
+      subtitle: 'Синий'
+    },
+    {
+      image: 'img/content/colors/lightblue.png',
+      title: 'Цвет 015',
+      subtitle: 'Светло-синий'
+    },
+    {
+      image: 'img/content/colors/green.png',
+      title: 'Цвет 016',
+      subtitle: 'Зеленый'
+    },
+    {
+      image: 'img/content/colors/white.png',
+      title: 'Цвет 017',
+      subtitle: 'Белый'
+    },
+    {
+      image: 'img/content/colors/grey.png',
+      title: 'Цвет 019',
+      subtitle: 'Серый'
+    },
+    {
+      image: 'img/content/colors/black.png',
+      title: 'Цвет 019',
+      subtitle: 'Черный'
+    },
+  ];
+
+-
+  var backs = [
+    {
+      image: 'img/content/tatami/material/img-1.jpg',
+      title: 'Antislip',
+      subtitle: 'Натуральный каучук'
+    },
+    {
+      image: 'img/content/tatami/material/img-2.jpg',
+      title: 'закрытый низ',
+      subtitle: 'Пупырчатый ПВХ'
+    },
+    {
+      image: 'img/content/tatami/material/img-3.jpg',
+      title: 'открытый низ',
+      subtitle: 'ПВВ'
+    },
+  ];
+
+
+
+section.tatami-calc(
+  style="background-image: url(img/general/pattern-3.png);"
+)
+  .container
+    h2.title.title--tatami-calc
+      | Расчет стоимости покрытия татами
+
+    .content-box.content-box--tatami-calc
+      .content-box__body.content-box__module
+        .content-box__inner
+          h3.content-box__title Выбор татами за 5 шагов
+
+          .content-box__inner-module
+            .pure-g.negative-m-3
+              .pure-u-1.pure-u-lg-5-12
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 1. Выберите варианты плотности:
+                  .control-group
+                    each item, index in densities
+                      .control-item
+                        input.visuallyhidden(
+                          type="radio",
+                          name="density",
+                          id= "density-" + (index+1),
+                          value= item.value,
+                        )
+                        label.control-item__label(
+                          for="density-" + (index+1)
+                        )!= item.label 
+
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 2. Выберите размер:
+                  .control-group
+                    each item, index in sizes
+                      .control-item
+                        input.visuallyhidden(
+                          type="radio",
+                          name="size",
+                          id= "size-" + (index+1),
+                          value= item.value,
+                        )
+                        label.control-item__label(
+                          for="size-" + (index+1)
+                        )!=  item.label
+
+              .pure-u-1.pure-u-lg-7-12
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 3. Выберите вид мата в татами:
+                  ul.card-list.card-list--tatami-sorts.negative-m-2
+                    each item in sorts
+                      li.card-list__item
+                        .card.card--bg
+                          figure.card-media
+                            .card-media__content
+                              img(src=item.image, alt="")
+                          .card__foot
+                            img(src="img/general/card-logo.png", alt="")
+                        .card-list__item-foot
+                          p.card-list__item-title= item.title
+                          p.card-list__item-subtitle= item.subtitle
+
+          .content-box__inner-module
+            p.content-box__label.content-box__label--bigger
+              | Шаг 4. Выберите тип  и цвет ткани
+            .pure-g.negative-m-3
+              .pure-u-1.pure-u-xl-1-2
+                p.content-box__label.ta-center
+                  | Рисовая соломка –
+                  br
+                  | ткань классического татами (Judo)
+
+                ul.card-list.card-list--tatami-colors.negative-m-2
+                  each item in colors_1
+                    li.card-list__item
+                      .card.card--bg
+                        figure.card-media
+                          .card-media__content
+                            img(src=item.image, alt="")
+                        .card__foot
+                          img(src="img/general/card-logo.png", alt="")
+                      .card-list__item-foot
+                        p.card-list__item-title= item.title
+                        p.card-list__item-subtitle= item.subtitle
+
+
+              .pure-u-1.pure-u-xl-1-2
+                p.content-box__label.ta-center
+                  | Гладкая ПВХ –
+                  br
+                  | ткань гладкого татами
+                ul.card-list.card-list--tatami-colors.negative-m-2
+                  each item in colors_2
+                    li.card-list__item
+                      .card.card--bg
+                        figure.card-media
+                          .card-media__content
+                            img(src=item.image, alt="")
+                        .card__foot
+                          img(src="img/general/card-logo.png", alt="")
+                      .card-list__item-foot
+                        p.card-list__item-title= item.title
+                        p.card-list__item-subtitle= item.subtitle
+
+          .content-box__inner-module
+            p.content-box__label
+              | Шаг 5. Выберите типы нижнего покрытия:
+            ul.card-list.card-list--tatami-backs
+              each item in backs
+                li.card-list__item
+                  .card.card--bg
+                    figure.card-media
+                      .card-media__content
+                        img(src=item.image, alt="")
+                    .card__foot
+                      img(src="img/general/card-logo.png", alt="")
+                  .card-list__item-foot
+                    p.card-list__item-title= item.title
+                    p.card-list__item-subtitle= item.subtitle
+
+      .content-box__foot.content-box__module
+        .content-box__inner
+          h3.content-box__title
+            | Вышлем расчет на вашу почту прямо сейчас
+          .content-box__controls-row
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-name") Ваше имя
+              input.form-control(
+                type="text",
+                id="calc-name",
+                name="calc-name",
+                placeholder="Ваше имя"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-email") Ваш e-mail
+              input.form-control(
+                type="text",
+                id="calc-email",
+                name="calc-email",
+                placeholder="Ваш e-mail"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-phone") Номер телефона
+              input.form-control(
+                type="tel",
+                id="calc-phone",
+                name="calc-phone",
+                placeholder="Номер телефона"
+              )
+            button.button(type="submit") Рассчитать стоимость
+
+          h3.content-box__title
+            | Нужна консультация специалиста?
+            button.button.button--call(
+              title="Заказать обратный звонок"
+            )
+              span.icon.icon-phone
+
+

@@ -19,7 +19,7 @@
 
 
 .title--hero {
-  @include fluid-type($min_width, $max_width, 22px, 42px);
+  @include fluid-type($min_width, $max_width, 24px, 42px);
 
   margin-bottom: 12px;
 
@@ -184,9 +184,13 @@
 
 
 .title--banner-sale {
-  @include fluid-type($min_width, $max_width, 24px, 56px);
+  @include fluid-type($min_width, $max_width, 32px, 56px);
 
   margin-bottom: 10px;
+
+  @media (max-width: 35.99em) {
+    text-align: center;
+  }
 
   @media (min-width: 36em) {
     display: flex;
@@ -302,10 +306,35 @@
 
 
 .title--mat-colors {
+  @include fluid-type($min_width, $max_width, 24px, 48px);
 
+  margin-bottom: 32px;
 }
 
 
 .title--mat-options {
   margin-bottom: 30px;
+}
+
+
+.title--tatami-about {
+  @include fluid-type($min_width, $max_width, 24px, 44px);
+
+  margin-bottom: 20px;
+
+  @media (min-width: 62em) {
+    text-align: left;
+    margin-top: 28px;
+  }
+}
+
+
+.title--tatami-calc {
+  @include fluid-type($min_width, $max_width, 24px, 46px);
+
+  margin-bottom: 40px;
+
+  @media (min-width: 80em) {
+    margin-bottom: 50px;
+  }
 }

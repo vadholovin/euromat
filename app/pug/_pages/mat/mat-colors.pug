@@ -3,52 +3,52 @@
     {
       title: 'Цвет 011',
       subtitle: 'Красный',
-      image: 'img/content/mat/colors/mat-red.png'
+      image: 'img/content/colors/red.png'
     },
     {
       title: 'Цвет 012',
       subtitle: 'Оранжевый',
-      image: 'img/content/mat/colors/mat-orange.png'
+      image: 'img/content/colors/orange.png'
     },
     {
       title: 'Цвет 013',
       subtitle: 'Желтый',
-      image: 'img/content/mat/colors/mat-yellow.png'
+      image: 'img/content/colors/yellow.png'
     },
     {
       title: 'Цвет 014',
       subtitle: 'Бежевый',
-      image: 'img/content/mat/colors/mat-beige.png'
+      image: 'img/content/colors/beige.png'
     },
     {
       title: 'Цвет 015',
       subtitle: 'Белый',
-      image: 'img/content/mat/colors/mat-white.png'
+      image: 'img/content/colors/white.png'
     },
     {
       title: 'Цвет 016',
       subtitle: 'Синий',
-      image: 'img/content/mat/colors/mat-blue.png'
+      image: 'img/content/colors/blue.png'
     },
     {
       title: 'Цвет 017',
       subtitle: 'Светло-синий',
-      image: 'img/content/mat/colors/mat-lightblue.png'
+      image: 'img/content/colors/lightblue.png'
     },
     {
       title: 'Цвет 018',
       subtitle: 'Зеленый',
-      image: 'img/content/mat/colors/mat-green.png'
+      image: 'img/content/colors/green.png'
     },
     {
       title: 'Цвет 019',
       subtitle: 'Серый',
-      image: 'img/content/mat/colors/mat-grey.png'
+      image: 'img/content/colors/grey.png'
     },
     {
       title: 'Цвет 020',
       subtitle: 'Черный',
-      image: 'img/content/mat/colors/mat-black.png'
+      image: 'img/content/colors/black.png'
     },
   ];
 
@@ -66,5 +66,6 @@ section.mat-colors(style="background-image: url(img/general/pattern-3.png);")
                 img(src=color.image, alt="")
             .card__foot
               img(src="img/general/card-logo.png", alt="")
-          p.mat-colors__item-title= color.title
-          p.mat-colors__item-subtitle= color.subtitle
+          .mat-colors__item-foot
+            p.mat-colors__item-title= color.title
+            p.mat-colors__item-subtitle= color.subtitle
