@@ -38,7 +38,7 @@
 }
 
 
-input:checked ~ label .form__acceptance-mask:after {
+input:checked~label .form__acceptance-mask:after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -245,5 +245,51 @@ input:checked ~ label .form__acceptance-mask:after {
   border-radius: 5px;
   border: 0;
   background-color: #eee;
+}
+
+
+
+/* #form--modal
+   ========================================================================== */
+
+.form--modal .form-control__wrapper {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 22px;
+  }
+}
+
+
+.form--modal .form-control {
+  padding: 0.9em 1.5em;
+  border-radius: 30px;
+  font-size: rem(16);
+}
+
+
+.form--modal .form__head {
+  font-weight: 800;
+  color: $primary-color;
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.form--modal .form__title {
+  @include fluid-type($min_width, $max_width, 24px, 36px);
+
+  line-height: inherit;
+  margin-bottom: 8px;
+}
+
+
+.form--modal .form__subtitle {
+  // @include fluid-type($min_width, $max_width, 18px, 20px);
+
+  font-size: rem(15);
+  line-height: inherit;
+  margin-bottom: 24px;
 }
 

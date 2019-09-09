@@ -6,20 +6,20 @@ const plumber = require('gulp-plumber'),
   gulpif = require('gulp-if'),
   filter = require('gulp-filter');
 
-const SOURCE_DIR = 'app/pug/';
-const SOURCE = 'app/pug/**/*.pug';
-const DESTINATION = 'dist'; 
+const sourceDir = 'app/pug/';
+const source = 'app/pug/**/*.pug';
+const dest = 'dist'; 
 
 module.exports = function () {
   $.gulp.task('pug', () => {
-    return $.gulp.src(SOURCE)
+    return $.gulp.src(source)
       .pipe(plumber())
-      .pipe(changed(DESTINATION, {
+      .pipe(changed(dest, {
         extension: '.html'
       }))
       .pipe(gulpif(global.isWatching, cached('pug')))
       .pipe(pugInheritance({
-        basedir: SOURCE_DIR,
+        basedir: sourceDir,
         skip: 'node_modules'
       }))
       .pipe(filter(function (file) {
@@ -29,7 +29,7 @@ module.exports = function () {
         pretty: true
       }))
       .pipe(plumber.stop())
-      .pipe($.gulp.dest(DESTINATION))
+      .pipe($.gulp.dest(dest))
       .on('end', $.browserSync.reload);
   });
 };

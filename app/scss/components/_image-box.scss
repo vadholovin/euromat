@@ -1,0 +1,69 @@
+/* ==========================================================================
+   #IMAGE-BOX   ========================================================================== */
+
+.image-box {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+
+.image-box__img {
+  
+}
+
+
+.image-box__foot {
+  padding-top: 8px;
+}
+
+
+.image-box__title {
+  display: block;
+  font-weight: bold;
+  font-size: rem(13);
+}
+
+
+/* #image-box__list--carpet-design
+   ========================================================================== */
+
+.image-box__list--carpet-design {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.image-box__list--carpet-design .image-box {
+  width: 50%;
+  margin-bottom: 16px;
+
+  @media (min-width: 36em) {
+    width: 25%;
+  }
+}
+
+
+/* #image-box__list--carpet-material
+   ========================================================================== */
+
+.image-box__list--carpet-material {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.image-box__list--carpet-material .image-box {
+  width: 50%;
+}
+
+
+/* #image-box__list--carpet-mount
+   ========================================================================== */
+
+.image-box__list--carpet-mount {
+  display: flex;
+  justify-content: space-between;
+}

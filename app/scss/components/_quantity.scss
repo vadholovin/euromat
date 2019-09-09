@@ -23,6 +23,11 @@
   height: 52px;
   line-height: 52px;
   text-align: center;
+
+  
+  &:focus {
+    outline: none;
+  }
 }
 
 
@@ -56,5 +61,10 @@
 
 .quantity--budo-calculator .quantity__input {
 
+}
+
+
+.quantity--carpet-calc {
+  margin-bottom: 8px;
 }
 

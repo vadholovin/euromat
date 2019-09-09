@@ -9,6 +9,11 @@
 }
 
 
+.content-box__body {
+  padding-top: 45px;
+}
+
+
 .content-box__module {
   padding-left: 30px;
   padding-right: 30px;
@@ -31,6 +36,14 @@
 .content-box__label {
   display: block;
   font-weight: bold;
+  margin-bottom: 16px;
+}
+
+
+.content-box__notes {
+  display: block;
+  font-weight: bold;
+  font-size: rem(13);
 }
 
 
@@ -175,10 +188,3 @@
   text-align: center;
 }
 
-
-/* #content-box--carpet-calc
-   ========================================================================== */
-
-.content-box--carpet-calc {
-  
-}

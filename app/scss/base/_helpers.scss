@@ -78,8 +78,23 @@
   clear: both;
 }
 
+
 .highlight {
   color: $secondary-color;
+}
+
+
+.checked {
+  opacity: 1;
+}
+
+.unchecked {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .ta-center {
@@ -177,4 +192,16 @@
 .negative-m-3 > * {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+
+.negative-m-6 {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+
+.negative-m-6 > * {
+  padding-left: 24px;
+  padding-right: 24px;
 }

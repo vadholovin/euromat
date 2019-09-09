@@ -5,11 +5,36 @@
 .product-calc {
   padding-top: 64px;
   padding-bottom: 60px;
-  background-color: #f4f4f4;
-  background-repeat: no-repeat;
-  background-position: bottom right;
+  background-image: linear-gradient(to right, #e8e7ef 0%, #f4f4f4 100%);
+}
 
-  @media (min-width: 80em) {
-    padding-bottom: 80px;
+
+.product-calc__variants-title {
+  margin-bottom: 16px;
+  font-size: rem(14);
+}
+
+
+.product-calc__variants-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.product-calc__variants-list > * + * {
+  border-left: 3px solid #eeeeee;
+}
+
+
+.product-calc__variants-item {
+  font-weight: 500;
+  font-size: rem(14);
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @media (min-width: 48em) {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }

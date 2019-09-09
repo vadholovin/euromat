@@ -4,19 +4,22 @@
       image: 'https://via.placeholder.com/125x77',
       title: `Покрышка
       <br>
-      + маты`
+      + маты`,
+      value: 'full'
     },
     {
       image: 'https://via.placeholder.com/125x77',
       title: `Покрышка
         <br>
-        (без мата)`
+        (без мата)`,
+        value: 'cover'
     },
     {
       image: 'https://via.placeholder.com/125x77',
       title: `Маты
       <br>
-      (под покрышку)`
+      (под покрышку)`,
+      value: 'mat'
     },
   ];
 -
@@ -38,64 +41,77 @@
   var design = [
     {
       image: 'img/content/carpet/features/classic.png',
-      title: 'Классика'
+      title: 'Классика',
+      value: 'classic'
     },
     {
       image: 'img/content/carpet/features/fias.png',
-      title: 'fias'
+      title: 'FIAS',
+      value: 'fias'
     },
     {
       image: 'img/content/carpet/features/uww.png',
-      title: 'uww'
+      title: 'UWW',
+      value: 'uww'
     },
     {
       image: 'img/content/carpet/features/monochrome.png',
-      title: 'Одноцветный'
+      title: 'Одноцветный',
+      value: 'mono'
     },
   ];
 -
   var material = [
     {
       image: 'img/content/carpet/features/matte.png',
-      title: 'Матовая'
+      title: 'Матовая',
+      value: 'matte'
     },
     {
       image: 'img/content/carpet/features/gloss.png',
-      title: 'Глянцевая'
+      title: 'Глянцевая',
+      value: 'gloss'
     },
   ];
 -
   var mount = [
     {
       image: 'img/content/carpet/features/cringle.png',
-      title: 'Люверсы'
+      title: 'Люверсы',
+      value: 'cringle'
     },
     {
       image: 'img/content/carpet/features/pocket.png',
-      title: 'Карманы'
+      title: 'Карманы',
+      value: 'pocket'
     },
     {
       image: 'img/content/carpet/features/velcro.png',
-      title: 'Велькро'
+      title: 'Велькро',
+      value: 'velcro'
     },
   ];
 -
   var mat = [
     {
       image: 'img/content/carpet/features/start.jpg',
-      title: 'Старт'
+      title: 'Старт',
+      value: 'start'
     },
     {
       image: 'img/content/carpet/features/standard.jpg',
-      title: 'Стандарт'
+      title: 'Стандарт',
+      value: 'standard'
     },
     {
       image: 'img/content/carpet/features/pro.jpg',
-      title: 'Профи'
+      title: 'Профи',
+      value: 'pro'
     },
     {
       image: 'img/content/carpet/features/expert.jpg',
-      title: 'Эксперт'
+      title: 'Эксперт',
+      value: 'expert'
     },
   ];
 
@@ -108,10 +124,11 @@ section.product-calc.product-calc--carpet-calc
     .content-box.content-box--carpet-calc
       .content-box__body.content-box__module
         .content-box__inner
-          h3.content-box__title Выбор татами за 5 шагов
+          h3.content-box__title
+            | Выбор борцовского ковра за 7 шагов
 
           .content-box__inner-module
-            .pure-g.negative-m-3
+            .pure-g.negative-m-6
               .pure-u-1.pure-u-lg-1-2
                 .content-box__unit
                   p.content-box__label
@@ -121,64 +138,75 @@ section.product-calc.product-calc--carpet-calc
                     input.quantity__input#square(
                       type='text',
                       name='square',
-                      placeholder='1',
+                      placeholder='0',
                       pattern='[0-9]*'
                     )
                     button.quantity__btn.quantity__btn--plus +
                   p.content-box__notes.highlight
                     | Чем больше площадь, тем ниже цена
+                .content-box__unit
+                  .product-calc__variants.product-calc__variants--carpet-calc
+                    p.product-calc__variants-title
+                      | Стандартные варианты исполнения  на производстве:
+                    ul.product-calc__variants-list
+                      li.product-calc__variants-item
+                        | 6х6 м
+                      li.product-calc__variants-item
+                        | 8х8 м
+                      li.product-calc__variants-item
+                        | 10х10 м
+                      li.product-calc__variants-item
+                        | 12х12 м
 
-                  p.carpet-calc__variants-title
-                    | Стандартные варианты исполнения  на производстве:
-                  ul.carpet-calc__variants
-                    li.carpet-calc__variants-item
-                      | 6х6 м
-                    li.carpet-calc__variants-item
-                      | 8х8 м
-                    li.carpet-calc__variants-item
-                      | 10х10 м
-                    li.carpet-calc__variants-item
-                      | 12х12 м
-
-
-                  .content-box__unit
-                    p.content-box__label
-                      | Шаг 2. Выберите нужную комплектацию
-                    ul.card-list.card-list--carpet-equipment.negative-m-2
-                      each item in equipment
-                        li.card-list__item
-                          .card.card--bg
-                            figure.card-media
-                              .card-media__content
-                                img(src=item.image, alt="")
-                            .card__foot
-                              img(src="img/general/card-logo.png", alt="")
-                          .card-list__item-foot
-                            span.card-list__item-title!= item.title
-
-                  .content-box__unit
-                    p.content-box__label
-                      | Шаг 3. Выберите толщину матов:
-                    .control-group
-                      each item, index in thickness
-                        .control-item
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 2. Выберите нужную комплектацию
+                  ul.card-list.card-list--carpet-equipment.negative-m-2
+                    each item, index in equipment
+                      li.card-list__item.js-check
+                        .card.card--bg
+                          figure.card-media
+                            .card-media__content
+                              img(src=item.image, alt="")
+                          .card__foot
+                            img(src="img/general/card-logo.png", alt="")
+                        .card-list__item-foot
+                          span.card-list__item-title!= item.title
+                        .control-box
                           input.visuallyhidden(
-                            type="radio",
-                            name="thickness",
-                            id= "thickness-" + (index+1),
-                            value= item.value,
+                          type="radio",
+                          name="equipment",
+                          id= "equipment-" + (index+1),
+                          value= item.value,
                           )
-                          label.control-item__label(
-                            for="thickness-" + (index+1)
-                          )=  item.title
+                          label.control-box__label(
+                            for="equipment-" + (index+1)
+                          )
+
+
+                .content-box__unit
+                  p.content-box__label
+                    | Шаг 3. Выберите толщину матов:
+                  .control-group
+                    each item, index in thickness
+                      .control-item
+                        input.visuallyhidden(
+                          type="radio",
+                          name="thickness",
+                          id= "thickness-" + (index+1),
+                          value= item.value,
+                        )
+                        label.control-item__label(
+                          for="thickness-" + (index+1)
+                        )=  item.title
 
               .pure-u-1.pure-u-lg-1-2
                 .content-box__unit
                   p.content-box__label
                     | Шаг 4.Выберите вариант оформления покрышки:
-                  ul.image-box__list.image-box__list--carpet-design
-                    each item in design
-                      .image-box
+                  .image-box__list.image-box__list--carpet-design.negative-m-1
+                    each item, index in design
+                      .image-box.js-check
                         .image-box__img
                           img(
                             src= item.image,
@@ -186,13 +214,23 @@ section.product-calc.product-calc--carpet-calc
                           )
                         .image-box__foot
                           span.image-box__title= item.title
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="design",
+                          id= "design-" + (index+1),
+                          value= item.value,
+                          )
+                          label.control-box__label(
+                            for="design-" + (index+1)
+                          )
 
                 .content-box__unit
                   p.content-box__label
                     | Шаг.5 Выберите тип ткани:
-                  ul.image-box__list.image-box__list--carpet-material
-                    each item in material
-                      .image-box
+                  ul.image-box__list.image-box__list--carpet-material.negative-m-2
+                    each item, index in material
+                      .image-box.js-check
                         .image-box__img
                           img(
                             src= item.image,
@@ -200,13 +238,23 @@ section.product-calc.product-calc--carpet-calc
                           )
                         .image-box__foot
                           span.image-box__title= item.title
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="material",
+                          id= "material-" + (index+1),
+                          value= item.value,
+                          )
+                          label.control-box__label(
+                            for="material-" + (index+1)
+                          )
 
                 .content-box__unit
                   p.content-box__label
                     | Шаг 6. Выберите тип крепления:
-                  ul.image-box__list.image-box__list--carpet-mount
-                    each item in mount
-                      .image-box
+                  ul.image-box__list.image-box__list--carpet-mount.negative-m-1
+                    each item, index in mount
+                      .image-box.js-check
                         .image-box__img
                           img(
                             src= item.image,
@@ -214,13 +262,23 @@ section.product-calc.product-calc--carpet-calc
                           )
                         .image-box__foot
                           span.image-box__title= item.title
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="mount",
+                          id= "mount-" + (index+1),
+                          value= item.value,
+                          )
+                          label.control-box__label(
+                            for="mount-" + (index+1)
+                          )
 
             .content-box__unit
               p.content-box__label.ta-center
                 | Шаг 7. Маты под борцовскую покрышку
-              ul.card-list.card-list--carpet-equipment.negative-m-2
-                each item in mat
-                  li.card-list__item
+              ul.card-list.card-list--carpet-mat
+                each item, index in mat
+                  li.card-list__item.js-check
                     .card.card--bg
                       figure.card-media
                         .card-media__content
@@ -229,6 +287,16 @@ section.product-calc.product-calc--carpet-calc
                         img(src="img/general/card-logo.png", alt="")
                     .card-list__item-foot
                       span.card-list__item-title= item.title
+                    .control-box
+                      input.visuallyhidden(
+                      type="radio",
+                      name="mat",
+                      id= "mat-" + (index+1),
+                      value= item.value,
+                      )
+                      label.control-box__label(
+                        for="mat-" + (index+1)
+                      )
 
       .content-box__foot.content-box__module
         .content-box__inner

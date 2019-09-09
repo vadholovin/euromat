@@ -50,6 +50,8 @@ jQuery(document).ready(function($) {
     nextArrow: $('#hero-nav .slider-nav__next'),
     pauseOnHover: false,
     pauseOnFocus: false,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 992,
@@ -290,6 +292,58 @@ jQuery(document).ready(function($) {
     buttons: [
       'close',
     ],
+  });
+});
+
+
+
+/**
+ * Micromodal init
+ * 1. Prevent page scrolling when a modal is open
+ */
+(function() {
+  let body = document.body,
+      site = document.documentElement;
+
+  MicroModal.init({
+    onShow: function() {
+      body.classList.add('is-overflowed'); /* 1 */
+      site.classList.add('is-overflowed'); /* 1 */
+    },
+    onClose: function() {
+      body.classList.remove('is-overflowed'); /* 1 */
+      site.classList.remove('is-overflowed'); /* 1 */
+    },
+  });
+})();
+
+
+/**
+ * Calc
+ */
+jQuery(document).ready(function($) {
+  // Check Radios
+  $('.js-check').click(function() {
+    $(this).siblings().removeClass('checked').addClass('unchecked');
+    $('.js-check').has(':checked').removeClass('unchecked').addClass('checked');
+  });
+
+  // Increase quantity
+  $('.quantity').click(function(e) { 
+    e.preventDefault();
+    var plus = $(this).find('.quantity__btn--plus'),
+        minus = $(this).find('.quantity__btn--minus'),
+        field = $(this).find('.quantity__input'),
+        fieldVal = +field.val(),
+        target = $(event.target);
+
+    if (target.is(plus)) {
+      field.val(fieldVal += 1);
+    } else if (target.is(minus)) {
+      if (fieldVal > 0) {
+        field.val(fieldVal -= 1);
+      }
+    }
   });
 });
 

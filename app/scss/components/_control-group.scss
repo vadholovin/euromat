@@ -42,7 +42,11 @@ input:checked ~ .control-item__label {
 }
 
 
-.control-group--budo-calculator {
-
+.control-box__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
-
