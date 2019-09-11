@@ -4,7 +4,8 @@
 
 .product-about {
   position: relative;
-  padding-top: 36px;
+  // padding-top: 36px;
+  padding-top: 64px;
   padding-bottom: 60px;
   font-weight: 500;
   background-color: #ffffff;
@@ -12,6 +13,10 @@
   background-position: left -350px bottom -400px;
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.3);
   z-index: 10;
+
+  @media (min-width: 80em) {
+    padding-top: 74px;
+  }
 }
 
 
@@ -106,3 +111,53 @@
 .product-about--carpet .product-about__lead {
   max-width: 1120px;
 }
+
+
+/* #product-about--roll
+   ========================================================================== */
+
+.product-about--roll .product-about__main {
+  padding-bottom: 48px;
+
+  @media (min-width: 80em) {
+    padding-bottom: 70px;
+  }
+}
+
+
+.product-about--roll .product-about__content {
+
+  @media (min-width: 62em) {
+    width: 55%;
+    margin-right: 30px;
+    float: left;
+  }
+
+  @media (min-width: 90em) {
+    width: 53%;
+  }
+}
+
+
+.product-about--roll .product-about__img {
+  position: relative;
+  display: block;
+  width: 280px;
+  max-width: 552px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 62em) {
+    margin-top: 32px;
+    margin-right: 0;
+    margin-left: 0;
+    float: right;
+    width: 40%;
+  }
+
+  @media (min-width: 110em) {
+    width: 28.75vw;
+    margin-right: -70px;
+  }
+}
+

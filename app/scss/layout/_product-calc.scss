@@ -38,3 +38,53 @@
     padding-right: 24px;
   }
 }
+
+
+/* #product-calc--roll
+   ========================================================================== */
+
+.roll-calc__options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+.roll-calc__options-col {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.roll-calc__options-col--left {
+  margin-right: auto;
+}
+
+
+.roll-calc__options-col--right {
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.roll-calc__options-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.roll-calc__options-info .content-box__label {
+  margin-top: 16px;
+}

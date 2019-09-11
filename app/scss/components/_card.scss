@@ -27,11 +27,13 @@
 .card-list__item-title {
   display: block;
   font-weight: bold;
+  color: $text-darker;
 }
 
 
 .card-list__item-subtitle {
   display: block;
+  line-height: 1.25;
 }
 
 
@@ -651,4 +653,130 @@
 
 .card-list--carpet-colors .card-list__item--double .card__foot img {
   width: 38.83%;
+}
+
+
+/* #card-list--roll-cover
+   ========================================================================== */
+
+.card-list--roll-cover {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.card-list--roll-cover .card-list__item {
+  width: 100%;
+  margin-bottom: 16px;
+
+  @media (min-width: 36em) {
+    width: 50%;
+  }
+
+  @media (min-width: 48em) {
+    width: 33.333333%;
+  }
+}
+
+
+.card-list--roll-cover .card {
+  max-width: 300px;
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+
+.card-list--roll-cover .card-media__content {
+  padding-top: 44.94382%;
+}
+
+
+.card-list--roll-cover .card__foot {
+
+
+  @media (min-width: 36em) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+
+.card-list--roll-cover .card-list__item-title {
+  text-transform: uppercase;
+  font-size: rem(14);
+
+  @media (min-width: 62em) {
+    font-size: rem(17);
+  }
+}
+
+
+.card-list--roll-filling .card-list__item-sutitle {
+  font-size: rem(14);
+
+  @media (min-width: 62em) {
+    font-size: rem(16);
+  }
+}
+
+
+/* #card-list--roll-filling
+   ========================================================================== */
+
+.card-list--roll-filling {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.card-list--roll-filling .card-list__item {
+  width: 100%;
+  margin-bottom: 16px;
+
+  @media (min-width: 36em) {
+    width: 50%;
+  }
+}
+
+
+.card-list--roll-filling .card {
+  max-width: 300px;
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+
+.card-list--roll-filling .card-media__content {
+  padding-top: 44.94382%;
+}
+
+
+.card-list--roll-filling .card__foot {
+
+
+  @media (min-width: 36em) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+
+.card-list--roll-filling .card-list__item-title {
+  text-transform: uppercase;
+  font-size: rem(14);
+
+  @media (min-width: 62em) {
+    font-size: rem(17);
+  }
+}
+
+
+.card-list--roll-filling .card-list__item-sutitle {
+  font-size: rem(14);
+
+  @media (min-width: 62em) {
+    font-size: rem(16);
+  }
 }

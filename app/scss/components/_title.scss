@@ -372,3 +372,19 @@
     padding-top: 50px;
   }
 }
+
+
+.title--roll-about {
+  @include fluid-type($min_width, $max_width, 24px, 44px);
+
+  margin-bottom: 32px;
+
+  @media (min-width: 62em) {
+    text-align: left;
+  }
+}
+
+
+.title--roll-calc {
+  margin-bottom: 24px;
+}

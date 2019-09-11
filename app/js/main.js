@@ -48,10 +48,10 @@ jQuery(document).ready(function($) {
     dots: false,
     prevArrow: $('#hero-nav .slider-nav__prev'),
     nextArrow: $('#hero-nav .slider-nav__next'),
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    // pauseOnHover: false,
+    // pauseOnFocus: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 992,

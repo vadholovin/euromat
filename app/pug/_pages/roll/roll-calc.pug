@@ -1,0 +1,217 @@
+-
+  var cover = [
+    {
+      title: ` Judо ткань`,
+      subtitle: `Рисовая соломка`,
+      image: 'img/content/roll/judo-cloth.jpg'
+    },
+    {
+      title: `гимнастический ворс`,
+      subtitle: `Идеальное скольжение <br> для гимнастики`,
+      image: 'img/content/roll/gym-pile.jpg'
+    },
+    {
+      title: `Искусственная кожа`,
+      subtitle: `Высокая износостойкость противоскользящее напыление`, 
+      image: 'img/content/roll/faux-leather.jpg',
+    },
+  ];
+-
+  var filling = [
+    {
+      title: `Наполнение Ппэ - Старт`,
+      subtitle: `Плотность 140-160 кг/м<sup>3</sup>`,
+      image: 'img/content/roll/start.jpg'
+    },
+    {
+      title: `Наполнение ППЭ - стандарт`,
+      subtitle: `Плотность 180 кг/м<sup>3</sup>`,
+      image: 'img/content/roll/standard.jpg'
+    },
+  ];
+-
+  var thickness = [
+    {
+      title: '20 мм',
+      subtitle: '– бокс / тхеквандо / карате / фитнес',
+      value: '20 мм'
+    },
+    {
+      title: '30 мм',
+      subtitle: '– гимнастика / кик-боксинг',
+      value: '30 мм'
+    },
+    {
+      title: '40 мм',
+      subtitle: '– смешанные / восточные единоборства',
+      value: '40 мм'
+    },
+    {
+      title: '50 мм',
+      subtitle: '– спортивная борьба / акробатика',
+      value: '50 мм'
+    },
+  ];
+-
+  var density = [
+    {
+      title: `160 кг/м<sup>3</sup>`,
+      value: '160 кг/м3'
+    },
+    {
+      title: `180 кг/м<sup>3</sup>`,
+      value: '180 кг/м3'
+    },
+  ];
+
+
+section.product-calc.product-calc--roll
+  .container
+    h2.title.title--roll-calc
+      | Расчет стоимости ролл-матов
+
+    .content-box.content-box--roll-calc
+      .content-box__body.content-box__module
+        .content-box__inner
+          h3.content-box__title
+            | Выбор ролл-мата за 4 шага
+          .content-box__unit
+            p.content-box__label.ta-center
+              | Шаг 1. Выберите верхнее покрытие ролл-мата:
+            ul.card-list.card-list--roll-cover.negative-m-3
+              each item, index in cover
+                li.card-list__item.js-check
+                  .card.card--bg
+                    figure.card-media
+                      .card-media__content
+                        img(src=item.image, alt="")
+                    .card__foot
+                      img(src="img/general/card-logo.png", alt="")
+                  .card-list__item-foot
+                    span.card-list__item-title!= item.title
+                    span.card-list__item-subtitle!= item.subtitle
+                  .control-box
+                    input.visuallyhidden(
+                    type="radio",
+                    name="cover",
+                    id= "cover-" + (index+1),
+                    value= item.value,
+                    )
+                    label.control-box__label(
+                      for="cover-" + (index+1)
+                    )
+                    span.control-box__flag
+
+          .content-box__unit
+            .pure-g.negative-m-3
+              .pure-u-1.pure-u-lg-1-3
+                p.content-box__label
+                  | Шаг 2. Выберите наполнение ролл-мата:
+              
+              .pure-u-1.pure-u-lg-2-3
+                ul.card-list.card-list--roll-filling.negative-m-3
+                  each item, index in filling
+                    li.card-list__item.js-check
+                      .card.card--bg
+                        figure.card-media
+                          .card-media__content
+                            img(src=item.image, alt="")
+                        .card__foot
+                          img(src="img/general/card-logo.png", alt="")
+                      .card-list__item-foot
+                        span.card-list__item-title!= item.title
+                        span.card-list__item-subtitle!= item.subtitle
+                      .control-box
+                        input.visuallyhidden(
+                        type="radio",
+                        name="filling",
+                        id= "filling-" + (index+1),
+                        value= item.value,
+                        )
+                        label.control-box__label(
+                          for="filling-" + (index+1)
+                        )
+                        span.control-box__flag
+          
+      .content-box__module
+        .content-box__inner
+          .roll-calc__options
+            .roll-calc__options-col.roll-calc__options-col--left
+              .content-box__unit
+                p.content-box__label
+                  | Шаг 3. Выберите толщину ролл-мата:
+                  .control-group.control-group--roll-thickness
+                    each item, index in thickness
+                      .control-item__wrapper
+                        .control-item
+                          input.visuallyhidden(
+                            type="radio",
+                            name="thickness",
+                            id= "thickness-" + (index+1),
+                            value= item.value,
+                          )
+                          label.control-item__label(
+                            for="thickness-" + (index+1)
+                          )=  item.title
+                        span.control-item__text= item.subtitle
+
+            .roll-calc__options-col.roll-calc__options-col--right
+              .content-box__unit
+                p.content-box__label
+                  | Шаг 4. Выберите плотность ролл-матов:
+                .control-group.control-group--roll-density
+                  each item, index in density
+                    .control-item
+                      input.visuallyhidden(
+                        type="radio",
+                        name="density",
+                        id= "density-" + (index+1),
+                        value= item.value,
+                      )
+                      label.control-item__label(
+                        for="density-" + (index+1)
+                      )!=  item.title
+                .roll-calc__options-info
+                  p.content-box__label Длина ролл-матов:
+                  .control-item__label до 25 метров
+                .roll-calc__options-info
+                  p.content-box__label Ширина ролл-матов:
+                  .control-item__label до 1.5 метра
+
+      .content-box__foot.content-box__module
+        .content-box__inner
+          h3.content-box__title
+            | Вышлем расчет на вашу почту прямо сейчас
+          .content-box__controls-row
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-name") Ваше имя
+              input.form-control(
+                type="text",
+                id="calc-name",
+                name="calc-name",
+                placeholder="Ваше имя"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-email") Ваш e-mail
+              input.form-control(
+                type="text",
+                id="calc-email",
+                name="calc-email",
+                placeholder="Ваш e-mail"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(for="calc-phone") Номер телефона
+              input.form-control(
+                type="tel",
+                id="calc-phone",
+                name="calc-phone",
+                placeholder="Номер телефона"
+              )
+            button.button(type="submit") Рассчитать стоимость
+
+          h3.content-box__title
+            | Нужна консультация специалиста?
+            button.button.button--call(
+              title="Заказать обратный звонок"
+            )
+              span.icon.icon-phone

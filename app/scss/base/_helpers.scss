@@ -159,6 +159,19 @@
   }
 }
 
+
+.negative-m {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+
+.negative-m > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
 .negative-m-1 {
   margin-left: -4px;
   margin-right: -4px;
@@ -184,14 +197,14 @@
 
 
 .negative-m-3 {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 
 .negative-m-3 > * {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 

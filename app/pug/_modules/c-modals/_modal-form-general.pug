@@ -1,0 +1,227 @@
+-
+  var modals = [
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Каратэ?`,
+      id: 'karate',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Айкидо?`,
+      id: 'aikido',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для дзюдо?`,
+      id: 'judo',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Джиу-джитсу?`,
+      id: 'jujitsu',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Ушу?`,
+      id: 'ushu',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Тайского бокса?`,
+      id: 'thai',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для MMA?`,
+      id: 'mma',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Вольной борьбы?`,
+      id: 'freestyle',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Кудо?`,
+      id: 'kudo',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Грепплинга?`,
+      id: 'grappling',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Греко-Римской борьбы?`,
+      id: 'greek',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Тхэквандо?`,
+      id: 'taekwondo',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Бокса?`,
+      id: 'boxing',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Рукопашного боя?`,
+      id: 'hand',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Йоги?`,
+      id: 'yoga',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+    {
+      category: 'sports',
+      title: `Хотите заказать`,
+      subtitle: `спортивное покрытие для Гимнастики?`,
+      id: 'gymnastics',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
+  ];
+
+
+
+each item, index in modals
+  .modal.modal--form(
+    id="modal-form-" + item.id,
+    aria-hidden='true'
+  )
+    .modal__overlay(tabindex='-1', data-micromodal-close='')
+      .modal__container(role='dialog', aria-modal='true')
+        button.modal__close(aria-label='Закрыть попап', data-micromodal-close='')
+        main.modal__content
+          form.form.form--modal
+            .form__head
+              p.form__title!= item.title
+              p.form__subtitle!= item.subtitle
+            
+            .form-control__wrapper
+              label.visuallyhidden(
+                for="client-name-modal-" + item.category + "-" + (index + 1)
+              ) Ваше имя
+              input.form-control(
+                type="text",
+                id="client-name-modal-" + item.category + "-" + (index + 1),
+                name="client-name-modal",
+                placeholder="Ваше имя"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(
+                for="client-email-modal-" + item.category + "-" + (index + 1)
+              ) Ваша почта
+              input.form-control(
+                type="text",
+                id="client-email-modal-" + item.category + "-" + (index + 1),
+                name="client-email-modal",
+                placeholder="Ваша почта"
+              )
+            .form-control__wrapper
+              label.visuallyhidden(
+                for="client-phone-modal-" + item.category + "-" + (index + 1)
+              ) Номер телефона
+              input.form-control(
+                type="tel",
+                id="client-phone-modal-" + item.category + "-" + (index + 1),
+                name="client-phone-modal",
+                placeholder="Ваш номер телефона"
+              )
+            button.button(type="submit") Отправить заявку

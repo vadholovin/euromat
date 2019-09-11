@@ -9,14 +9,26 @@
 }
 
 
-.content-box__body {
-  padding-top: 45px;
-}
-
-
 .content-box__module {
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 40px;
+}
+
+
+.content-box__module + .content-box__module {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+
+.content-box__body {
+  // padding-bottom: 10px;
+}
+
+
+.content-box__foot {
+  // padding-top: 24px;
+  padding-bottom: 10px;
 }
 
 
@@ -71,13 +83,6 @@
   @media (min-width: 62em) {
     flex-direction: row;
   }
-}
-
-
-.content-box__foot {
-  padding-top: 24px;
-  padding-bottom: 10px;
-  border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 
