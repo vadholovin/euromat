@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #TILE-BENEFITS
+   ========================================================================== */
+
+.tile-benefits {
+  padding-top: 84px;
+  padding-bottom: 20px;
+}
+
+
+.tile-benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  @media (min-width: 62em) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+
+.tile-benefits__item {
+  width: 50%;
+  margin-bottom: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+
+  @media (min-width: 36em) {
+    width: 33.333333%;
+  }
+
+  @media (min-width: 62em) {
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: 80em) {
+    margin-bottom: 60px;
+  }
+}
+
+
+.tile-benefits__item .icon-o {
+  margin-bottom: 16px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.tile-benefits__item-text {
+  @include fluid-type($min_width, $max_width, 14px, 18px);
+  
+  font-weight: bold;
+  color: $text-darker;
+  display: block;
+
+  @media (min-width: 62em) {
+    line-height: 1.25;
+  }
+}
+

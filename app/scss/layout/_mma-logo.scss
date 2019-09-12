@@ -1,0 +1,98 @@
+/* ==========================================================================
+   #MMA-LOGO
+   ========================================================================== */
+
+.mma-logo {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+
+.mma-logo__subtitle {
+  @include fluid-type($min_width, $max_width, 16px, 20px);
+
+  font-weight: 800;
+  color: $text-darker;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 48px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 60px;
+    font-size: rem(20);
+  }
+}
+
+
+.mma-logo__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.mma-logo__col-left {
+  width: 100%;
+
+  @media (min-width: 62em) {
+    width: 40%;
+  }
+}
+
+
+.mma-logo__col-right {
+  width: 100%;
+
+  @media (min-width: 62em) {
+    width: 60%;
+  }
+}
+
+
+.mma-logo__img {
+  display: block;
+
+  @media (max-width: 61.99em) {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+}
+
+
+.mma-logo__heading {
+  @include fluid-type($min_width, $max_width, 18px, 22px);
+
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+
+.mma-logo__notes {
+  text-align: center;
+
+  @media (min-width: 90em) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+
+.mma-logo__notes-text {
+  margin-right: auto;
+  font-weight: bold;
+  font-size: rem(18);
+  color: $primary-color;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+
+  @media (min-width: 90em) {
+    max-width: 310px;
+  }
+}

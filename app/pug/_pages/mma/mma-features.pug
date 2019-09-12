@@ -1,0 +1,101 @@
+-
+  var features = [
+    {
+      text:`Эстетичный внешний вид и современный дизайн <br> Простота и легкость сборки`
+    },
+    {
+      text:`Обеспечение максимальной безопасности для участников поединка благодаря использованию лучших материалов`
+    },
+    {
+      text:`Высокий эксплуатационный срок, рассчитанный на длительные и интенсивные нагрузки`
+    },
+    {
+      text:`Устойчивая рамная конструкция октагона предотвращает преждевременное «расшатывание» элементов`
+    },
+
+  ];
+-
+  var list = [
+    {
+      text:`Материал рамы – стальная профильная труба`
+    },
+    {
+      text:`Настил выполнен из фанеры толщиной 18 мм`
+    },
+    {
+      text:`Мягкое покрытие из пенолона толщиной 15 мм не подвержено продавливанию и деформации, благодаря чему обеспечивается высокая износостойкость. Покрытие защищено антискользящим материалом из ПВХ с высокими показателями надежности`
+    },
+    {
+      text:`Металлическая сетка октагона Euromat имеет диаметр проволоки от 1.8 до 4,2 мм, на поверхность которой нанесено пластифицированное полимерное покрытие, обеспечивающее ее долговечность и безопасность, а также препятствующее деформации при воздействии`
+    },
+    {
+      text:`На все металлические детали внутри рабочего пространства восьмиугольника установлены мягкие элементы толщиной 15 мм для предотвращения травм`
+    },
+    {
+      text:`Сборно-разборная конструкция выполнена с использованием болтовых соединений, что обеспечивает высокую надежность и устойчивость, позволяет без повреждений демонтировать и собрать конструкцию`
+    },
+    {
+      text:`Октагон может быть укомплектован 1 или 2 калитками`
+    },
+    {
+      text:`Элементы каркаса обладают небольшими габаритами, облегчающие доставку к месту сборки и монтаж.`
+    },
+  ];
+
+
+section.mma-features.mma-features--top(style="background-image: url(img/general/pattern-3.png);")
+  .container
+    h2.title.title--mma-features
+      span.bigger Клетка без подиума
+      span.smaller от 128 000 рублей/м<sup>2</sup>
+    .mma-features__grid.negative-m
+      .mma-features__col-left
+        ul.checked-list.checked-list--mma-features
+          each item in features
+            li.checked-list__item
+              span.icon.icon-check-circle
+              p.checked-list__item-text!= item.text
+
+      .mma-features__col-right
+        img.mma-features__img(
+          src="img/content/mma/mma-img-1.png",
+          alt=""
+        )
+    h3.mma-features__heading Полная комплектация
+    ul.bullet-list.bullet-list--mma-features
+      each item in list
+        li.bullet-list__item!= item.text
+    .button-wrapper
+      button.button(
+
+      )
+        | Оставить заявку <span class="button-extra-text">на клетку ММА</span>
+
+section.mma-features.mma-features--bottom
+  .container
+    h2.title.title--mma-features
+      span.bigger Клетка подиум
+      span.smaller от 228 000 рублей/м<sup>2</sup>
+    .mma-features__grid.negative-m
+      .mma-features__col-left
+        img.mma-features__img(
+          src="img/content/mma/mma-img-2.png",
+          alt=""
+        )
+
+      .mma-features__col-right
+        ul.checked-list.checked-list--mma-features
+          each item in features
+            li.checked-list__item
+              span.icon.icon-check-circle
+              p.checked-list__item-text!= item.text
+
+    h3.mma-features__heading Полная комплектация
+    ul.bullet-list.bullet-list--mma-features
+      each item in list
+        li.bullet-list__item!= item.text
+    .button-wrapper
+      button.button(
+        
+      )
+        | Оставить заявку <span class="button-extra-text">на клетку ММА</span>

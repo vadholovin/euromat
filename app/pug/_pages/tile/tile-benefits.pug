@@ -1,0 +1,45 @@
+-
+  var benefit = [
+    {
+      image: 'star',
+      title: `Привлекательный <br> внешний вид`
+    },
+    {
+      image: 'fall',
+      title: `Противоскользящий <br> эффект`
+    },
+    {
+      image: 'boot',
+      title: ` Стойкость к <br> механическим воздействиям`
+    },
+    {
+      image: 'drop',
+      title: `Долговечность <br> цвета покрытия`
+    },
+    {
+      image: 'cold',
+      title: `Стойкость к перепадам <br> температуры`
+    },
+    {
+      image: 'spray',
+      title: `Стойкость <br> к химикатам`
+    },
+    {
+      image: 'mat',
+      title: `Эластичность <br> покрытия`
+    },
+    {
+      image: 'hammer',
+      title: `Высокая <br> ремонтопригодность`
+    },
+  ];
+
+section.tile-benefits
+  .container
+    h2.title.title--tile-benefits
+      | Преимущества резиновой плитки
+    .tile-benefits__list
+      each item, index in benefit
+        .tile-benefits__item
+          span(class="icon-o icon-o-" + item.image)
+          span.tile-benefits__item-text!= item.title

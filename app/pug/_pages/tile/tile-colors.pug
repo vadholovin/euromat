@@ -1,0 +1,122 @@
+-
+  var colors_classic = [
+    {
+      image: 'img/content/tile/colors-classic/black.jpg',
+      title: 'Черный'
+    },
+    {
+      image: 'img/content/tile/colors-classic/grey.jpg',
+      title: 'Серый'
+    },
+    {
+      image: 'img/content/tile/colors-classic/brown.jpg',
+      title: 'Коричневый'
+    },
+    {
+      image: 'img/content/tile/colors-classic/red.jpg',
+      title: 'Красный'
+    },
+    {
+      image: 'img/content/tile/colors-classic/orange.jpg',
+      title: 'Оранжевый'
+    },
+    {
+      image: 'img/content/tile/colors-classic/orange.jpg',
+      title: 'Песочный'
+    },
+    {
+      image: 'img/content/tile/colors-classic/blue.jpg',
+      title: 'Синий'
+    },
+    {
+      image: 'img/content/tile/colors-classic/green.jpg',
+      title: 'Зеленый'
+    },
+  ];
+-
+  var colors_bright = [
+    {
+      image: 'img/content/tile/colors-bright/brown.jpg',
+      title: 'Коричневый'
+    },
+    {
+      image: 'img/content/tile/colors-bright/red.jpg',
+      title: 'Красный'
+    },
+    {
+      image: 'img/content/tile/colors-bright/orange.jpg',
+      title: 'Оранжевый'
+    },
+    {
+      image: 'img/content/tile/colors-bright/yellow.jpg',
+      title: 'Желтый'
+    },
+    {
+      image: 'img/content/tile/colors-bright/grey.jpg',
+      title: 'Серый'
+    },
+    {
+      image: 'img/content/tile/colors-bright/blue.jpg',
+      title: 'Синий'
+    },
+    {
+      image: 'img/content/tile/colors-bright/green.jpg',
+      title: 'Зеленый'
+    },
+    {
+      image: 'img/content/tile/colors-bright/turquoise.jpg',
+      title: 'Бирюзовый'
+    },
+  ];
+
+
+
+
+section.tile-colors
+  .container
+    h2.title.title--tile-colors
+      | Цветовые решения
+    .tile-colors__grid.negative-m
+      .tile-colors__col-left
+        h3.tile-colors__heading Классические цвета
+        ul.card-list.card-list--tile-colors
+          each item, index in colors_classic
+            li.card-list__item
+              .card.card--bg
+                figure.card-media
+                  .card-media__content
+                    img(src=item.image, alt="")
+                .card__foot
+                  img(src="img/general/card-logo.png", alt="")
+              .card-list__item-foot
+                span.card-list__item-title!= item.title
+
+        h3.tile-colors__heading Яркие цвета EPDM
+        ul.card-list.card-list--tile-colors
+          each item, index in colors_classic
+            li.card-list__item
+              .card.card--bg
+                figure.card-media
+                  .card-media__content
+                    img(src=item.image, alt="")
+                .card__foot
+                  img(src="img/general/card-logo.png", alt="")
+              .card-list__item-foot
+                span.card-list__item-title!= item.title
+
+      .tile-colors__col-right
+        .card.card--bg.card--display-box
+          figure.card-media
+            .card-media__content
+              img(
+                src="img/content/tile/colors-classic/black.jpg",
+                alt=""
+              )
+          .card__foot
+            p.card__title Черный
+
+        p.tile-colors__info
+          | Резиновая плитка 500х500 см
+        button.button(
+          
+        ) Оставить заявку <span class="button-extra-text">на Резиновую плитку</span>

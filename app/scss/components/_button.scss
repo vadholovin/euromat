@@ -314,3 +314,28 @@
     margin-right: 0;
   }
 }
+
+
+.mma-features .button {
+
+  @media (min-width: 80em) {
+    width: 390px;
+  }
+}
+
+
+.mma-logo__notes .button {
+
+  @media (min-width: 80em) {
+    width: 310px;
+  }
+}
+
+
+.tile-colors .button {
+  font-size: rem(14);
+
+  @media (min-width: 80em) {
+    width: 436px;
+  }
+}

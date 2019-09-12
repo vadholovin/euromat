@@ -50,11 +50,11 @@ section.budo-benefits(style="background-image: url(img/general/pattern-1.png), u
     h2.title.title--budo-benefits Преимущества наших матов
     .budo-benefits__grid
       .budo-benefits__col-left
-        ul.budo-benefits__list
+        ul.checked-list.checked-list--budo-benefits
           each benefit in benefits
-            li.budo-benefits__item
+            li.checked-list__item
               span.icon.icon-check-circle
-              p.budo-benefits__item-text!= benefit.text
+              p.checked-list__item-text!= benefit.text
 
       .budo-benefits__col-right
         img.budo-benefits__img(

@@ -1,0 +1,55 @@
+/* ==========================================================================
+   #TILE-COLORS
+   ========================================================================== */
+
+.tile-colors {
+  padding-top: 50px;
+  padding-bottom: 45px;
+  background-image: linear-gradient(to right, #e8e7ef, #f4f4f4);
+}
+
+
+.tile-colors__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.tile-colors__col-left,
+.tile-colors__col-right {
+  width: 100%;
+
+  
+  @media (min-width: 62em) {
+    width: 50%;
+  }
+}
+
+
+.tile-colors__col-right {
+  text-align: center;
+
+  @media (min-width: 62em) {
+    padding-top: 24px;
+    padding-left: 5.96%;
+  }
+}
+
+
+.tile-colors__heading {
+  margin-bottom: 20px;
+}
+
+
+.tile-colors__info {
+  font-weight: bold;
+  font-size: rem(18);
+  color: $text-darker;
+  text-align: center;
+  margin-bottom: 16px;
+
+  @media (min-width: 62em) {
+    font-size: rem(20);
+  }
+}
+

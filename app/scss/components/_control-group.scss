@@ -135,3 +135,24 @@ input:checked ~ .control-item__label {
 .roll-calc__options-info .control-item__label {
   width: 170px;
 }
+
+
+/* #control-group--mma-logo
+   ========================================================================== */
+
+.control-group--mma-logo {
+  justify-content: center;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 20px;
+}
+
+
+.control-group--mma-logo .control-item {
+  margin: 12px 8px;
+}
+
+
+.control-group--mma-logo .control-item__label {
+  width: 150px;
+}

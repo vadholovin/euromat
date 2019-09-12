@@ -18,6 +18,12 @@
 }
 
 
+.title .bigger,
+.title .smaller {
+  display: block;
+}
+
+
 .title--hero {
   @include fluid-type($min_width, $max_width, 24px, 42px);
 
@@ -206,7 +212,6 @@
 .title--banner-sale .smaller {
   @include fluid-type($min_width, $max_width, 14px, 20px);
 
-  display: block;
   text-transform: none;
 }
 
@@ -260,7 +265,6 @@
 
 
 .title--budo-features .bigger {
-  display: block;
   margin-right: 16px;
 }
 
@@ -268,7 +272,6 @@
 .title--budo-features .smaller {
   @include fluid-type($min_width, $max_width, 16px, 24px);
 
-  display: block;
   color: $text-darker;
 }
 
@@ -387,4 +390,57 @@
 
 .title--roll-calc {
   margin-bottom: 24px;
+}
+
+
+.title--mma-features {
+  margin-bottom: 32px;
+  
+  @media (min-width: 62em) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+
+
+.title--mma-features .bigger {
+  
+
+  @media (min-width: 62em) {
+    margin-right: 32px;
+  }
+}
+
+
+.title--mma-features .smaller {
+  @include fluid-type($min_width, $max_width, 18px, 26px);
+
+  color: $secondary-color;
+  text-transform: none;
+}
+
+
+.title--mma-logo {
+  @include fluid-type($min_width, $max_width, 20px, 36px);
+
+  margin-bottom: 8px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
+  }
+}
+
+
+.title--tile-colors {
+  @include fluid-type($min_width, $max_width, 24px, 46px);
+
+  margin-bottom: 32px;
+}
+
+
+.title--tile-benefits {
+  @include fluid-type($min_width, $max_width, 24px, 44px);
+
+  margin-bottom: 48px;
 }

@@ -1,0 +1,46 @@
+/* ==========================================================================
+   #ICON-O
+   ========================================================================== */
+
+.icon-o {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url(../img/icons/sprites/sprite-round@2x.png);
+  background-repeat: no-repeat;
+  background-size: 282px 282px;
+  display: inline-block;
+}
+
+
+.icon-o-boot {
+  background-position: -2px -2px;
+}
+
+.icon-o-cold {
+  background-position: -96px -2px;
+}
+
+.icon-o-drop {
+  background-position: -2px -96px;
+}
+
+.icon-o-fall {
+  background-position: -96px -96px;
+}
+
+.icon-o-hammer {
+  background-position: -190px -2px;
+}
+
+.icon-o-mat {
+  background-position: -190px -96px;
+}
+
+.icon-o-spray {
+  background-position: -2px -190px;
+}
+
+.icon-o-star {
+  background-position: -96px -190px;
+}

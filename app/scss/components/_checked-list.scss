@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #CHECKED-LIST
+   ========================================================================== */
+
+.checked-list__item {
+  display: flex;
+  width: 100%;
+}
+
+
+.checked-list__item .icon {
+  flex: none;
+  margin-right: 12px;
+}
+
+.checked-list__item-text {
+  flex-grow: 1;
+}
+
+
+/* #checked-list--mma-features
+   ========================================================================== */
+
+
+.checked-list--mma-features {
+  font-weight: 500;
+}
+
+
+.checked-list--mma-features .checked-list__item + .checked-list__item {
+  margin-top: 32px;
+
+  @media (min-width: 80em) {
+    margin-top: 40px;
+  }
+}
+
+
+/* #checked-list--budo-benefits
+   ========================================================================== */
+
+.checked-list--budo-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 20px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
+  }
+}
+
+
+.checked-list--budo-benefits .checked-list__item {
+  margin-bottom: 32px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 36em) {
+    width: 50%;
+  }
+
+  @media (min-width: 80em) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 100em) {
+    margin-bottom: 70px;
+  }
+}
+
+
+.checked-list--budo-benefits .checked-list__item-text {
+  font-weight: 500;
+  line-height: 1.25;
+}
