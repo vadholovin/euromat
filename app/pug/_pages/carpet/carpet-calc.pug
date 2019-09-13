@@ -164,25 +164,26 @@ section.product-calc.product-calc--carpet-calc
                   ul.card-list.card-list--carpet-equipment.negative-m-2
                     each item, index in equipment
                       li.card-list__item.js-check
-                        .card.card--bg
-                          figure.card-media
-                            .card-media__content
-                              img(src=item.image, alt="")
-                          .card__foot
-                            img(src="img/general/card-logo.png", alt="")
-                        .card-list__item-foot
-                          span.card-list__item-title!= item.title
-                        .control-box
-                          input.visuallyhidden(
-                          type="radio",
-                          name="equipment",
-                          id= "equipment-" + (index+1),
-                          value= item.value,
-                          )
-                          label.control-box__label(
-                            for="equipment-" + (index+1)
-                          )
-                          span.control-box__flag
+                        .card-list__item-inner
+                          .card.card--bg
+                            figure.card-media
+                              .card-media__content
+                                img(src=item.image, alt="")
+                            .card__foot
+                              img(src="img/general/card-logo.png", alt="")
+                          .card-list__item-foot
+                            span.card-list__item-title!= item.title
+                          .control-box
+                            input.visuallyhidden(
+                            type="radio",
+                            name="equipment",
+                            id= "equipment-" + (index+1),
+                            value= item.value,
+                            )
+                            label.control-box__label(
+                              for="equipment-" + (index+1)
+                            )
+                            span.control-box__flag
 
 
                 .content-box__unit
@@ -205,7 +206,7 @@ section.product-calc.product-calc--carpet-calc
                 .content-box__unit
                   p.content-box__label
                     | Шаг 4.Выберите вариант оформления покрышки:
-                  .image-box__list.image-box__list--carpet-design.negative-m-1
+                  .image-box__list.image-box__list--carpet-design
                     each item, index in design
                       .image-box.js-check
                         .image-box__img
@@ -230,7 +231,7 @@ section.product-calc.product-calc--carpet-calc
                 .content-box__unit
                   p.content-box__label
                     | Шаг.5 Выберите тип ткани:
-                  ul.image-box__list.image-box__list--carpet-material.negative-m-2
+                  ul.image-box__list.image-box__list--carpet-material
                     each item, index in material
                       .image-box.js-check
                         .image-box__img
@@ -283,25 +284,26 @@ section.product-calc.product-calc--carpet-calc
               ul.card-list.card-list--carpet-mat
                 each item, index in mat
                   li.card-list__item.js-check
-                    .card.card--bg
-                      figure.card-media
-                        .card-media__content
-                          img(src=item.image, alt="")
-                      .card__foot
-                        img(src="img/general/card-logo.png", alt="")
-                    .card-list__item-foot
-                      span.card-list__item-title= item.title
-                    .control-box
-                      input.visuallyhidden(
-                      type="radio",
-                      name="mat",
-                      id= "mat-" + (index+1),
-                      value= item.value,
-                      )
-                      label.control-box__label(
-                        for="mat-" + (index+1)
-                      )
-                      span.control-box__flag
+                    .card-list__item-inner
+                      .card.card--bg
+                        figure.card-media
+                          .card-media__content
+                            img(src=item.image, alt="")
+                        .card__foot
+                          img(src="img/general/card-logo.png", alt="")
+                      .card-list__item-foot
+                        span.card-list__item-title= item.title
+                      .control-box
+                        input.visuallyhidden(
+                        type="radio",
+                        name="mat",
+                        id= "mat-" + (index+1),
+                        value= item.value,
+                        )
+                        label.control-box__label(
+                          for="mat-" + (index+1)
+                        )
+                        span.control-box__flag
 
       .content-box__foot.content-box__module
         .content-box__inner

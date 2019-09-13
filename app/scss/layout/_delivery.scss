@@ -8,20 +8,35 @@
 
 
 .delivery-top {
-  padding-top: 64px;
+  position: relative;
+  padding-top: 50px;
   padding-bottom: 200px;
-  background-repeat: no-repeat;
-  background-position: bottom 20px left 50%;
-  background-size: 120px auto;
+  overflow: hidden;
 
-  @media (min-width: 62em) {
-    padding-top: 50px;
-    background-size: auto;
+  @media (min-width: 100em) {
+    padding-bottom: 50px;
+    background-position: top 35px left 96.1%;
+  }
+}
+
+
+.delivery-top__img {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+
+  @media (min-width: 100em) {
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 1.2%;
+    animation: slidedown 10s infinite;
   }
 
   @media (min-width: 110em) {
-    padding-bottom: 50px;
-    background-position: top 35px left 96.1%;
+    right: 3.958%;
   }
 }
 
@@ -214,7 +229,10 @@
   font-weight: bold;
 }
 
-
+@keyframes slidedown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(650px); }
+}
 
 
 

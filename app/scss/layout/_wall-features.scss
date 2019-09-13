@@ -1,0 +1,83 @@
+/* ==========================================================================
+   #WALL-FEATURES
+   ========================================================================== */
+
+.wall-features {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background-color: #fafafa;
+  font-weight: 500;
+
+  @media (min-width: 80em) {
+    padding-top: 68px;
+    padding-bottom: 70px;
+  }
+}
+
+
+.wall-features__col-left {
+  width: 100%;
+
+  
+  @media (min-width: 62em) {
+    width: 47.37%;
+    padding-left: 50px;
+  }
+}
+
+
+.wall-features__col-right {
+  width: 100%;
+  
+  @media (min-width: 62em) {
+    width: 52.63%;
+  }
+}
+
+
+.wall-features__img {
+  display: block;
+  margin-bottom: 28px;
+
+  @media (max-width: 61.99em) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.wall-features__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 61.99em) {
+    margin-bottom: 36px;
+  }
+}
+
+
+.wall-features__list-item {
+  margin-right: 20px;
+
+  @media (min-width: 36em) {
+    margin-right: 30px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+.wall-features__list-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.wall-features__heading {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: $primary-color;
+  text-transform: uppercase;
+}

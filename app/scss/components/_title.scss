@@ -444,3 +444,50 @@
 
   margin-bottom: 48px;
 }
+
+
+.title--ring-about {
+  margin-bottom: 30px;
+}
+
+
+.ring-about__top .title--ring-about,
+.ring-about__bottom .title--ring-about {
+  text-align: left;
+}
+
+
+.title--ring-about .smaller {
+  @include fluid-type($min_width, $max_width, 18px, 26px);
+
+  display: inline-block;
+  vertical-align: baseline;
+  color: $secondary-color;
+  text-transform: none;
+}
+
+
+.title--ring-logo {
+  @include fluid-type($min_width, $max_width, 20px, 36px);
+
+  margin-bottom: 8px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
+  }
+}
+
+
+.title--wall-about {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+
+.title--wall-features {
+  margin-bottom: 48px;
+
+  @media (min-width: 80em) {
+    margin-bottom: 70px;
+  }
+}

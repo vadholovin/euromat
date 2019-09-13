@@ -181,11 +181,35 @@
 }
 
 
-// .product-about--tile .product-about__grid > div:last-child {
-//   order: -1;
-//   text-align: center;
+/* #product-about--wall
+   ========================================================================== */
 
-//   @media (min-width: 62em) {
-//     order: 0;
-//   }
-// }
+.product-about--wall {
+  padding-top: 50px;
+  padding-bottom: 68px;
+  box-shadow: none;
+  background-position: 
+    top -100px left -100px,
+    bottom -100px right;
+}
+
+
+.product-about--wall .product-about__foot {
+  padding-top: 0;
+  border-top: 0;
+}
+
+
+.product-about--wall .product-about__lead {
+  max-width: 940px;
+  margin-bottom: 36px;
+
+  @media (min-width: 80em) {
+    margin-bottom: 56px;
+  }
+}
+
+
+.product-about--wall .product-about__foot-heading {
+  @include fluid-type($min_width, $max_width, 16px, 18px);
+}

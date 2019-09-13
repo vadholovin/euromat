@@ -1,0 +1,160 @@
+/* ==========================================================================
+   #RING-ABOUT
+   ========================================================================== */
+
+.ring-about {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-image: none;
+}
+
+
+.ring-about__top {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  @media (min-width: 80em) {
+    padding-top: 110px;
+    padding-bottom: 90px;
+  }
+}
+
+
+.ring-about__middle {
+  padding-top: 50px;
+  padding-bottom: 64px;
+  background-color: #fafafa;
+
+  @media (min-width: 80em) {
+    padding-bottom: 100px;
+  }
+}
+
+
+.ring-about__bottom {
+  padding-top: 36px;
+  padding-bottom: 64px;
+  background-repeat: no-repeat;
+  background-position:
+    top -100px left -100px,
+    bottom right;
+
+  @media (min-width: 80em) {
+    padding-bottom: 75px;
+  }
+}
+
+
+.ring-about__desc {
+  width: 100%;
+  max-width: 1040px;
+  margin-bottom: 24px;
+}
+
+
+.ring-about__middle .ring-about__desc {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.ring-about__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.ring-about__top-left,
+.ring-about__bottom-left {
+  width: 100%;
+
+  @media (min-width: 62em) {
+    width: 40%;
+  }
+}
+
+
+.ring-about__top-right,
+.ring-about__bottom-right {
+  order: -1;
+  width: 100%;
+  padding-bottom: 24px;
+  text-align: center;
+
+  @media (min-width: 62em) {
+    order: 0;
+    width: 60%;
+    padding-top: 40px;
+    text-align: left;
+  }
+}
+
+
+.ring-about__middle-left {
+  width: 100%;
+  padding-bottom: 24px;
+  text-align: center;
+  
+  @media (min-width: 62em) {
+    width: 60%;
+    padding-top: 40px;
+    text-align: left;
+  }
+}
+
+
+.ring-about__middle-right {
+  width: 100%;
+
+  @media (min-width: 62em) {
+    width: 40%;
+  }
+}
+
+
+.ring-about__img {
+
+  @media (max-width: 61.99em) {
+    width: 80%;
+  }
+}
+
+
+.ring-about__foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.ring-about__heading {
+  font-weight: bold;
+}
+
+
+.ring-about__notes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 760px;
+}
+
+
+.ring-about__notes-text {
+  margin-right: 28px;
+  font-weight: bold;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
+.ring-about__notes-text .smaller {
+  font-size: rem(14);
+}
+

@@ -20,6 +20,12 @@
   margin-right: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  &:hover {
+    .card-media__content > img {
+      transform: scale(1.2);
+    }
+  }
 }
 
 

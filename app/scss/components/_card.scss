@@ -10,10 +10,18 @@
   overflow: hidden;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
+
+  &:hover {
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0px 16px 10px 0px rgba(0, 0, 0, 0.4);
+  }
 }
 
 
-.card-list__item {
+.card-list__item-inner {
   position: relative;
 }
 
@@ -138,6 +146,7 @@
 
 .card-media__content>img {
   object-fit: cover;
+  transition: transform 0.3s ease-out;
 }
 
 
@@ -304,7 +313,6 @@
 
 .card-list--tatami-sorts {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -325,7 +333,7 @@
 
 
 .card-list--tatami-sorts .card-list__item {
-  width: 50%;
+  width: 100%;
   max-width: 300px;
 }
 
@@ -366,12 +374,12 @@
 
 
 .card-list--tatami-colors .card-list__item {
-  width: 50%;
-  max-width: 156px;
+  width: 100%;
+  max-width: 140px;
   margin-bottom: 16px;
 
-  @media (min-width: 80em) {
-    width: 33.333333%;
+  @media (min-width: 36em) {
+    max-width: 156px;
   }
 }
 

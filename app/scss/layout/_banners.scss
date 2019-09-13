@@ -334,7 +334,12 @@
 
 
 .banner-sale__list-content {
-  background-color: $primary-color;
+  background-color: #fff;
+}
+
+
+.banner-sale__list-content img {
+  object-fit: cover;
 }
 
 

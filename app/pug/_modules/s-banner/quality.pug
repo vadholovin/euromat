@@ -3,9 +3,10 @@ section.banner.banner-quality(style="background-image: url(img/backgrounds/bg-qu
     .banner-quality__grid
       .banner-quality__text
         h2.title.title--banner.title--banner-quality Качество Euromat
-        p.banner-quality__subtitle
-          | Маты соответствующие международным
-          br
-          | стандартам WKF и WTF
+        if pageClass == 'mat-page'
+          p.banner-quality__subtitle
+            | Маты соответствующие международным
+            br
+            | стандартам WKF и WTF
 
       img.banner-quality__img(src="img/content/mark-made-in.png", alt="")

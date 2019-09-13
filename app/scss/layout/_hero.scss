@@ -11,6 +11,7 @@
 
 
 .hero__top {
+  padding-top: 156px;
   margin-bottom: 60px;
 }
 
@@ -131,6 +132,12 @@
 
 .hero-slider__item .icon-martial {
   margin-bottom: 6px;
+  transition: transform 0.3s ease-out;
+}
+
+
+.hero-slider__item:hover .icon-martial {
+  transform: scale(1.1);
 }
 
 

@@ -50,6 +50,10 @@
   height: 100%;
 }
 
+.video-link {
+  z-index: 5;
+}
+
 .video-box iframe {
   display: none;
 }

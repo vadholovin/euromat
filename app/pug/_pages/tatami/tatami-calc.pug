@@ -39,12 +39,14 @@
     {
       image: 'img/content/tatami/material/img-4.jpg',
       title: 'ППЭ',
-      subtitle: 'Пенополиэтилен высокого качества'
+      subtitle: 'Пенополиэтилен высокого качества',
+      value: 'ППЭ'
     },
     {
       image: 'img/content/tatami/material/img-3.jpg',
       title: 'ПВВ',
-      subtitle: 'Поролон вторичного вспенивания'
+      subtitle: 'Поролон вторичного вспенивания',
+      value: 'ПВВ'
     },
   ];
 
@@ -53,47 +55,56 @@
     {
       image: 'img/content/tatami/colors/red.png',
       title: 'Цвет 001',
-      subtitle: 'Красный'
+      subtitle: 'Красный',
+      value: 'Красный'
     },
     {
       image: 'img/content/tatami/colors/yellow.png',
       title: 'Цвет 002',
-      subtitle: 'Желтый'
+      subtitle: 'Желтый',
+      value: 'Желтый'
     },
     {
       image: 'img/content/tatami/colors/olive.png',
       title: 'Цвет 003',
-      subtitle: 'Оливковый'
+      subtitle: 'Оливковый',
+      value: 'Оливковый'
     },
     {
       image: 'img/content/tatami/colors/green.png',
       title: 'Цвет 004',
-      subtitle: 'Зеленый'
+      subtitle: 'Зеленый',
+      value: 'Зеленый'
     },
     {
       image: 'img/content/tatami/colors/darkblue.png',
       title: 'Цвет 005',
-      subtitle: 'Темно-синий'
+      subtitle: 'Темно-синий',
+      value: 'Темно-синий'
     },
     {
       image: 'img/content/tatami/colors/lightblue.png',
       title: 'Цвет 005',
-      subtitle: 'Светло-синий'
+      subtitle: 'Светло-синий',
+      value: 'Светло-синий'
     },
     {
       image: 'img/content/tatami/colors/white.png',
       title: 'Цвет 007',
-      subtitle: 'Белый'
+      subtitle: 'Белый',
+      value: 'Белый'
     },
     {
       image: 'img/content/tatami/colors/grey.png',
       title: 'Цвет 008',
-      subtitle: 'Серый'
+      subtitle: 'Серый',
+      value: 'Серый'
     },
     {
       image: 'img/content/tatami/colors/black.png',
       title: 'Цвет 009',
-      subtitle: 'Черный'
+      subtitle: 'Черный',
+      value: 'Черный'
     },
   ];
 
@@ -102,47 +113,56 @@
     {
       image: 'img/content/colors/red.png',
       title: 'Цвет 011',
-      subtitle: 'Красный'
+      subtitle: 'Красный',
+      value: 'Красный'
     },
     {
       image: 'img/content/colors/yellow.png',
       title: 'Цвет 012',
-      subtitle: 'Желтый'
+      subtitle: 'Желтый',
+      value: 'Желтый'
     },
     {
       image: 'img/content/colors/beige.png',
       title: 'Цвет 013',
-      subtitle: 'Бежевый'
+      subtitle: 'Бежевый',
+      value: 'Бежевый'
     },
     {
       image: 'img/content/colors/blue.png',
       title: 'Цвет 014',
-      subtitle: 'Синий'
+      subtitle: 'Синий',
+      value: 'Синий'
     },
     {
       image: 'img/content/colors/lightblue.png',
       title: 'Цвет 015',
-      subtitle: 'Светло-синий'
+      subtitle: 'Светло-синий',
+      value: 'Светло-синий'
     },
     {
       image: 'img/content/colors/green.png',
       title: 'Цвет 016',
-      subtitle: 'Зеленый'
+      subtitle: 'Зеленый',
+      value: 'Зеленый'
     },
     {
       image: 'img/content/colors/white.png',
       title: 'Цвет 017',
-      subtitle: 'Белый'
+      subtitle: 'Белый',
+      value: 'Белый'
     },
     {
       image: 'img/content/colors/grey.png',
       title: 'Цвет 019',
-      subtitle: 'Серый'
+      subtitle: 'Серый',
+      value: 'Серый'
     },
     {
       image: 'img/content/colors/black.png',
       title: 'Цвет 019',
-      subtitle: 'Черный'
+      subtitle: 'Черный',
+      value: 'Черный'
     },
   ];
 
@@ -151,17 +171,20 @@
     {
       image: 'img/content/tatami/material/img-1.jpg',
       title: 'Antislip',
-      subtitle: 'Натуральный каучук'
+      subtitle: 'Натуральный каучук',
+      value: 'antislip'
     },
     {
       image: 'img/content/tatami/material/img-2.jpg',
       title: 'закрытый низ',
-      subtitle: 'Пупырчатый ПВХ'
+      subtitle: 'Пупырчатый ПВХ',
+      value: 'закрытый низ'
     },
     {
       image: 'img/content/tatami/material/img-3.jpg',
       title: 'открытый низ',
-      subtitle: 'ПВВ'
+      subtitle: 'ПВВ',
+      value: 'открытый низ'
     },
   ];
 
@@ -219,17 +242,29 @@ section.tatami-calc(
                   p.content-box__label
                     | Шаг 3. Выберите вид мата в татами:
                   ul.card-list.card-list--tatami-sorts.negative-m-2
-                    each item in sorts
-                      li.card-list__item
-                        .card.card--bg
-                          figure.card-media
-                            .card-media__content
-                              img(src=item.image, alt="")
-                          .card__foot
-                            img(src="img/general/card-logo.png", alt="")
-                        .card-list__item-foot
-                          p.card-list__item-title= item.title
-                          p.card-list__item-subtitle= item.subtitle
+                    each item, index in sorts
+                      li.card-list__item.js-check
+                        .card-list__item-inner
+                          .card.card--bg
+                            figure.card-media
+                              .card-media__content
+                                img(src=item.image, alt="")
+                            .card__foot
+                              img(src="img/general/card-logo.png", alt="")
+                          .card-list__item-foot
+                            p.card-list__item-title= item.title
+                            p.card-list__item-subtitle= item.subtitle
+                          .control-box
+                            input.visuallyhidden(
+                            type="radio",
+                            name="sorts",
+                            id= "sorts-" + (index+1),
+                            value= item.value,
+                            )
+                            label.control-box__label(
+                              for="sorts-" + (index+1)
+                            )
+                            span.control-box__flag
 
           .content-box__inner-module
             p.content-box__label.content-box__label--bigger
@@ -242,17 +277,29 @@ section.tatami-calc(
                   | ткань классического татами (Judo)
 
                 ul.card-list.card-list--tatami-colors.negative-m-2
-                  each item in colors_1
-                    li.card-list__item
-                      .card.card--bg
-                        figure.card-media
-                          .card-media__content
-                            img(src=item.image, alt="")
-                        .card__foot
-                          img(src="img/general/card-logo.png", alt="")
-                      .card-list__item-foot
-                        p.card-list__item-title= item.title
-                        p.card-list__item-subtitle= item.subtitle
+                  each item, index in colors_1
+                    li.card-list__item.js-check
+                      .card-list__item-inner
+                        .card.card--bg
+                          figure.card-media
+                            .card-media__content
+                              img(src=item.image, alt="")
+                          .card__foot
+                            img(src="img/general/card-logo.png", alt="")
+                        .card-list__item-foot
+                          p.card-list__item-title= item.title
+                          p.card-list__item-subtitle= item.subtitle
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="colors-1",
+                          id= "colors-1-" + (index+1),
+                          value= item.value,
+                          )
+                          label.control-box__label(
+                            for="colors-1-" + (index+1)
+                          )
+                          span.control-box__flag
 
 
               .pure-u-1.pure-u-xl-1-2
@@ -261,33 +308,57 @@ section.tatami-calc(
                   br
                   | ткань гладкого татами
                 ul.card-list.card-list--tatami-colors.negative-m-2
-                  each item in colors_2
-                    li.card-list__item
-                      .card.card--bg
-                        figure.card-media
-                          .card-media__content
-                            img(src=item.image, alt="")
-                        .card__foot
-                          img(src="img/general/card-logo.png", alt="")
-                      .card-list__item-foot
-                        p.card-list__item-title= item.title
-                        p.card-list__item-subtitle= item.subtitle
+                  each item, index in colors_2
+                    li.card-list__item.js-check
+                      .card-list__item-inner
+                        .card.card--bg
+                          figure.card-media
+                            .card-media__content
+                              img(src=item.image, alt="")
+                          .card__foot
+                            img(src="img/general/card-logo.png", alt="")
+                        .card-list__item-foot
+                          p.card-list__item-title= item.title
+                          p.card-list__item-subtitle= item.subtitle
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="colors-2",
+                          id= "colors-2-" + (index+1),
+                          value= item.value,
+                          )
+                          label.control-box__label(
+                            for="colors-2-" + (index+1)
+                          )
+                          span.control-box__flag
 
           .content-box__inner-module
             p.content-box__label
               | Шаг 5. Выберите типы нижнего покрытия:
             ul.card-list.card-list--tatami-backs
-              each item in backs
-                li.card-list__item
-                  .card.card--bg
-                    figure.card-media
-                      .card-media__content
-                        img(src=item.image, alt="")
-                    .card__foot
-                      img(src="img/general/card-logo.png", alt="")
-                  .card-list__item-foot
-                    p.card-list__item-title= item.title
-                    p.card-list__item-subtitle= item.subtitle
+              each item, index in backs
+                li.card-list__item.js-check
+                  .card-list__item-inner
+                    .card.card--bg
+                      figure.card-media
+                        .card-media__content
+                          img(src=item.image, alt="")
+                      .card__foot
+                        img(src="img/general/card-logo.png", alt="")
+                    .card-list__item-foot
+                      p.card-list__item-title= item.title
+                      p.card-list__item-subtitle= item.subtitle
+                    .control-box
+                      input.visuallyhidden(
+                      type="radio",
+                      name="backs",
+                      id= "backs-" + (index+1),
+                      value= item.value,
+                      )
+                      label.control-box__label(
+                        for="backs-" + (index+1)
+                      )
+                      span.control-box__flag
 
       .content-box__foot.content-box__module
         .content-box__inner

@@ -11,13 +11,14 @@
   background-color: #eee;
   display: none;
 
-  @media (min-width: 62em) {
+  @media (min-width: 48em) {
     display: block;
   }
 }
 
 
 .header-top__content {
+  height: 40px;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -75,12 +76,8 @@
 
 
 .header-members--primary {
-  display: none;
-
-  @media (min-width: 62em) {
-    display: flex;
-    flex-wrap: nowrap;
-  }
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 
@@ -93,19 +90,29 @@
   margin-right: 0;
 }
 
-
-.header-main {
+.header__scrollable {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, .9);
   z-index: 9999;
-  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+  transition: all 0.3s;
 
-  @media (min-width: 62em) {
-    position: relative;
+  @media (min-width: 48em) {
+    top: 40px;
   }
+
+  &.is-scroll {
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
+  }
+}
+
+
+.header-main {
+  background-color: rgba(255, 255, 255, .9);
+  overflow: hidden;
 }
 
 
@@ -117,9 +124,23 @@
   
 
   @media (min-width: 62em) {
-    min-height: 96px;
+    height: 96px;
     padding-top: 14px;
     padding-bottom: 14px;
+  }
+
+
+  .is-scroll & {
+    height: 64px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+
+    > * {
+      @media (min-width: 62em) {
+        transform: scale(0.8);
+      }
+    }
   }
 }
 
@@ -173,16 +194,17 @@
 
 
 .header-bottom {
-  color: #fff;
-  background-color: $primary-color;
   display: none;
 
-  @media (min-width: 48em) {
+  @media (min-width: 80em) {
     display: block;
-    margin-top: 72px;
+    height: 60px;
+    color: #fff;
+    background-color: $primary-color;
+    overflow: hidden;
   }
 
-  @media (min-width: 62em) {
-    margin-top: 0;
+  .is-scroll & {
+    height: 42px;
   }
 }

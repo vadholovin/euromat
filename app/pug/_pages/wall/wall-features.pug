@@ -1,0 +1,71 @@
+-
+  var features = [
+    {
+      text: `Эстетичный внешний вид <br> и современный дизайн`
+    },
+    {
+      text: `Обеспечение максимальной <br> безопасности для спортсменов`
+    },
+    {
+      text: `Простота и <br> удобство монтажа`
+    },
+    {
+      text: `Высокий <br> эксплуатационный срок`
+    },
+  ];
+
+
+section.wall-features
+  .container
+    h2.title.title--wall-features
+      | Cтеновой протектор
+    ul.checked-list.checked-list--wall-features.d-flex.negative-m
+      each item in features
+        li.checked-list__item
+          span.icon.icon-check-circle
+          p.checked-list__item-text!= item.text
+
+    .wall-features__grid.d-flex-wrapped.negative-m
+      .wall-features__col-left
+        img.wall-features__img(
+          src="img/content/wall/wall-img-1.png",
+          alt=""
+        )
+        .wall-features__list
+          .wall-features__list-item
+            p.wall-features__list-label Высота:
+            .control-item__label 2000 мм
+          .wall-features__list-item
+            p.wall-features__list-label Ширина:
+            .control-item__label 1000 мм
+          .wall-features__list-item
+            p.wall-features__list-label Толщина:
+            .control-item__label 20 - 50 мм
+
+      .wall-features__col-right
+        .bullet-list__wrapper.bullet-list__wrapper--wall-features
+          h3.bullet-list__heading Характеристики:
+          ul.bullet-list.bullet-list--wall-features
+            li.bullet-list__item
+              b Наполнение: 
+              br
+              | ППЭ
+              br
+              | НПЭ (несшитый пенополиэтилен) плотностью 120кг/м<sup>2</sup>
+              br
+              | Ударопоглощающий материал, который отлично держит форму и снижает риск травмирования при контакте.
+            
+            li.bullet-list__item
+              | <b>Метод крепления:</b> Липучка Velcro, монтажный клей
+            
+            li.bullet-list__item
+              | <b>Лицевая сторона:</b> ПВХ с высоким показателем надежности
+
+        .wall-features__heading
+          | На выбор есть различные цветовые решения
+        button.button(
+
+        ) Оставить заявку
+
+
+

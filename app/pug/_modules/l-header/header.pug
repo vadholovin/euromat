@@ -9,51 +9,52 @@ header.header
           |
           span.header-cities__link Москва
 
-        //- .header-members.header-members--primary
-        //-   p.header-members__text
-        //-     | Официальные представители в России и странах СНГ
-        //-   .header-members__flags
-        //-     span.icon.icon-flag-ru(title="Россия")
-        //-     span.icon.icon-flag-by(title="Белорусь")
-        //-     span.icon.icon-flag-ukr(title="Украина")
-        //-     span.icon.icon-flag-kz(title="Казахстан")
-        //-     span.icon.icon-flag-pl(title="Польша")
+        .header-members.header-members--primary
+          //- p.header-members__text
+          //-   | Официальные представители в России и странах СНГ
+          .header-members__flags
+            span.icon.icon-flag-ru(title="Россия")
+            span.icon.icon-flag-by(title="Белорусь")
+            span.icon.icon-flag-ukr(title="Украина")
+            span.icon.icon-flag-kz(title="Казахстан")
+            span.icon.icon-flag-pl(title="Польша")
   
-  .header-main
-    .container.container--header
-      .header-main__content.d-flex-wrapped
-        .brand-wrapper.brand-wrapper--header
-          a.brand
-            img(
-              src="img/general/logo.png",
-              scrset="img/general/logo.png 1x, img/general/logo@2x.png 1.5x, img/general/logo@2x.png 2x, img/general/logo@2x.png 3x,"
-              alt="логотип Euromat"
-            )
-        ul.header-contacts
-          li.header-contacts__item
-            a.header-contacts__link(href="tel:+74995262525") +7 (499) 526-25-25
-            span.header-contacts__notes Режим работы: Круглосуточно
-          li.header-contacts__item
-            a.header-contacts__link(href="mailto:info@euromatsport.ru") info@euromatsport.ru
-            span.header-contacts__notes Напишите нам на почту
-        
-        button.hamburger.hamburger--spring(
-          type='button',
-          aria-label='Menu',
-          aria-controls='navigation'
-        )
-          span.hamburger-box
-            span.hamburger-inner
-        
-        button.button.button--call(
-          title="Заказать обратный звонок"
-        )
-          span.icon.icon-phone
+  .header__scrollable.js-header-scrollable
+    .header-main
+      .container.container--header
+        .header-main__content.d-flex-wrapped
+          .brand-wrapper.brand-wrapper--header
+            a.brand(href="/")
+              img(
+                src="img/general/logo.png",
+                scrset="img/general/logo.png 1x, img/general/logo@2x.png 1.5x, img/general/logo@2x.png 2x, img/general/logo@2x.png 3x,"
+                alt="логотип Euromat"
+              )
+          ul.header-contacts
+            li.header-contacts__item
+              a.header-contacts__link(href="tel:+74995262525") +7 (499) 526-25-25
+              span.header-contacts__notes Режим работы: Круглосуточно
+            li.header-contacts__item
+              a.header-contacts__link(href="mailto:info@euromatsport.ru") info@euromatsport.ru
+              span.header-contacts__notes Напишите нам на почту
+          
+          button.hamburger.hamburger--spring(
+            type='button',
+            aria-label='Menu',
+            aria-controls='navigation'
+          )
+            span.hamburger-box
+              span.hamburger-inner
+          
+          button.button.button--call(
+            title="Заказать обратный звонок"
+          )
+            span.icon.icon-phone
 
-  .header-bottom
-    .container.container--wider
-      include ../l-menu/menu-header
-  
+    .header-bottom
+      .container.container--wider
+        include ../l-menu/menu-header
+    
   include ../l-menu/menu-mobile
   
 

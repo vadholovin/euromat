@@ -75,3 +75,31 @@
   font-weight: 500;
   line-height: 1.25;
 }
+
+
+/* #checked-list--wall-features
+   ========================================================================== */
+
+.checked-list--wall-features {
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  
+  @media (min-width: 62em) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+
+
+.checked-list--wall-features .checked-list__item {
+  margin-bottom: 24px;
+  font-size: rem(14);
+
+  @media (min-width: 36em) {
+    width: 50%;
+  }
+
+  @media (min-width: 62em) {
+    width: auto;
+  }
+}

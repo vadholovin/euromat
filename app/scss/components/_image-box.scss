@@ -9,12 +9,37 @@
 
 
 .image-box__img {
-  
+  position: relative;
+}
+
+
+.image-box__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.image-box__img:before {
+  content: '';
+  float: left;
+  padding-top: 100%;
+}
+
+
+.image-box__img:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 
 .image-box__foot {
   padding-top: 8px;
+  overflow: hidden;
 }
 
 
@@ -30,17 +55,24 @@
 
 .image-box__list--carpet-design {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  margin-left: -4px;
+  margin-right: -4px;
+
+  @media (max-width: 61.99em) {
+    flex-wrap: wrap;
+  }
 }
 
 
 .image-box__list--carpet-design .image-box {
   width: 50%;
   margin-bottom: 16px;
+  padding-left: 4px;
+  padding-right: 4px;
 
   @media (min-width: 36em) {
-    width: 25%;
+    width: 110px;
   }
 }
 
@@ -50,13 +82,21 @@
 
 .image-box__list--carpet-material {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 
 .image-box__list--carpet-material .image-box {
-  width: 50%;
+  width: 222px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+.image-box__list--carpet-material .image-box__img:before {
+  padding-top: 49.5495%;
 }
 
 
@@ -66,4 +106,9 @@
 .image-box__list--carpet-mount {
   display: flex;
   justify-content: space-between;
+}
+
+
+.image-box__list--carpet-mount .image-box__img:before {
+  padding-top: 47.6635514%;
 }

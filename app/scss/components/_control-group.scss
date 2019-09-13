@@ -59,7 +59,7 @@ input:checked ~ .control-item__label {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(-20%, 20%);
+  transform: translate(10%, -10%);
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -155,4 +155,12 @@ input:checked ~ .control-item__label {
 
 .control-group--mma-logo .control-item__label {
   width: 150px;
+}
+
+
+/* #control-group--ring-about
+   ========================================================================== */
+
+.control-group--ring-about {
+  
 }

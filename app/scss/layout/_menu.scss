@@ -19,6 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 
@@ -64,6 +65,11 @@
   @media (min-width: 80em) {
     padding-top: 18px;
     padding-bottom: 18px;
+  }
+
+  .is-scroll & {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
