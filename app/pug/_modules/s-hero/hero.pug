@@ -1,60 +1,128 @@
-section.hero(style="background-image: url(img/backgrounds/bg-hero.jpg);")
+section.hero
+  .slider__wrapper.slider__wrapper--hero-main
+    .slider-nav.slider-nav--shevrons.slider-nav--hero-main#hero-main-nav
+      button.slider-nav__prev(aria-label="Предыдущий слайд")
+      button.slider-nav__next(aria-label="Следующий слайд")
+    .hero-main__slider.slider.slider--hero-main.js-hero-main-slider
+      .hero-main__slider-item(
+        style="background-image: url(img/content/hero-slider/img-1.jpg)"
+      )
+        .container
+          .hero__top.d-flex-wrapped
+            .hero__text
+              h1.title.title--hero
+                | безусловный лидер
+                br
+                | в сфере производства
+                br
+                | спортивных покрытий
+              p.hero__subtitle
+                | Поможем выбрать покрытие для вашего вида спорта
+
+            .hero-widget
+              .hero-widget__inner
+                p.hero-widget__title
+                  | Ликвидация склада
+                  br
+                  | до 30.08.2019
+                .hero-widget__timer
+                  .hero-widget__timer-item
+                    span.hero-widget__timer-top 25
+                    span.hero-widget__timer-bottom Дней
+                  .hero-widget__timer-item
+                    span.hero-widget__timer-top 13
+                    span.hero-widget__timer-bottom Часов
+                  .hero-widget__timer-item
+                    span.hero-widget__timer-top 6
+                    span.hero-widget__timer-bottom Минут
+                
+                form.form.form--hero-widget
+                  .form-control__wrapper
+                    label.visuallyhidden(for="client-name-hero") Ваше имя
+                    input.form-control(
+                      type="text",
+                      id="client-name-hero",
+                      name="client-name-hero",
+                      placeholder="Ваше имя"
+                    )
+                  .form-control__wrapper
+                    label.visuallyhidden(for="client-email-hero") Ваша почта
+                    input.form-control(
+                      type="text",
+                      id="client-email-hero",
+                      name="client-email-hero",
+                      placeholder="Ваша почта"
+                    )
+                  .form-control__wrapper
+                    label.visuallyhidden(for="client-phone-hero") Номер телефона
+                    input.form-control(
+                      type="tel",
+                      id="client-phone-hero",
+                      name="client-phone-hero",
+                      placeholder="Ваш номер телефона"
+                    )
+                  button.button(type="submit") Отправить заявку
+      
+      .hero-main__slider-item(
+        style="background-image: url(img/content/hero-slider/img-2.jpg)"
+      )
+        .container
+          .hero__top.d-flex-wrapped
+            .hero__text
+              h1.title.title--hero
+                | безусловный лидер
+                br
+                | в сфере производства
+                br
+                | спортивных покрытий
+              p.hero__subtitle
+                | Поможем выбрать покрытие для вашего вида спорта
+
+            .hero-widget
+              .hero-widget__inner
+                p.hero-widget__title
+                  | Ликвидация склада
+                  br
+                  | до 30.08.2019
+                .hero-widget__timer
+                  .hero-widget__timer-item
+                    span.hero-widget__timer-top 25
+                    span.hero-widget__timer-bottom Дней
+                  .hero-widget__timer-item
+                    span.hero-widget__timer-top 13
+                    span.hero-widget__timer-bottom Часов
+                  .hero-widget__timer-item
+                    span.hero-widget__timer-top 6
+                    span.hero-widget__timer-bottom Минут
+                
+                form.form.form--hero-widget
+                  .form-control__wrapper
+                    label.visuallyhidden(for="client-name-hero") Ваше имя
+                    input.form-control(
+                      type="text",
+                      id="client-name-hero",
+                      name="client-name-hero",
+                      placeholder="Ваше имя"
+                    )
+                  .form-control__wrapper
+                    label.visuallyhidden(for="client-email-hero") Ваша почта
+                    input.form-control(
+                      type="text",
+                      id="client-email-hero",
+                      name="client-email-hero",
+                      placeholder="Ваша почта"
+                    )
+                  .form-control__wrapper
+                    label.visuallyhidden(for="client-phone-hero") Номер телефона
+                    input.form-control(
+                      type="tel",
+                      id="client-phone-hero",
+                      name="client-phone-hero",
+                      placeholder="Ваш номер телефона"
+                    )
+                  button.button(type="submit") Отправить заявку
+  
   .container
-    .hero__top.d-flex-wrapped
-      .hero__text
-        h1.title.title--hero
-          | безусловный лидер
-          br
-          | в сфере производства
-          br
-          | спортивных покрытий
-        p.hero__subtitle
-          | Поможем выбрать покрытие для вашего вида спорта
-
-      .hero-widget
-        .hero-widget__inner
-          p.hero-widget__title
-            | Ликвидация склада
-            br
-            | до 30.08.2019
-          .hero-widget__timer
-            .hero-widget__timer-item
-              span.hero-widget__timer-top 25
-              span.hero-widget__timer-bottom Дней
-            .hero-widget__timer-item
-              span.hero-widget__timer-top 13
-              span.hero-widget__timer-bottom Часов
-            .hero-widget__timer-item
-              span.hero-widget__timer-top 6
-              span.hero-widget__timer-bottom Минут
-          
-          form.form.form--hero-widget
-            .form-control__wrapper
-              label.visuallyhidden(for="client-name-hero") Ваше имя
-              input.form-control(
-                type="text",
-                id="client-name-hero",
-                name="client-name-hero",
-                placeholder="Ваше имя"
-              )
-            .form-control__wrapper
-              label.visuallyhidden(for="client-email-hero") Ваша почта
-              input.form-control(
-                type="text",
-                id="client-email-hero",
-                name="client-email-hero",
-                placeholder="Ваша почта"
-              )
-            .form-control__wrapper
-              label.visuallyhidden(for="client-phone-hero") Номер телефона
-              input.form-control(
-                type="tel",
-                id="client-phone-hero",
-                name="client-phone-hero",
-                placeholder="Ваш номер телефона"
-              )
-            button.button(type="submit") Отправить заявку
-
     .slider__wrapper.slider__wrapper--hero
       .hero-slider.slider.slider--hero.js-hero-slider
         a.hero-slider__item.slider-item(
@@ -175,10 +243,6 @@ section.hero(style="background-image: url(img/backgrounds/bg-hero.jpg);")
           span.icon-martial.icon-martial-gymnastics
           span.hero-slider__item-title Гимнастика
 
-
-
-
-      
       .slider-nav.slider-nav--shevrons.slider-nav--hero#hero-nav
         button.slider-nav__prev(aria-label="Предыдущий слайд")
         button.slider-nav__next(aria-label="Следующий слайд")

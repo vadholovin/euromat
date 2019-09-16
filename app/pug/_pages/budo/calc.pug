@@ -12,7 +12,7 @@
       img: 'img/content/budo/colors/yellow-green.png',
       title: 'Желто-зеленые'
     },
-    
+
   ];
 
 -
@@ -154,16 +154,30 @@ section.budo-calc
               .pure-u-1.pure-u-lg-1-2
                 p.budo-calculator__colors-subtitle популярный цвет
 
-                ul.budo-calculator__colors-list
-                  each color in colors_1
-                    li.budo-calculator__colors-item
-                      .card.card--budo-calculator
-                        figure.card-media
-                          .card-media__content
-                            img(src=color.img, alt="")
-                        .card__foot
-                          img(src="img/general/card-logo.png", alt="")
-                      p.budo-calculator__colors-item-title= color.title
+                ul.card-list.card-list--budo-calculator
+                  each color, index in colors_1
+                    li.card-list__item.js-check
+                      .card-list__item-inner
+                        .card.card--bg.card--budo-calculator
+                          figure.card-media
+                            .card-media__content
+                              img(src=color.img, alt="")
+                          .card__foot
+                            img(src="img/general/card-logo.png", alt="")
+                        .card-list__item-foot
+                          span.card-list__item-title= color.title
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="colors-1",
+                          id= "colors-1-" + (index+1),
+                          value= color.title,
+                          )
+                          label.control-box__label(
+                            for="colors-1-" + (index+1)
+                          )
+                          span.control-box__flag
+
                 .flex-center
                   .budo-calculator__colors-notes
                     p.bigger
@@ -175,16 +189,29 @@ section.budo-calc
                 p.budo-calculator__colors-subtitle
                   span.bigger Эксклюзивный цвет
                   span.smaller.highlight (Заказ от 50 м<sup>2</sup>)
-                ul.budo-calculator__colors-list
-                  each color in colors_2
-                    li.budo-calculator__colors-item
-                      .card.card--budo-calculator
-                        figure.card-media
-                          .card-media__content
-                            img(src=color.img, alt="")
-                        .card__foot
-                          img(src="img/general/card-logo.png", alt="")
-                      p.budo-calculator__colors-item-title= color.title
+                ul.card-list.card-list--budo-calculator
+                  each color, index in colors_2
+                    li.card-list__item.js-check
+                      .card-list__item-inner
+                        .card.card--bg.card--budo-calculator
+                          figure.card-media
+                            .card-media__content
+                              img(src=color.img, alt="")
+                          .card__foot
+                            img(src="img/general/card-logo.png", alt="")
+                        .card-list__item-foot
+                          span.card-list__item-title= color.title
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="colors-2",
+                          id= "colors-2-" + (index+1),
+                          value= color.title,
+                          )
+                          label.control-box__label(
+                            for="colors-2-" + (index+1)
+                          )
+                          span.control-box__flag
 
         .budo-calculator__foot
           .budo-calculator__inner

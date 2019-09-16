@@ -5,6 +5,31 @@ jQuery(document).ready(function($) {
 });
 
 
+
+jQuery(document).ready(function($) {
+
+  $('.js-tile-colors .card-list__item').hover(function () {
+    let img = $(this).find('img').attr('src'),
+        text = $(this).find('.card-list__item-title').text(),
+        targetImg = $('.card--display-box').find('img'),
+        targeText = $('.card--display-box .card__title');
+
+    targetImg.attr('src', img);
+    targeText.text(text);
+  });
+
+  $('.js-tile-colors .card-list__item').click(function () {
+    let img = $(this).find('img').attr('src'),
+        text = $(this).find('.card-list__item-title').text(),
+        targetImg = $('.card--display-box').find('img'),
+        targeText = $('.card--display-box .card__title');
+
+    targetImg.attr('src', img);
+    targeText.text(text);
+  });
+});
+
+
 /**
  * #Scroll Header
  */
@@ -49,6 +74,27 @@ jQuery(document).ready(function($) {
 });
 
 
+
+
+/**
+ * #Hero main Slider
+ */
+jQuery(document).ready(function($) {
+  var slider = $('.js-hero-main-slider');
+
+  slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    prevArrow: $('#hero-main-nav .slider-nav__prev'),
+    nextArrow: $('#hero-main-nav .slider-nav__next'),
+    // pauseOnHover: false,
+    // pauseOnFocus: false,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
+  });
+});
 
 
 /**
@@ -267,26 +313,44 @@ jQuery(document).ready(function($) {
  * #Team Slider
  */
 jQuery(document).ready(function($) {
-  var slider = $('.js-team-slider'),
-      current = $('.js-counter-team .slider-counter__current'),
-      total = $('.js-counter-team .slider-counter__total'),
-      eventSet = 'init reInit afterChange';
-
-  slider.on(eventSet, function(event, slick, currentSlide) {
-    var i = (currentSlide ? currentSlide : 0) + 1;
-    current.text(i);
-    total.text(slick.slideCount);
-  });
+  var slider = $('.js-team-slider');
 
   slider.slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     infinite: true,
     dots: false,
     prevArrow: $('#team-nav .slider-nav__prev'),
     nextArrow: $('#team-nav .slider-nav__next'),
     pauseOnHover: false,
     pauseOnFocus: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+        },
+      },
+    ],
   });
 
   slider.on('wheel', (function(e) {

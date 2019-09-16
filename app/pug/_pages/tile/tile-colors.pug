@@ -79,7 +79,7 @@ section.tile-colors
     .tile-colors__grid.negative-m
       .tile-colors__col-left
         h3.tile-colors__heading Классические цвета
-        ul.card-list.card-list--tile-colors
+        ul.card-list.card-list--tile-colors.js-tile-colors
           each item, index in colors_classic
             li.card-list__item
               .card.card--bg
@@ -92,7 +92,7 @@ section.tile-colors
                 span.card-list__item-title!= item.title
 
         h3.tile-colors__heading Яркие цвета EPDM
-        ul.card-list.card-list--tile-colors
+        ul.card-list.card-list--tile-colors.js-tile-colors
           each item, index in colors_classic
             li.card-list__item
               .card.card--bg

@@ -33,7 +33,7 @@
   display: inline-block;
   width: 17px;
   height: 17px;
-  border: 1px solid #fff;
+  border: 1px solid $primary-color;
   border-radius: 3px;
 }
 
@@ -42,15 +42,18 @@ input:checked~label .form__acceptance-mask:after {
   content: '';
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-45deg);
   width: 12px;
-  height: 10px;
-  background-image: url(../img/icons/sprites/sprite.png);
-  background-repeat: no-repeat;
-  background-position: -158px -118px;
-  background-size: 212px 193px;
+  height: 6px;
+  border: 1px solid transparent;
+  border-left-color: $primary-color;
+  border-bottom-color: $primary-color;
+  // background-image: url(../img/icons/sprites/sprite.png);
+  // background-repeat: no-repeat;
+  // background-position: -158px -118px;
+  // background-size: 212px 193px;
 }
 
 
@@ -191,6 +194,13 @@ input:checked~label .form__acceptance-mask:after {
 .form--banner-consult .form__acceptance-mask {
   flex: none;
   margin-right: 8px;
+  border-color: #fff;
+}
+
+
+.form--banner-consult input:checked~label .form__acceptance-mask:after {
+  border-left-color: #fff;
+  border-bottom-color: #fff;
 }
 
 
@@ -252,44 +262,75 @@ input:checked~label .form__acceptance-mask:after {
 /* #form--modal
    ========================================================================== */
 
-.form--modal .form-control__wrapper {
-  margin-bottom: 13px;
+.form--modal {
+  padding: 50px 35px 50px 35px;
 
-  &:last-child {
-    margin-bottom: 22px;
+  @media (min-width: 36em) {
+    padding: 50px 50px 60px 50px;
+  }
+}
+
+
+.form--modal .form-control__wrapper {
+  margin-bottom: 12px;
+
+
+  @media (min-width: 48em) {
+    margin-bottom: 23px;
+  }
+}
+
+
+.form--modal .form__acceptance-wrapper {
+  margin-bottom: 24px;
+  margin-top: 24px;
+
+  @media (min-width: 48em) {
+    margin-top: 40px;
+    margin-bottom: 45px;
   }
 }
 
 
 .form--modal .form-control {
   padding: 0.9em 1.5em;
-  border-radius: 30px;
   font-size: rem(16);
+  background-color: #efefef;
+  border-color: #efefef;
 }
 
 
 .form--modal .form__head {
   font-weight: 800;
-  color: $primary-color;
-  line-height: 1.15;
-  text-transform: uppercase;
+  line-height: 1.25;
   text-align: center;
 }
 
 
 .form--modal .form__title {
-  @include fluid-type($min_width, $max_width, 24px, 36px);
+  @include fluid-type($min_width, $max_width, 22px, 28px);
 
   line-height: inherit;
-  margin-bottom: 8px;
+  color: $primary-color;
+  text-transform: uppercase;
 }
 
 
 .form--modal .form__subtitle {
-  // @include fluid-type($min_width, $max_width, 18px, 20px);
-
-  font-size: rem(15);
+  font-size: rem(14);
   line-height: inherit;
   margin-bottom: 24px;
 }
 
+
+.form--modal .form__acceptance-label {
+  display: flex;
+  width: 100%;
+  font-size: rem(14);
+
+
+  .form__acceptance-mask {
+    flex: none;
+    margin-right: 10px;
+  }
+}

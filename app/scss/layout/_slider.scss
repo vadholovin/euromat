@@ -106,13 +106,33 @@
    #Slider--team
    ========================================================================== */
 
+.slider__wrapper--hero {
+  position: relative;
+  margin-top: -210px;
+}
+
+
 .slider--hero {
   padding-left: 50px;
   padding-right: 50px;
 }
 
+
+.slider-nav--hero-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .slider--portfolio,
-.slider--reviews {
+.slider--reviews,
+.slider--team {
   margin-left: -20px;
   margin-right: -20px;
 
@@ -124,14 +144,16 @@
 
 
 .slider-item--portfolio,
-.slider-item--reviews {
+.slider-item--reviews,
+.slider-item--team {
   margin-left: 20px;
   margin-right: 20px;
 }
 
 
 .slider-nav--portfolio,
-.slider-nav--reviews {
+.slider-nav--reviews,
+.slider-nav--team {
 
   @media (max-width: 47.99em) {
     display: none;
@@ -139,9 +161,11 @@
 }
 
 
+.slider-nav--hero-main > *,
 .slider-nav--hero > *,
 .slider-nav--portfolio > *,
-.slider-nav--reviews > * {
+.slider-nav--reviews > *,
+.slider-nav--team > * {
   position: absolute;
   top: 50%;
   width: 44px;
@@ -150,7 +174,8 @@
 
 
 .slider-nav--portfolio .slider-nav__prev,
-.slider-nav--reviews .slider-nav__prev {
+.slider-nav--reviews .slider-nav__prev,
+.slider-nav--team .slider-nav__prev {
   left: 0;
   transform: translate(0%, -50%);
 
@@ -161,7 +186,8 @@
 
 
 .slider-nav--portfolio .slider-nav__next,
-.slider-nav--reviews .slider-nav__next {
+.slider-nav--reviews .slider-nav__next,
+.slider-nav--team .slider-nav__next {
   right: 0;
   transform: translate(0%, -50%);
 
@@ -171,15 +197,27 @@
 }
 
 
-.slider-nav--hero .slider-nav__prev {
+.slider-nav--hero-main .slider-nav__prev {
   left: 0;
   transform: translate(0%, -50%);
 }
 
 
-.slider-nav--hero .slider-nav__next {
+.slider-nav--hero-main .slider-nav__next {
   right: 0;
   transform: translate(0%, -50%);
+}
+
+
+.slider-nav--hero .slider-nav__prev {
+  left: 0;
+  transform: translate(0%, -50%) scale(0.65);
+}
+
+
+.slider-nav--hero .slider-nav__next {
+  right: 0;
+  transform: translate(0%, -50%) scale(0.65);
 }
 
 
@@ -214,10 +252,6 @@
 
 .slider-nav--team {
   margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
 }
 
 
@@ -240,7 +274,7 @@
 
 .slider-nav--team .slider-nav__prev:after,
 .slider-nav--team .slider-nav__next:after {
-  transform: translate(-50%, -50%) scale(0.64);
+  transform: translate(-50%, -50%);
 }
 
 
@@ -274,5 +308,3 @@
     height: 44px;
   }
 }
-
-

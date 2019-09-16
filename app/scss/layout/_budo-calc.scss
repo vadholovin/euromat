@@ -250,33 +250,6 @@
 }
 
 
-.budo-calculator__colors-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: -8px;
-  margin-right: -8px;
-}
-
-
-.budo-calculator__colors-item {
-  width: 100%;
-  max-width: 156px;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-bottom: 8px;
-}
-
-
-.budo-calculator__colors-item-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: rem(13);
-  line-height: 1.25;
-  margin-top: 8px;
-}
-
-
 .budo-calculator__foot {
   padding: 36px 30px;
   border-top: 1px solid rgba(0, 0, 0, .1);

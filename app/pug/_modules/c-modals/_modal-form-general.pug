@@ -176,6 +176,17 @@
       field_4: '',
       field_5: '',
     },
+    {
+      category: 'bid',
+      title: `Оставьте заявку`,
+      subtitle: `Мы свяжемся с Вами в ближайшее время`,
+      id: 'bid',
+      field_1: '',
+      field_2: '',
+      field_3: '',
+      field_4: '',
+      field_5: '',
+    },
   ];
 
 
@@ -186,42 +197,69 @@ each item, index in modals
     aria-hidden='true'
   )
     .modal__overlay(tabindex='-1', data-micromodal-close='')
-      .modal__container(role='dialog', aria-modal='true')
-        button.modal__close(aria-label='Закрыть попап', data-micromodal-close='')
+      .modal__container.modal__container--big(role='dialog', aria-modal='true')
         main.modal__content
-          form.form.form--modal
-            .form__head
-              p.form__title!= item.title
-              p.form__subtitle!= item.subtitle
-            
-            .form-control__wrapper
-              label.visuallyhidden(
-                for="client-name-modal-" + item.category + "-" + (index + 1)
-              ) Ваше имя
-              input.form-control(
-                type="text",
-                id="client-name-modal-" + item.category + "-" + (index + 1),
-                name="client-name-modal",
-                placeholder="Ваше имя"
+          button.modal__close(aria-label='Закрыть попап', data-micromodal-close='')
+          .pure-g
+            .pure-u-1.pure-u-md-1-2
+              .modal__banner(
+                style="background-image: url(img/backgrounds/bg-modal-banner.jpg);"
               )
-            .form-control__wrapper
-              label.visuallyhidden(
-                for="client-email-modal-" + item.category + "-" + (index + 1)
-              ) Ваша почта
-              input.form-control(
-                type="text",
-                id="client-email-modal-" + item.category + "-" + (index + 1),
-                name="client-email-modal",
-                placeholder="Ваша почта"
-              )
-            .form-control__wrapper
-              label.visuallyhidden(
-                for="client-phone-modal-" + item.category + "-" + (index + 1)
-              ) Номер телефона
-              input.form-control(
-                type="tel",
-                id="client-phone-modal-" + item.category + "-" + (index + 1),
-                name="client-phone-modal",
-                placeholder="Ваш номер телефона"
-              )
-            button.button(type="submit") Отправить заявку
+                .modal__banner-content
+                  .modal__banner-logo
+                    img(src="img/general/logo-white.png", alt="")
+                  p.title.title--modal-banner Доставка –
+                  p.modal__banner-text
+                    | 172 пункта выдачи
+                    br
+                    | по России и СНГ
+            .pure-u-1.pure-u-md-1-2
+              form.form.form--modal
+                .form__head
+                  p.form__title!= item.title
+                  p.form__subtitle!= item.subtitle
+
+                .form-control__wrapper
+                  label.visuallyhidden(
+                    for="client-name-modal-" + item.category + "-" + (index + 1)
+                  ) Ваше имя
+                  input.form-control(
+                    type="text",
+                    id="client-name-modal-" + item.category + "-" + (index + 1),
+                    name="client-name-modal",
+                    placeholder="Ваше имя"
+                  )
+                .form-control__wrapper
+                  label.visuallyhidden(
+                    for="client-email-modal-" + item.category + "-" + (index + 1)
+                  ) Ваша почта
+                  input.form-control(
+                    type="text",
+                    id="client-email-modal-" + item.category + "-" + (index + 1),
+                    name="client-email-modal",
+                    placeholder="Ваша почта"
+                  )
+                .form-control__wrapper
+                  label.visuallyhidden(
+                    for="client-phone-modal-" + item.category + "-" + (index + 1)
+                  ) Номер телефона
+                  input.form-control(
+                    type="tel",
+                    id="client-phone-modal-" + item.category + "-" + (index + 1),
+                    name="client-phone-modal",
+                    placeholder="Ваш номер телефона"
+                  )
+                .form__acceptance-wrapper
+                  input.visuallyhidden(
+                    type="checkbox",
+                    name="client-acceptance-" + (index + 1),
+                    id="client-acceptance-" + (index + 1),
+                    checked
+                  )
+                  label.form__acceptance-label(
+                    for="client-acceptance-" + (index + 1)
+                  )
+                    span.form__acceptance-mask
+                    | - Я даю согласие на обработку моих персональных данных
+
+                button.button(type="submit") Отправить заявку

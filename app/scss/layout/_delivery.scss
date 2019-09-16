@@ -176,28 +176,11 @@
 
 
 .delivery-bottom {
-  padding-top: 50px;
-  padding-bottom: 250px;
-  background-repeat: no-repeat;
-  background-position: bottom 30px left 50%;
-  background-size: 320px auto;
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
-  @media (min-width: 48em) {
-    padding-bottom: 300px;
-    background-size: 440px auto;
-  }
-
-  @media (min-width: 62em) {
-    padding-bottom: 118px;
-    background-size: 35.625% auto;
-    background-position: top 35% right 2.3958%;
-  }
-
-  @media (min-width: 100em) {
-    background-position: top 12px right 2.3958%;
-  }
-
-  @media (min-width: 110em) {
+  @media (min-width: 90em) {
     padding-top: 85px;
   }
 }
@@ -210,13 +193,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 40px;
   }
 
   @media (min-width: 62em) {
     width: 60%;
   }
 
-  @media (min-width: 80em) {
+  @media (min-width: 90em) {
     width: 66.666666%;
   }
 }
@@ -232,6 +216,57 @@
 @keyframes slidedown {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(650px); }
+}
+
+
+.delivery-map {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 62em) {
+    position: absolute;
+    top: 60px;
+    right: 2.3958%;
+    width: 35.625vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  @media (min-width: 90em) {
+    top: 0;
+  }
+  
+}
+
+.delivery-map:before {
+  content: '';
+  float: left;
+  padding-top: 56.785348323687%;
+}
+
+
+.delivery-map:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.delivery-map svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.delivery-map svg path:hover {
+  transition: fill 0.3s;
+  fill: $primary-color;
 }
 
 

@@ -81,26 +81,27 @@ section.product-calc.product-calc--roll
             ul.card-list.card-list--roll-cover.negative-m-3
               each item, index in cover
                 li.card-list__item.js-check
-                  .card.card--bg
-                    figure.card-media
-                      .card-media__content
-                        img(src=item.image, alt="")
-                    .card__foot
-                      img(src="img/general/card-logo.png", alt="")
-                  .card-list__item-foot
-                    span.card-list__item-title!= item.title
-                    span.card-list__item-subtitle!= item.subtitle
-                  .control-box
-                    input.visuallyhidden(
-                    type="radio",
-                    name="cover",
-                    id= "cover-" + (index+1),
-                    value= item.value,
-                    )
-                    label.control-box__label(
-                      for="cover-" + (index+1)
-                    )
-                    span.control-box__flag
+                  .card-list__item-inner
+                    .card.card--bg
+                      figure.card-media
+                        .card-media__content
+                          img(src=item.image, alt="")
+                      .card__foot
+                        img(src="img/general/card-logo.png", alt="")
+                    .card-list__item-foot
+                      span.card-list__item-title!= item.title
+                      span.card-list__item-subtitle!= item.subtitle
+                    .control-box
+                      input.visuallyhidden(
+                      type="radio",
+                      name="cover",
+                      id= "cover-" + (index+1),
+                      value= item.title,
+                      )
+                      label.control-box__label(
+                        for="cover-" + (index+1)
+                      )
+                      span.control-box__flag
 
           .content-box__unit
             .pure-g.negative-m-3
@@ -112,26 +113,27 @@ section.product-calc.product-calc--roll
                 ul.card-list.card-list--roll-filling.negative-m-3
                   each item, index in filling
                     li.card-list__item.js-check
-                      .card.card--bg
-                        figure.card-media
-                          .card-media__content
-                            img(src=item.image, alt="")
-                        .card__foot
-                          img(src="img/general/card-logo.png", alt="")
-                      .card-list__item-foot
-                        span.card-list__item-title!= item.title
-                        span.card-list__item-subtitle!= item.subtitle
-                      .control-box
-                        input.visuallyhidden(
-                        type="radio",
-                        name="filling",
-                        id= "filling-" + (index+1),
-                        value= item.value,
-                        )
-                        label.control-box__label(
-                          for="filling-" + (index+1)
-                        )
-                        span.control-box__flag
+                      .card-list__item-inner
+                        .card.card--bg
+                          figure.card-media
+                            .card-media__content
+                              img(src=item.image, alt="")
+                          .card__foot
+                            img(src="img/general/card-logo.png", alt="")
+                        .card-list__item-foot
+                          span.card-list__item-title!= item.title
+                          span.card-list__item-subtitle!= item.subtitle
+                        .control-box
+                          input.visuallyhidden(
+                          type="radio",
+                          name="filling",
+                          id= "filling-" + (index+1),
+                          value= item.title,
+                          )
+                          label.control-box__label(
+                            for="filling-" + (index+1)
+                          )
+                          span.control-box__flag
           
       .content-box__module
         .content-box__inner
