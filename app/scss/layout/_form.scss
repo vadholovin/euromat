@@ -135,9 +135,11 @@ input:checked~label .form__acceptance-mask:after {
 
 
 /* #Form--banner-consult
+   #form--banner-calculation
    ========================================================================== */
 
-.form--banner-consult .form-lead {
+.form--banner-consult .form-lead,
+.form--banner-calculation .form-lead {
   font-weight: bold;
   margin-bottom: 22px;
   color: #fff;
@@ -145,7 +147,10 @@ input:checked~label .form__acceptance-mask:after {
 
 .form--banner-consult .form-lead,
 .form--banner-consult .form-control,
-.form--banner-consult .form__acceptance-label {
+.form--banner-consult .form__acceptance-label,
+.form--banner-calculation .form-lead,
+.form--banner-calculation .form-control,
+.form--banner-calculation .form__acceptance-label {
 
   @media (min-width: 80em) {
     transform: skewX(30deg);
@@ -153,19 +158,22 @@ input:checked~label .form__acceptance-mask:after {
 }
 
 
-.form--banner-consult .form-control__wrapper {
+.form--banner-consult .form-control__wrapper,
+.form--banner-calculation .form-control__wrapper {
   margin-bottom: 23px;
   background-color: #d7d7d7;
 }
 
 
-.form--banner-consult .form-control__wrapper--last {
+.form--banner-consult .form-control__wrapper--last,
+.form--banner-calculation .form-control__wrapper--last {
   margin-bottom: 30px;
   background-color: $secondary-color;
 }
 
 
-.form--banner-consult .form-control {
+.form--banner-consult .form-control,
+.form--banner-calculation .form-control {
   height: 45px;
   padding-left: 32px;
   padding-right: 32px;
@@ -179,7 +187,8 @@ input:checked~label .form__acceptance-mask:after {
 }
 
 
-.form--banner-consult .form__acceptance-label {
+.form--banner-consult .form__acceptance-label,
+.form--banner-calculation .form__acceptance-label {
   display: flex;
   font-weight: 500;
   font-size: rem(12);
@@ -191,16 +200,27 @@ input:checked~label .form__acceptance-mask:after {
 }
 
 
-.form--banner-consult .form__acceptance-mask {
+.form--banner-consult .form__acceptance-mask,
+.form--banner-calculation .form__acceptance-mask {
   flex: none;
   margin-right: 8px;
   border-color: #fff;
 }
 
 
-.form--banner-consult input:checked~label .form__acceptance-mask:after {
+.form--banner-consult input:checked~label .form__acceptance-mask:after,
+.form--banner-calculation input:checked~label .form__acceptance-mask:after {
   border-left-color: #fff;
   border-bottom-color: #fff;
+}
+
+
+.form-control--banner-calculation-foot {
+  padding: 24px 16px;
+  border: 0;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #fff;
 }
 
 

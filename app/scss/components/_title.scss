@@ -111,7 +111,7 @@
 
 
 .title--portfolio {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 
   @media (min-width: 90em) {
     margin-bottom: 60px;
@@ -160,6 +160,20 @@
   @media (min-width: 80em) {
     margin-bottom: 32px;
   }
+}
+
+
+.title--banner-calculation {
+  margin-bottom: 40px;
+}
+
+
+.title--banner-calculation .smaller {
+  @include fluid-type($min_width, $max_width, 20px, 42px);
+}
+
+.title--banner-calculation .bigger {
+  @include fluid-type($min_width, $max_width, 24px, 46px);
 }
 
 
@@ -354,7 +368,7 @@
   @include fluid-type($min_width, $max_width, 24px, 36px);
 
   margin-bottom: 32px;
-  max-width: 840px;
+  max-width: 860px;
 }
 
 

@@ -144,3 +144,11 @@ del {
     padding-top: 0;
   }
 }
+
+[data-fancybox] {
+  display: block;
+
+  &:focus {
+    outline: none;
+  }
+}

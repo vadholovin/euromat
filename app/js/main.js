@@ -169,13 +169,13 @@ jQuery(document).ready(function($) {
     centerPadding: '0px',
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: 991.98,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 767.98,
         settings: {
           dots: true,
           arrows: false,
@@ -183,7 +183,7 @@ jQuery(document).ready(function($) {
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 575.98,
         settings: {
           slidesToShow: 1,
           dots: true,

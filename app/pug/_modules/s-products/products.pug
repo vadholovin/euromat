@@ -78,7 +78,9 @@ section.products
           .products-item__body
             h3.products-item__title= item.title
             span.products-item__cost= item.cost
-            a.button(href="#") Скачать прайс
+            button.button(
+              data-micromodal-trigger="modal-form-price"
+            ) Скачать прайс
           .products-item__foot
             a.products-item__more(
               href= item.link,

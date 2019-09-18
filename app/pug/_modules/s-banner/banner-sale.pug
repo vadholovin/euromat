@@ -1,4 +1,4 @@
-section.banner.banner-sale(style="background-image: url(img/general/pattern-1.png);")
+section.banner.banner--sale.banner-sale(style="background-image: url(img/general/pattern-1.png);")
   .container
     .banner-sale__grid.pure-g
       .banner-sale__col-left.pure-u-1.pure-u-xl-1-2
@@ -7,23 +7,12 @@ section.banner.banner-sale(style="background-image: url(img/general/pattern-1.pn
           |
           span.highlight.smaller Предложение ограничено
         p.banner-sale__subtitle
-          | Оставьте заявку прямо сейчас  и получите подарок!
-        a.button(
-          href="#"
+          | Оставьте заявку прямо сейчас и получите подарок!
+        button.button(
+          data-micromodal-trigger="modal-form-sale"
         ) Получить подарок
 
       .banner-sale__col-right.pure-u-1.pure-u-xl-1-2
-        //- ul.banner-sale__list
-        //-   li.banner-sale__list-item
-        //-     .banner-sale__list-content
-        //-       img(src="img/content/sale/img-1.jpg", alt="")
-        //-   li.banner-sale__list-item
-        //-     .banner-sale__list-content
-        //-       img(src="img/content/sale/img-2.jpg", alt="")
-        //-   li.banner-sale__list-item
-        //-     .banner-sale__list-content
-        //-       img(src="img/content/sale/img-3.jpg", alt="")
-        
         ul.card-list.card-list--banner-sale
           li.card-list__item
             .card.card--bg

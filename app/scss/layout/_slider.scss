@@ -31,8 +31,10 @@
 }
 
 
-.slider-nav__prev:after,
-.slider-nav__next:after {
+.slider-nav--shevrons .slider-nav__prev:after,
+.slider-nav--shevrons .slider-nav__next:after,
+.slider-nav--arrows .slider-nav__prev:after,
+.slider-nav--arrows .slider-nav__next:after {
   content: '';
   position: absolute;
   display: inline-block;
@@ -80,6 +82,38 @@
 }
 
 
+/* #slider-nav--shevrons-big
+   ========================================================================== */
+
+.slider-nav--shevrons-big > * {
+  position: relative;
+}
+
+
+.slider-nav--shevrons-big .slider-nav__prev:after,
+.slider-nav--shevrons-big .slider-nav__next:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  border: 3px solid transparent;
+  border-left-color: $primary-color;
+  border-bottom-color: $primary-color;
+}
+
+
+.slider-nav--shevrons-big .slider-nav__prev:after {
+  transform: translate(-25%, -50%) rotate(45deg);
+}
+
+
+.slider-nav--shevrons-big .slider-nav__next:after {
+  transform: translate(-75%, -50%) rotate(-135deg);
+}
+
+
 /* #Slider-nav--arrows
    ========================================================================== */
 
@@ -108,7 +142,7 @@
 
 .slider__wrapper--hero {
   position: relative;
-  margin-top: -210px;
+  margin-top: -200px;
 }
 
 
@@ -125,7 +159,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -161,7 +195,6 @@
 }
 
 
-.slider-nav--hero-main > *,
 .slider-nav--hero > *,
 .slider-nav--portfolio > *,
 .slider-nav--reviews > *,
@@ -170,6 +203,15 @@
   top: 50%;
   width: 44px;
   height: 44px;
+}
+
+
+.slider-nav--hero-main > * {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 110;
 }
 
 

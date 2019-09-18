@@ -10,13 +10,58 @@
       link: 'img/content/portfolio/img-3.jpg'
     },
     {
-      link: 'img/content/portfolio/img-1.jpg'
+      link: 'img/content/portfolio/img-4.jpg'
     },
     {
-      link: 'img/content/portfolio/img-2.jpg'
+      link: 'img/content/portfolio/img-5.jpg'
     },
     {
-      link: 'img/content/portfolio/img-3.jpg'
+      link: 'img/content/portfolio/img-6.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-7.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-8.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-9.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-10.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-11.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-12.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-13.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-14.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-15.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-16.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-17.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-18.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-19.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-20.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-21.jpg'
     },
   ];
 
@@ -30,7 +75,10 @@ section.portfolio(style="background-image: url(img/general/pattern-1.png);")
           .portfolio-slider__item.slider-item
             .card.card--portfolio.card--bg
               figure.card-media
-                .card-media__content
+                a.card-media__content(
+                  href= image.link,
+                  data-fancybox="portfolio"
+                )
                   img(src=image.link, alt="")
               .card__foot
                 img(src="img/general/card-logo.png", alt="")

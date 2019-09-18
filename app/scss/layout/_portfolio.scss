@@ -35,6 +35,9 @@
 
 
 .portfolio-slider__item.slick-center .card {
-  transform: scale(1.12);
+
+  @media (min-width: 62em) {
+    transform: scale(1.12);
+  }
 }
 

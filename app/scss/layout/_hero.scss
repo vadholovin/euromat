@@ -12,7 +12,7 @@
 
 
 .hero__top {
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
 
   @media (min-width: 62em) {
     padding-top: 100px;
@@ -51,17 +51,18 @@
 
 
 .hero-widget {
+  position: absolute;
+  bottom: 206px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 324px;
   flex-shrink: 0;
-
-
-  @media (max-width: 61.99em) {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  z-index: 100;
 
   @media (min-width: 62em) {
-    margin-top: 40px;
+    bottom: 206px;
+    left: 64.4%;
+    transform: translateX(0%);
   }
 }
 
@@ -178,10 +179,15 @@
 
 .hero-main__slider-item {
   position: relative;
-  padding-bottom: 210px;
+  min-height: 794px;
+  padding-bottom: 640px;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+
+  @media (min-width: 62em) {
+    padding-bottom: 200px;
+  }
 }
 
 
