@@ -7,7 +7,15 @@ section.ring-logo
     .ring-logo__grid
       .ring-logo__col-left
         figure.ring-logo__img.ring-logo__img--3d
-          img(src="img/content/ring/ring-logo-1.png", alt="")
+          img.lozad(
+            data-src="img/content/ring/ring-logo-1.png",
+            alt=""
+          )
+          noscript
+            img(
+              src="img/content/ring/ring-logo-1.png",
+              alt=""
+            )
           figcaption.ring-logo__img-caption
             | Пример размещения логотипа
 

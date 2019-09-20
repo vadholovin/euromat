@@ -13,10 +13,15 @@
 
     .ring-about__grid.negative-m
       .ring-about__middle-left
-        img.ring-about__img(
-          src="img/content/ring/ring-img-2.png",
+        img.ring-about__img.lozad(
+          data-src="img/content/ring/ring-img-2.png",
           alt=""
         )
+        noscript
+          img.ring-about__img(
+            src="img/content/ring/ring-img-2.png",
+            alt=""
+          )
       .ring-about__middle-right
         .bullet-list__wrapper.bullet-list__wrapper--ring-about
           h3.bullet-list__heading Полная комплектация:
@@ -54,5 +59,6 @@
                 br
                 | <span class="smaller">канатов и подушек в индивидуальных цветах</span>
               button.button(
-
+                type="button",
+                data-micromodal-trigger="modal-form-bid"
               ) Оставить заявку

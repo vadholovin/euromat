@@ -6,10 +6,17 @@ section.product-about.product-about--carpet(style="background-image: url(img/gen
       | Большинство борцовских ковров, на сегодняшний день, - наполнены матами ППЭ, таковы стандарты международных федераций по спортивной борьбе UWW и самбо FIAS.
 
       .product-about__content
-        img.product-about__img(
-          src="img/content/carpet/carpet-img.png",
+        img.product-about__img.lozad(
+          data-src="img/content/carpet/carpet-img.png",
+          width="598",
           alt=""
         )
+        noscript
+          img.product-about__img(
+            src="img/content/carpet/carpet-img.png",
+            width="598",
+            alt=""
+          )
 
         h3.product-about__heading
           | ППЭ Euromat –
@@ -33,4 +40,7 @@ section.product-about.product-about--carpet(style="background-image: url(img/gen
           p.product-about__foot-subheading
             | Оставьте заявку и наш специалист свяжется с вами для подробной консультации
 
-        button.button Оставить заявку
+        button.button(
+          type="button",
+          data-micromodal-trigger="modal-form-bid"
+        ) Оставить заявку

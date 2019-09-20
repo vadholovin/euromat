@@ -1,74 +1,74 @@
 -
   var colors = [
     {
-      image: 'img/content/carpet/colors/classic.png',
+      img: 'img/content/carpet/colors/classic.png',
       title: 'Классический ковер для борьбы'
     },
     {
-      image: 'img/content/carpet/colors/sambo.png',
+      img: 'img/content/carpet/colors/sambo.png',
       title: 'Ковер для Самбо и Боевого самбо'
     },
     {
-      image: 'img/content/carpet/colors/free.png',
+      img: 'img/content/carpet/colors/free.png',
       title: 'Вольная и Греко-римская борьба'
     },
     {
-      image: 'img/content/carpet/colors/judo.png',
+      img: 'img/content/carpet/colors/judo.png',
       title: 'Ковер для Дзюдо новый стандарт'
     },
     {
-      image: 'img/content/carpet/colors/judo-classic.png',
+      img: 'img/content/carpet/colors/judo-classic.png',
       title: 'Ковер для Дзюдо классический'
     },
     {
-      image: 'img/content/carpet/colors/mono.png',
+      img: 'img/content/carpet/colors/mono.png',
       title: 'Одноцветный ковер'
     },
   ];
 -
   var exclusive = [
     {
-      image: 'img/content/carpet/colors/grey-black-o.png',
+      img: 'img/content/carpet/colors/grey-black-o.png',
       title: 'Серо-черный'
     },
     {
-      image: 'img/content/carpet/colors/red-black-o.png',
+      img: 'img/content/carpet/colors/red-black-o.png',
       title: 'Красно-черный'
     },
     {
-      image: 'img/content/carpet/colors/black-white-o.png',
+      img: 'img/content/carpet/colors/black-white-o.png',
       title: 'Черно-белый'
     },
     {
-      image: 'img/content/carpet/colors/blue-red.png',
+      img: 'img/content/carpet/colors/blue-red.png',
       title: 'Сине-красный'
     },
     {
-      image: 'img/content/carpet/colors/tricolor.png',
+      img: 'img/content/carpet/colors/tricolor.png',
       title: 'Трехцветный'
     },
     {
-      image: 'img/content/carpet/colors/black-red.png',
+      img: 'img/content/carpet/colors/black-red.png',
       title: 'Черно-красный'
     },
     {
-      image: 'img/content/carpet/colors/black-white.png',
+      img: 'img/content/carpet/colors/black-white.png',
       title: 'Черно-белый'
     },
     {
-      image: 'img/content/carpet/colors/red.png',
+      img: 'img/content/carpet/colors/red.png',
       title: 'Красный'
     },
     {
-      image: 'img/content/carpet/colors/black.png',
+      img: 'img/content/carpet/colors/black.png',
       title: 'Черный'
     },
     {
-      image: 'img/content/carpet/colors/double.png',
+      img: 'img/content/carpet/colors/double.png',
       title: 'Двойной ковер '
     },
     {
-      image: 'img/content/carpet/colors/white-octagon.png',
+      img: 'img/content/carpet/colors/white-octagon.png',
       title: 'Белый восьмиугольник'
     },
   ];
@@ -86,7 +86,15 @@ section.carpet-colors
           .card.card--bg
             figure.card-media
               .card-media__content
-                img(src=item.image, alt="")
+                img.lozad(
+                  data-src= item.img,
+                  alt=""
+                )
+                noscript
+                  img(
+                    src= item.img,
+                    alt=""
+                  )
             .card__foot
               img(src="img/general/card-logo.png", alt="")
           .card-list__item-foot
@@ -101,7 +109,15 @@ section.carpet-colors
             .card.card--bg
               figure.card-media
                 .card-media__content
-                  img(src=item.image, alt="")
+                  img.lozad(
+                    data-src= item.img,
+                    alt=""
+                  )
+                  noscript
+                    img(
+                      src= item.img,
+                      alt=""
+                    )
               .card__foot
                 img(src="img/general/card-logo.png", alt="")
             .card-list__item-foot
@@ -111,7 +127,15 @@ section.carpet-colors
             .card.card--bg
               figure.card-media
                 .card-media__content
-                  img(src=item.image, alt="")
+                  img.lozad(
+                      data-src= item.img,
+                      alt=""
+                    )
+                  noscript
+                    img(
+                      src= item.img,
+                      alt=""
+                    )
               .card__foot
                 img(src="img/general/card-logo.png", alt="")
             .card-list__item-foot

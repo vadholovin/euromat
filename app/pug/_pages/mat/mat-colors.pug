@@ -3,52 +3,52 @@
     {
       title: 'Цвет 011',
       subtitle: 'Красный',
-      image: 'img/content/colors/red.png'
+      img: 'img/content/colors/red.png'
     },
     {
       title: 'Цвет 012',
       subtitle: 'Оранжевый',
-      image: 'img/content/colors/orange.png'
+      img: 'img/content/colors/orange.png'
     },
     {
       title: 'Цвет 013',
       subtitle: 'Желтый',
-      image: 'img/content/colors/yellow.png'
+      img: 'img/content/colors/yellow.png'
     },
     {
       title: 'Цвет 014',
       subtitle: 'Бежевый',
-      image: 'img/content/colors/beige.png'
+      img: 'img/content/colors/beige.png'
     },
     {
       title: 'Цвет 015',
       subtitle: 'Белый',
-      image: 'img/content/colors/white.png'
+      img: 'img/content/colors/white.png'
     },
     {
       title: 'Цвет 016',
       subtitle: 'Синий',
-      image: 'img/content/colors/blue.png'
+      img: 'img/content/colors/blue.png'
     },
     {
       title: 'Цвет 017',
       subtitle: 'Светло-синий',
-      image: 'img/content/colors/lightblue.png'
+      img: 'img/content/colors/lightblue.png'
     },
     {
       title: 'Цвет 018',
       subtitle: 'Зеленый',
-      image: 'img/content/colors/green.png'
+      img: 'img/content/colors/green.png'
     },
     {
       title: 'Цвет 019',
       subtitle: 'Серый',
-      image: 'img/content/colors/grey.png'
+      img: 'img/content/colors/grey.png'
     },
     {
       title: 'Цвет 020',
       subtitle: 'Черный',
-      image: 'img/content/colors/black.png'
+      img: 'img/content/colors/black.png'
     },
   ];
 
@@ -58,14 +58,22 @@ section.mat-colors(style="background-image: url(img/general/pattern-3.png);")
     h2.title.title--mat-colors Цветовые решения
 
     ul.mat-colors__list
-      each color in colors
+      each item in colors
         li.mat-colors__item
           .card.card--mat-colors
             figure.card-media
               .card-media__content
-                img(src=color.image, alt="")
+                img.lozad(
+                  data-src= item.img,
+                  alt=""
+                )
+                noscript
+                  img(
+                    src= item.img,
+                    alt=""
+                  )
             .card__foot
               img(src="img/general/card-logo.png", alt="")
           .mat-colors__item-foot
-            p.mat-colors__item-title= color.title
-            p.mat-colors__item-subtitle= color.subtitle
+            p.mat-colors__item-title= item.title
+            p.mat-colors__item-subtitle= item.subtitle

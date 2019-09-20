@@ -1,4 +1,4 @@
-section.banner.budo-audience(style="background-image: url(img/backgrounds/bg-budo-audience.jpg);")
+section.banner.budo-audience.lozad(data-background-image="img/backgrounds/bg-budo-audience.jpg")
   .container
     h2.title.title--banner.title--budo-audience Наши будо-маты покупают
     ul.budo-audience__list
@@ -43,5 +43,7 @@ section.banner.budo-audience(style="background-image: url(img/backgrounds/bg-bud
         span.budo-audience__item-text Yoga залы
     
     .button-wrapper
-      button.button
-        | Рассчитать стоимость будо-матов
+      button.button(
+        type="button",
+        data-micromodal-trigger="modal-form-bid"
+      ) Рассчитать стоимость будо-матов

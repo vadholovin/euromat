@@ -1,3 +1,17 @@
+-
+  var sales = [
+    {
+      img: 'img/content/sale/img-1.jpg',
+    },
+    {
+      img: 'img/content/sale/img-2.jpg',
+    },
+    {
+      img: 'img/content/sale/img-3.jpg',
+    },
+  ];
+- var offset = 0;
+
 section.banner.banner--sale.banner-sale(style="background-image: url(img/general/pattern-1.png);")
   .container
     .banner-sale__grid.pure-g
@@ -9,29 +23,28 @@ section.banner.banner--sale.banner-sale(style="background-image: url(img/general
         p.banner-sale__subtitle
           | Оставьте заявку прямо сейчас и получите подарок!
         button.button(
+          type="button",
           data-micromodal-trigger="modal-form-sale"
         ) Получить подарок
 
       .banner-sale__col-right.pure-u-1.pure-u-xl-1-2
         ul.card-list.card-list--banner-sale
-          li.card-list__item
-            .card.card--bg
-              figure.card-media
-                .card-media__content
-                  img(src="img/content/sale/img-1.jpg", alt="")
-              .card__foot
-                img(src="img/general/card-logo.png", alt="")
-          li.card-list__item
-            .card.card--bg
-              figure.card-media
-                .card-media__content
-                  img(src="img/content/sale/img-2.jpg", alt="")
-              .card__foot
-                img(src="img/general/card-logo.png", alt="")
-          li.card-list__item
-            .card.card--bg
-              figure.card-media
-                .card-media__content
-                  img(src="img/content/sale/img-3.jpg", alt="")
-              .card__foot
-                img(src="img/general/card-logo.png", alt="")
+          each item in sales
+            li.card-list__item(
+              data-aos="fade-up",
+              data-aos-offset= (offset += 100)
+            )
+              .card.card--bg
+                figure.card-media
+                  .card-media__content
+                    img.lozad(
+                      data-src= item.img,
+                      alt=""
+                    )
+                    noscript
+                      img(
+                        src= item.img,
+                        alt=""
+                      )
+                .card__foot
+                  img(src="img/general/card-logo.png", alt="")

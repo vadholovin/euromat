@@ -3,17 +3,17 @@
     {
       title: ` Judо ткань`,
       subtitle: `Рисовая соломка`,
-      image: 'img/content/roll/judo-cloth.jpg'
+      img: 'img/content/roll/judo-cloth.jpg'
     },
     {
       title: `гимнастический ворс`,
       subtitle: `Идеальное скольжение <br> для гимнастики`,
-      image: 'img/content/roll/gym-pile.jpg'
+      img: 'img/content/roll/gym-pile.jpg'
     },
     {
       title: `Искусственная кожа`,
       subtitle: `Высокая износостойкость противоскользящее напыление`, 
-      image: 'img/content/roll/faux-leather.jpg',
+      img: 'img/content/roll/faux-leather.jpg',
     },
   ];
 -
@@ -21,12 +21,12 @@
     {
       title: `Наполнение Ппэ - Старт`,
       subtitle: `Плотность 140-160 кг/м<sup>3</sup>`,
-      image: 'img/content/roll/start.jpg'
+      img: 'img/content/roll/start.jpg'
     },
     {
       title: `Наполнение ППЭ - стандарт`,
       subtitle: `Плотность 180 кг/м<sup>3</sup>`,
-      image: 'img/content/roll/standard.jpg'
+      img: 'img/content/roll/standard.jpg'
     },
   ];
 -
@@ -85,7 +85,15 @@ section.product-calc.product-calc--roll
                     .card.card--bg
                       figure.card-media
                         .card-media__content
-                          img(src=item.image, alt="")
+                          img.lozad(
+                            data-src=item.img,
+                            alt=""
+                          )
+                          noscript
+                            img(
+                              src=item.img,
+                              alt=""
+                            )
                       .card__foot
                         img(src="img/general/card-logo.png", alt="")
                     .card-list__item-foot
@@ -117,7 +125,15 @@ section.product-calc.product-calc--roll
                         .card.card--bg
                           figure.card-media
                             .card-media__content
-                              img(src=item.image, alt="")
+                              img.lozad(
+                                data-src=item.img,
+                                alt=""
+                              )
+                              noscript
+                                img(
+                                  src=item.img,
+                                  alt=""
+                                )
                           .card__foot
                             img(src="img/general/card-logo.png", alt="")
                         .card-list__item-foot
@@ -214,6 +230,8 @@ section.product-calc.product-calc--roll
           h3.content-box__title
             | Нужна консультация специалиста?
             button.button.button--call(
-              title="Заказать обратный звонок"
+              type="button",
+              title="Заказать обратный звонок",
+              data-micromodal-trigger="modal-form-call"
             )
               span.icon.icon-phone

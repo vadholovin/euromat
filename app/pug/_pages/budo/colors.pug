@@ -2,39 +2,39 @@
   var colors = [
     {
       title: 'Красно-синие',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Желто-синие',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Желто-зеленые',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Желто-черные',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Красно-зеленые',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Черно-красные',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Черно-серые',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Черно-белые',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
     {
       title: 'Оранжево-фиолетовые',
-      image: 'img/content/budo-colors/img-1.png'
+      img: 'img/content/budo-colors/img-1.png'
     },
   ];
 
@@ -49,7 +49,15 @@ section.budo-colors(style="background-image: url(img/general/pattern-1.png), url
           .card.card--bg.card--budo-colors
             figure.card-media
               .card-media__content
-                img(src=color.image, alt="")
+                img.lozad(
+                  data-src=color.img,
+                  alt=""
+                )
+                noscript
+                  img(
+                    src=color.img,
+                    alt=""
+                  )
             .card__foot
               img(src="img/general/card-logo.png", alt="")
           h2.budo-colors__item-title= color.title
@@ -61,4 +69,7 @@ section.budo-colors(style="background-image: url(img/general/pattern-1.png), url
         p.budo-colors__foot-subheading
           | Оставьте заявку и наш специалист свяжется с вами для подробной консультации
 
-      button.button Оставить заявку
+      button.button(
+        type="button",
+        data-micromodal-trigger="modal-form-bid"
+      ) Оставить заявку

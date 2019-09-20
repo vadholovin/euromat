@@ -27,10 +27,15 @@ section.wall-features
 
     .wall-features__grid.d-flex-wrapped.negative-m
       .wall-features__col-left
-        img.wall-features__img(
-          src="img/content/wall/wall-img-1.png",
+        img.wall-features__img.lozad(
+          data-src="img/content/wall/wall-img-1.png",
           alt=""
         )
+        noscript
+          img.wall-features__img(
+            src="img/content/wall/wall-img-1.png",
+            alt=""
+          )
         .wall-features__list
           .wall-features__list-item
             p.wall-features__list-label Высота:
@@ -64,7 +69,8 @@ section.wall-features
         .wall-features__heading
           | На выбор есть различные цветовые решения
         button.button(
-
+          type="button",
+          data-micromodal-trigger="modal-form-bid"
         ) Оставить заявку
 
 

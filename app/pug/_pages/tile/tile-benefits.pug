@@ -1,35 +1,35 @@
 -
   var benefit = [
     {
-      image: 'star',
+      img: 'star',
       title: `Привлекательный <br> внешний вид`
     },
     {
-      image: 'fall',
+      img: 'fall',
       title: `Противоскользящий <br> эффект`
     },
     {
-      image: 'boot',
+      img: 'boot',
       title: ` Стойкость к <br> механическим воздействиям`
     },
     {
-      image: 'drop',
+      img: 'drop',
       title: `Долговечность <br> цвета покрытия`
     },
     {
-      image: 'cold',
+      img: 'cold',
       title: `Стойкость к перепадам <br> температуры`
     },
     {
-      image: 'spray',
+      img: 'spray',
       title: `Стойкость <br> к химикатам`
     },
     {
-      image: 'mat',
+      img: 'mat',
       title: `Эластичность <br> покрытия`
     },
     {
-      image: 'hammer',
+      img: 'hammer',
       title: `Высокая <br> ремонтопригодность`
     },
   ];
@@ -41,5 +41,5 @@ section.tile-benefits
     .tile-benefits__list
       each item, index in benefit
         .tile-benefits__item
-          span(class="icon-o icon-o-" + item.image)
+          span(class="icon-o icon-o-" + item.img)
           span.tile-benefits__item-text!= item.title

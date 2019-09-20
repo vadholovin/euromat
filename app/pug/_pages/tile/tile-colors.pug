@@ -1,70 +1,70 @@
 -
   var colors_classic = [
     {
-      image: 'img/content/tile/colors-classic/black.jpg',
+      img: 'img/content/tile/colors-classic/black.jpg',
       title: 'Черный'
     },
     {
-      image: 'img/content/tile/colors-classic/grey.jpg',
+      img: 'img/content/tile/colors-classic/grey.jpg',
       title: 'Серый'
     },
     {
-      image: 'img/content/tile/colors-classic/brown.jpg',
+      img: 'img/content/tile/colors-classic/brown.jpg',
       title: 'Коричневый'
     },
     {
-      image: 'img/content/tile/colors-classic/red.jpg',
+      img: 'img/content/tile/colors-classic/red.jpg',
       title: 'Красный'
     },
     {
-      image: 'img/content/tile/colors-classic/orange.jpg',
+      img: 'img/content/tile/colors-classic/orange.jpg',
       title: 'Оранжевый'
     },
     {
-      image: 'img/content/tile/colors-classic/orange.jpg',
+      img: 'img/content/tile/colors-classic/orange.jpg',
       title: 'Песочный'
     },
     {
-      image: 'img/content/tile/colors-classic/blue.jpg',
+      img: 'img/content/tile/colors-classic/blue.jpg',
       title: 'Синий'
     },
     {
-      image: 'img/content/tile/colors-classic/green.jpg',
+      img: 'img/content/tile/colors-classic/green.jpg',
       title: 'Зеленый'
     },
   ];
 -
   var colors_bright = [
     {
-      image: 'img/content/tile/colors-bright/brown.jpg',
+      img: 'img/content/tile/colors-bright/brown.jpg',
       title: 'Коричневый'
     },
     {
-      image: 'img/content/tile/colors-bright/red.jpg',
+      img: 'img/content/tile/colors-bright/red.jpg',
       title: 'Красный'
     },
     {
-      image: 'img/content/tile/colors-bright/orange.jpg',
+      img: 'img/content/tile/colors-bright/orange.jpg',
       title: 'Оранжевый'
     },
     {
-      image: 'img/content/tile/colors-bright/yellow.jpg',
+      img: 'img/content/tile/colors-bright/yellow.jpg',
       title: 'Желтый'
     },
     {
-      image: 'img/content/tile/colors-bright/grey.jpg',
+      img: 'img/content/tile/colors-bright/grey.jpg',
       title: 'Серый'
     },
     {
-      image: 'img/content/tile/colors-bright/blue.jpg',
+      img: 'img/content/tile/colors-bright/blue.jpg',
       title: 'Синий'
     },
     {
-      image: 'img/content/tile/colors-bright/green.jpg',
+      img: 'img/content/tile/colors-bright/green.jpg',
       title: 'Зеленый'
     },
     {
-      image: 'img/content/tile/colors-bright/turquoise.jpg',
+      img: 'img/content/tile/colors-bright/turquoise.jpg',
       title: 'Бирюзовый'
     },
   ];
@@ -85,12 +85,21 @@ section.tile-colors
               .card.card--bg
                 figure.card-media
                   .card-media__content
-                    img(src=item.image, alt="")
+                    img.lozad(
+                      data-src=item.img,
+                      alt=""
+                    )
+                    noscript
+                      img(
+                        src=item.img,
+                        alt=""
+                      )
                 .card__foot
                   img(src="img/general/card-logo.png", alt="")
               .card-list__item-foot
                 span.card-list__item-title!= item.title
 
+      .tile-colors__col-right
         h3.tile-colors__heading Яркие цвета EPDM
         ul.card-list.card-list--tile-colors.js-tile-colors
           each item, index in colors_classic
@@ -98,25 +107,23 @@ section.tile-colors
               .card.card--bg
                 figure.card-media
                   .card-media__content
-                    img(src=item.image, alt="")
+                    img.lozad(
+                      data-src=item.img,
+                      alt=""
+                    )
+                    noscript
+                      img(
+                        src=item.img,
+                        alt=""
+                      )
                 .card__foot
                   img(src="img/general/card-logo.png", alt="")
               .card-list__item-foot
                 span.card-list__item-title!= item.title
 
-      .tile-colors__col-right
-        .card.card--bg.card--display-box
-          figure.card-media
-            .card-media__content
-              img(
-                src="img/content/tile/colors-classic/black.jpg",
-                alt=""
-              )
-          .card__foot
-            p.card__title Черный
-
-        p.tile-colors__info
-          | Резиновая плитка 500х500 см
-        button.button(
-          
-        ) Оставить заявку <span class="button-extra-text">на Резиновую плитку</span>
+    p.tile-colors__info
+      | Резиновая плитка 500х500 см
+    button.button(
+      type="button",
+      data-micromodal-trigger="modal-form-bid"
+    ) Оставить заявку <span class="button-extra-text">на Резиновую плитку</span>

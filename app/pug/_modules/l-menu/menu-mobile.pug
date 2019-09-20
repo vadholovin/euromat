@@ -1,3 +1,58 @@
+-
+  var menu = [
+    {
+      link: 'budo.html',
+      title: 'Будо-маты',
+      current: 'budo-page'
+    },
+    {
+      link: 'carpet.html',
+      title: 'Борцовские ковры',
+      current: 'carpet-page'
+    },
+    {
+      link: 'tatami.html',
+      title: 'Татами',
+      current: 'tatami-page'
+    },
+    {
+      link: 'roll.html',
+      title: 'Ролл-маты',
+      current: 'roll-page'
+    },
+    {
+      link: 'mat.html',
+      title: 'Маты',
+      current: 'mat-page'
+    },
+    {
+      link: 'wall.html',
+      title: 'Стеновые протекторы',
+      current: 'wall-page'
+    },
+    {
+      link: 'ring.html',
+      title: 'Ринги',
+      current: 'ring-page'
+    },
+    {
+      link: 'mma.html',
+      title: 'клетка ММА',
+      current: 'mma-page'
+    },
+    {
+      link: 'tile.html',
+      title: 'Резиновая плитка',
+      current: 'tile-page'
+    },
+    {
+      link: 'child.html',
+      title: 'Детский пол',
+      current: 'child-page'
+    },
+  ];
+
+
 .mobile-nav(hidden)
   .mobile-nav__overlay
   .mobile-nav__content
@@ -23,8 +78,6 @@
         
         .side-menu__module
           .header-members.header-members--mobile
-            //- p.header-members__text
-            //-   | Официальные представители в России и странах СНГ
             .header-members__flags
               span.icon.icon-flag-ru(title="Россия")
               span.icon.icon-flag-by(title="Белорусь")
@@ -33,54 +86,20 @@
               span.icon.icon-flag-pl(title="Польша")
 
         .side-menu__module
-          .menu.menu--mobile
-            li.menu__item
-              a.menu__link(
-                href="budo.html"
-              ) Будо-маты
-            li.menu__item
-              a.menu__link(
-                href="carpet.html"
-              ) Борцовские ковры
-            li.menu__item
-              a.menu__link(
-                href="tatami.html"
-              ) Татами
-            li.menu__item
-              a.menu__link(
-                href="roll.html"
-              ) Ролл-маты
-            li.menu__item
-              a.menu__link(
-                href="mat.html"
-              ) Маты
-            li.menu__item
-              a.menu__link(
-                href="wall.html"
-              ) Стеновые протекторы
-            li.menu__item
-              a.menu__link(
-                href="ring.html"
-              ) Ринги
-            li.menu__item
-              a.menu__link(
-                href="mma.html"
-              ) клетка ММА
-            li.menu__item
-              a.menu__link(
-                href=".html"
-              ) Резиновая плитка
-            li.menu__item
-              a.menu__link(
-                href="child.html"
-              ) Детский пол
+          ul.menu.menu--mobile
+            each item in menu
+              li.menu__item
+                a.menu__link(
+                  href= item.link
+                )= item.title
+            
 
         .side-menu__module
           ul.menu-info
             li.menu-info__item
               a.menu-info__item-link(href="tel:+78003014788") +7 (800) 301-47-88
               a.menu-info__item-link(href="tel:+74951850488") +7 (495) 185-04-88
-              span.menu-info__item-notes Режим работы: Круглосуточно
+              span.menu-info__item-notes Режим работы: 9.00-21.00
             li.menu-info__item
               a.menu-info__item-link(href="mailto:sales@euromatsport.ru") sales@euromatsport.ru
               span.menu-info__item-notes Напишите нам на почту

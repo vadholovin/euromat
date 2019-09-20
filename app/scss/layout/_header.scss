@@ -174,7 +174,7 @@
 
 
 .header-contacts__link {
-  @include fluid-type($min_width, $max_width, 16px, 24px);
+  @include fluid-type($min_width, $max_width, 16px, 20px);
 
   display: block;
   margin-bottom: 4px;

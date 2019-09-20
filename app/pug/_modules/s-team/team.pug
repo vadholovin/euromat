@@ -1,3 +1,88 @@
+-
+  var team = [
+    {
+      name: 'Архипов Алексей',
+      position: 'Эксперт по спортивным покрытиям и оборудованию',
+      img: 'img/content/team/Arkhipov-Aleksej.jpg',
+    },
+    //- {
+    //-   name: 'Демченко Илья',
+    //-   position: 'Эксперт по спортивным покрытиям и оборудованию',
+    //-   img: 'img/content/team/',
+    //- },
+    {
+      name: 'Востриков Дмитрий',
+      position: 'Эксперт по спортивным покрытиям и оборудованию',
+      img: 'img/content/team/Vostrikov-Dmitrij.jpg',
+    },
+    {
+      name: 'Гаврилов Алексей',
+      position: 'Бренд менеджер',
+      img: 'img/content/team/Gavrilov-Aleksej.jpg',
+    },
+    {
+      name: 'Николай Захаров',
+      position: 'Юрист',
+      img: 'img/content/team/Nikolaj-Zakharov.jpg',
+    },
+    {
+      name: 'Виктория Лям',
+      position: 'Сопровождение по ходу заказа и логистики, оперативный учет',
+      img: 'img/content/team/Viktoriya-Lyam.jpg',
+    },
+    {
+      name: 'Ксения Волгина',
+      position: 'Бухгалтер',
+      img: 'img/content/team/Kseniya-Volgina.jpg',
+    },
+    {
+      name: 'Давид Мебония',
+      position: 'Дизайнер спортивного оборудования',
+      img: 'img/content/team/David-Meboniya.jpg',
+    },
+    {
+      name: 'Артур Коробов',
+      position: 'Руководитель дилерского отдела',
+      img: 'img/content/team/Artur-Korobov.jpg',
+    },
+    {
+      name: 'Вадим Игнатьев',
+      position: 'Начальник цеха',
+      img: 'img/content/team/Vadim-Ignatjev.jpg',
+    },
+    {
+      name: 'Ренат Исаев',
+      position: 'Специалист по тендерам и аукционам',
+      img: 'img/content/team/Renat-Isaev.jpg',
+    },
+    {
+      name: 'Роман Миронов',
+      position: 'Директор по продуктам',
+      img: 'img/content/team/Roman-Mironov.jpg',
+    },
+    {
+      name: 'Валера Солдатов',
+      position: 'Начальник службы монтажа',
+      img: 'img/content/team/Valera-Soldatov.jpg',
+    },
+    {
+      name: 'Влад Ковалев',
+      position: 'Сопровождение по ходу заказа и логистики, оперативный учет',
+      img: 'img/content/team/Vlad-Kovalev.jpg',
+    },
+    {
+      name: 'Комарина Юлия',
+      position: 'Директор экономики',
+      img: 'img/content/team/Komarina-Yuliya.jpg',
+    },
+    {
+      name: 'Павел Прохоров',
+      position: 'Ведущий инженер-технолог',
+      img: 'img/content/team/Pavel-Prokhorov.jpg',
+    },
+    
+  ];
+
 section.team(style="background-image: url(img/general/pattern-1.png),url(img/general/pattern-2.png);")
   .container
     .team__grid.pure-g
@@ -14,72 +99,30 @@ section.team(style="background-image: url(img/general/pattern-1.png),url(img/gen
         .card.card--bg.card--office
           figure.card-media
             .card-media__content
-              img(src="img/content/office.jpg", alt="")
+              img.lozad(
+                data-src="img/content/office.jpg",
+                alt=""
+              )
+              noscript
+                img(
+                  src="img/content/office.jpg",
+                  alt=""
+                )
           .card__body
             p.card__title Офис компании EUROMAT
     h3.team__heading Наши сотрудники
     .slider__wrapper.slider__wrapper--team
       .slider.slider--team.js-team-slider
-        .slider-item.slider-item--team
-          .card.card--bg.card--team
-            figure.card-media
-              .card-media__content
-                img(src="img/content/team/img-1.jpg", alt="")
-            .card__body
-              h5.card__title Фамилия Имя
-              p.card__text Должность сотрудника
+        each item in team
+          .slider-item.slider-item--team
+            .card.card--bg.card--team
+              figure.card-media
+                .card-media__content
+                  img(data-lazy= item.img, alt="")
+              .card__body
+                h4.card__title= item.name
+                p.card__text= item.position
 
-        .slider-item.slider-item--team
-          .card.card--bg.card--team
-            figure.card-media
-              .card-media__content
-                img(src="img/content/team/img-2.jpg", alt="")
-            .card__body
-              h5.card__title Фамилия Имя
-              p.card__text Должность сотрудника
-
-        .slider-item.slider-item--team
-          .card.card--bg.card--team
-            figure.card-media
-              .card-media__content
-                img(src="img/content/team/img-2.jpg", alt="")
-            .card__body
-              h5.card__title Фамилия Имя
-              p.card__text Должность сотрудника
-        .slider-item.slider-item--team
-          .card.card--bg.card--team
-            figure.card-media
-              .card-media__content
-                img(src="img/content/team/img-2.jpg", alt="")
-            .card__body
-              h5.card__title Фамилия Имя
-              p.card__text Должность сотрудника
-
-        .slider-item.slider-item--team
-          .card.card--bg.card--team
-            figure.card-media
-              .card-media__content
-                img(src="img/content/team/img-2.jpg", alt="")
-            .card__body
-              h5.card__title Фамилия Имя
-              p.card__text Должность сотрудника
-        .slider-item.slider-item--team
-          .card.card--bg.card--team
-            figure.card-media
-              .card-media__content
-                img(src="img/content/team/img-2.jpg", alt="")
-            .card__body
-              h5.card__title Фамилия Имя
-              p.card__text Должность сотрудника
-
-        .slider-item.slider-item--team
-          .card.card--bg.card--team
-            figure.card-media
-              .card-media__content
-                img(src="img/content/team/img-2.jpg", alt="")
-            .card__body
-              h5.card__title Фамилия Имя
-              p.card__text Должность сотрудника
 
       .slider-nav.slider-nav--shevrons.slider-nav--team#team-nav
         button.slider-nav__prev(aria-label="Предыдущий слайд")

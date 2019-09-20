@@ -6,10 +6,15 @@ section.mma-logo
       | Разместим логотип или слоган вашего клуба или партнеров на помосте клетки
     .mma-logo__grid.negative-m
       .mma-logo__col-left
-        img.mma-logo__img(
-          src="img/content/mma/dodjang.png",
+        img.mma-logo__img.lozad(
+          data-src="img/content/mma/dodjang.png",
           alt=""
         )
+        noscript
+          img.mma-logo__img(
+            src="img/content/mma/dodjang.png",
+            alt=""
+          )
       .mma-logo__col-right
         h3.mma-logo__heading
           | Размеры логотипов для размещения
@@ -35,6 +40,7 @@ section.mma-logo
           .mma-logo__notes-text
             | Произведем клетки ММА в индивидуальных цветах
           button.button(
-
+            type="button",
+            data-micromodal-trigger="modal-form-bid"
           ) Оставить заявку
 

@@ -99,6 +99,76 @@
 }
 
 
+.button-to-top,
+.button-to-home {
+  position: fixed;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all .4s;
+  z-index: 1000;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.75;
+  }
+}
+
+
+.button-to-top {
+  bottom: 5rem;
+  display: none;
+  background-color: $secondary-color;
+}
+
+
+.button-to-top.on {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.button-to-top::after {
+  content: '';
+  position: relative;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg);
+  border: 2px solid transparent;
+  border-top-color: #fff;
+  border-right-color: #fff;
+}
+
+
+.button-to-home {
+  bottom: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+}
+
+
+.index-page .button-to-home {
+  display: none;
+}
+
+
+.button-to-home svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+
 .form--hero-widget .button {
   width: 100%;
   font-size: rem(15);

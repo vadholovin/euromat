@@ -1,21 +1,21 @@
 -
   var equipment = [
     {
-      image: 'https://via.placeholder.com/125x77',
+      img: 'https://via.placeholder.com/125x77',
       title: `Покрышка
       <br>
       + маты`,
       value: 'full'
     },
     {
-      image: 'https://via.placeholder.com/125x77',
+      img: 'https://via.placeholder.com/125x77',
       title: `Покрышка
         <br>
         (без мата)`,
         value: 'cover'
     },
     {
-      image: 'https://via.placeholder.com/125x77',
+      img: 'https://via.placeholder.com/125x77',
       title: `Маты
       <br>
       (под покрышку)`,
@@ -40,22 +40,22 @@
 -
   var design = [
     {
-      image: 'img/content/carpet/features/classic.png',
+      img: 'img/content/carpet/features/classic.png',
       title: 'Классика',
       value: 'classic'
     },
     {
-      image: 'img/content/carpet/features/fias.png',
+      img: 'img/content/carpet/features/fias.png',
       title: 'FIAS',
       value: 'fias'
     },
     {
-      image: 'img/content/carpet/features/uww.png',
+      img: 'img/content/carpet/features/uww.png',
       title: 'UWW',
       value: 'uww'
     },
     {
-      image: 'img/content/carpet/features/monochrome.png',
+      img: 'img/content/carpet/features/monochrome.png',
       title: 'Одноцветный',
       value: 'mono'
     },
@@ -63,12 +63,12 @@
 -
   var material = [
     {
-      image: 'img/content/carpet/features/matte.png',
+      img: 'img/content/carpet/features/matte.png',
       title: 'Матовая',
       value: 'matte'
     },
     {
-      image: 'img/content/carpet/features/gloss.png',
+      img: 'img/content/carpet/features/gloss.png',
       title: 'Глянцевая',
       value: 'gloss'
     },
@@ -76,17 +76,17 @@
 -
   var mount = [
     {
-      image: 'img/content/carpet/features/cringle.png',
+      img: 'img/content/carpet/features/cringle.png',
       title: 'Люверсы',
       value: 'cringle'
     },
     {
-      image: 'img/content/carpet/features/pocket.png',
+      img: 'img/content/carpet/features/pocket.png',
       title: 'Карманы',
       value: 'pocket'
     },
     {
-      image: 'img/content/carpet/features/velcro.png',
+      img: 'img/content/carpet/features/velcro.png',
       title: 'Велькро',
       value: 'velcro'
     },
@@ -94,22 +94,22 @@
 -
   var mat = [
     {
-      image: 'img/content/carpet/features/start.jpg',
+      img: 'img/content/carpet/features/start.jpg',
       title: 'Старт',
       value: 'start'
     },
     {
-      image: 'img/content/carpet/features/standard.jpg',
+      img: 'img/content/carpet/features/standard.jpg',
       title: 'Стандарт',
       value: 'standard'
     },
     {
-      image: 'img/content/carpet/features/pro.jpg',
+      img: 'img/content/carpet/features/pro.jpg',
       title: 'Профи',
       value: 'pro'
     },
     {
-      image: 'img/content/carpet/features/expert.jpg',
+      img: 'img/content/carpet/features/expert.jpg',
       title: 'Эксперт',
       value: 'expert'
     },
@@ -168,7 +168,15 @@ section.product-calc.product-calc--carpet-calc
                           .card.card--bg
                             figure.card-media
                               .card-media__content
-                                img(src=item.image, alt="")
+                                img.lozad(
+                                  data-src= item.img,
+                                  alt=""
+                                )
+                                noscript
+                                  img(
+                                    src= item.img,
+                                    alt=""
+                                  )
                             .card__foot
                               img(src="img/general/card-logo.png", alt="")
                           .card-list__item-foot
@@ -210,10 +218,15 @@ section.product-calc.product-calc--carpet-calc
                     each item, index in design
                       .image-box.js-check
                         .image-box__img
-                          img(
-                            src= item.image,
+                          img.lozad(
+                            data-src= item.img,
                             alt=""
                           )
+                          noscript
+                            img(
+                              src= item.img,
+                              alt=""
+                            )
                         .image-box__foot
                           span.image-box__title= item.title
                         .control-box
@@ -235,10 +248,15 @@ section.product-calc.product-calc--carpet-calc
                     each item, index in material
                       .image-box.js-check
                         .image-box__img
-                          img(
-                            src= item.image,
+                          img.lozad(
+                            data-src= item.img,
                             alt=""
                           )
+                          noscript
+                            img(
+                              src= item.img,
+                              alt=""
+                            )
                         .image-box__foot
                           span.image-box__title= item.title
                         .control-box
@@ -260,10 +278,15 @@ section.product-calc.product-calc--carpet-calc
                     each item, index in mount
                       .image-box.js-check
                         .image-box__img
-                          img(
-                            src= item.image,
+                          img.lozad(
+                            data-src= item.img,
                             alt=""
                           )
+                          noscript
+                            img(
+                              src= item.img,
+                              alt=""
+                            )
                         .image-box__foot
                           span.image-box__title= item.title
                         .control-box
@@ -288,7 +311,15 @@ section.product-calc.product-calc--carpet-calc
                       .card.card--bg
                         figure.card-media
                           .card-media__content
-                            img(src=item.image, alt="")
+                            img.lozad(
+                              data-src= item.img,
+                              alt=""
+                            )
+                            noscript
+                              img(
+                                src= item.img,
+                                alt=""
+                              )
                         .card__foot
                           img(src="img/general/card-logo.png", alt="")
                       .card-list__item-foot
@@ -339,6 +370,8 @@ section.product-calc.product-calc--carpet-calc
           h3.content-box__title
             | Нужна консультация специалиста?
             button.button.button--call(
-              title="Заказать обратный звонок"
+              type="button",
+              title="Заказать обратный звонок",
+              data-micromodal-trigger="modal-form-call"
             )
               span.icon.icon-phone

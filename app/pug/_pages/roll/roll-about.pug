@@ -14,7 +14,12 @@ section.product-about.product-about--roll(
             br
             | не нанесли себе телесных повреждений
 
-      img.product-about__img(
+      img.product-about__img.lozad(
+        data-src="img/content/roll/roll-img.png",
+        alt=""
+      )
+      noscript
+        img.product-about__img(
           src="img/content/roll/roll-img.png",
           alt=""
         )
@@ -26,4 +31,7 @@ section.product-about.product-about--roll(
         p.product-about__foot-subheading
           | Оставьте заявку и наш специалист свяжется с вами для подробной консультации
 
-      button.button Оставить заявку
+      button.button(
+        type="button",
+        data-micromodal-trigger="modal-form-bid"
+      ) Оставить заявку

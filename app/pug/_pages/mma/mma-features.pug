@@ -67,9 +67,9 @@ section.mma-features.mma-features--top(style="background-image: url(img/general/
         li.bullet-list__item!= item.text
     .button-wrapper
       button.button(
-
-      )
-        | Оставить заявку <span class="button-extra-text">на клетку ММА</span>
+        type="button",
+        data-micromodal-trigger="modal-form-bid"
+      ) Оставить заявку <span class="button-extra-text">на клетку ММА</span>
 
 section.mma-features.mma-features--bottom
   .container
@@ -78,10 +78,15 @@ section.mma-features.mma-features--bottom
       span.smaller от 228 000 рублей/м<sup>2</sup>
     .mma-features__grid.negative-m
       .mma-features__col-left
-        img.mma-features__img(
-          src="img/content/mma/mma-img-2.png",
+        img.mma-features__img.lozad(
+          data-src="img/content/mma/mma-img-2.png",
           alt=""
         )
+        noscript
+          img.mma-features__img(
+            src="img/content/mma/mma-img-2.png",
+            alt=""
+          )
 
       .mma-features__col-right
         ul.checked-list.checked-list--mma-features
@@ -96,6 +101,6 @@ section.mma-features.mma-features--bottom
         li.bullet-list__item!= item.text
     .button-wrapper
       button.button(
-        
-      )
-        | Оставить заявку <span class="button-extra-text">на клетку ММА</span>
+        type="button",
+        data-micromodal-trigger="modal-form-bid"
+      ) Оставить заявку <span class="button-extra-text">на клетку ММА</span>

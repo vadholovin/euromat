@@ -57,6 +57,37 @@ input:checked~label .form__acceptance-mask:after {
 }
 
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+input[type='checkbox']:checked + .switch::after {
+  transform: translateX(20px);
+}
+
+input[type='checkbox']:checked + .switch {
+  background-color: $primary-color;
+}
+
+
 /* #Form--hero-widget
    ========================================================================== */
 
@@ -143,6 +174,10 @@ input:checked~label .form__acceptance-mask:after {
   font-weight: bold;
   margin-bottom: 22px;
   color: #fff;
+
+  @media (max-width: 79.99em) {
+    text-align: center;
+  }
 }
 
 .form--banner-consult .form-lead,
@@ -216,7 +251,7 @@ input:checked~label .form__acceptance-mask:after {
 
 
 .form-control--banner-calculation-foot {
-  padding: 24px 16px;
+  padding: 16px;
   border: 0;
   border-radius: 3px;
   text-align: center;

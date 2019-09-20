@@ -4,6 +4,7 @@
 
 
 .banner {
+  background-color: #f1f3f4;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -99,14 +100,17 @@
   }
 
   @media (min-width: 80em) {
-    right: -80px;
-    width: 300px;
+    width: 360px;
     margin-top: -46px;
   }
 
   @media (min-width: 90em) {
-    right: -112px;
+    right: -40px;
     width: 410px;
+  }
+
+  @media (min-width: 100em) {
+    right: -112px;
   }
 }
 
@@ -291,13 +295,13 @@
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  padding-top: 64px;
+  padding-top: 56px;
   padding-bottom: 48px;
   padding-right: 30px;
 
   @media (min-width: 48em) {
     width: 50%;
-    padding-top: 80px;
+    padding-top: 64px;
     padding-bottom: 60px;
   }
 
@@ -327,7 +331,7 @@
 
 
 .banner-calculation__info {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 
   @media (min-width: 62em) {
     margin-bottom: 60px;
@@ -349,11 +353,6 @@
 }
 
 
-.banner-calculation__foot {
-
-}
-
-
 .banner-calculation__foot-title {
   @include fluid-type($min_width, $max_width, 16px, 20px);
   
@@ -371,7 +370,7 @@
 
 .banner-calculation__foot-field {
   width: 100%;
-  max-width: 300px;
+  max-width: 160px;
 }
 
 

@@ -57,7 +57,12 @@ section.budo-benefits(style="background-image: url(img/general/pattern-1.png), u
               p.checked-list__item-text!= benefit.text
 
       .budo-benefits__col-right
-        img.budo-benefits__img(
-          src="img/content/budo/budo-img.png",
+        img.budo-benefits__img.lozad(
+          data-src="img/content/budo/budo-img.png",
           alt=""
         )
+        noscript
+          img.budo-benefits__img(
+            src="img/content/budo/budo-img.png",
+            alt=""
+          )

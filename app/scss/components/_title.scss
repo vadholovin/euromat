@@ -91,10 +91,14 @@
 
 .title--delivery-top {
   margin-bottom: 36px;
-  text-align: left;
 
   @media (min-width: 62em) {
+    text-align: left;
+  }
+
+  @media (min-width: 80em) {
     margin-bottom: 44px;
+    text-align: left;
   }
 }
 

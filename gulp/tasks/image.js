@@ -3,9 +3,9 @@ let imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache'),
     imgPATH = {
-        "input": ["./app/img/**/*.{png,jpg,gif,svg}",
+        input: ["./app/img/**/*.{png,jpg,gif,svg}",
             '!./app/img/svg/*'],
-        "ouput": "./dist/img/"
+        ouput: "./dist/img/"
     };
 
 module.exports = function () {
@@ -16,7 +16,7 @@ module.exports = function () {
 
     $.gulp.task('img:dist', () => {
         return $.gulp.src(imgPATH.input)
-            .pipe(cache(imagemin([
+            .pipe(imagemin([
                 imagemin.gifsicle({interlaced: true}),
                 imagemin.jpegtran({progressive: true}),
                 imageminJpegRecompress({
@@ -30,7 +30,7 @@ module.exports = function () {
                 pngquant({quality: '65-70', speed: 5})
             ], {
                 verbose: true
-            })))
+            }))
             .pipe($.gulp.dest(imgPATH.ouput));
     });
 };

@@ -33,7 +33,8 @@ header.header
           ul.header-contacts
             li.header-contacts__item
               a.header-contacts__link(href="tel:+78003014788") +7 (800) 301-47-88
-              span.header-contacts__notes Режим работы: Круглосуточно
+              a.header-contacts__link(href="tel:+74951850488") +7 (495) 185-04-88
+              //- span.header-contacts__notes 9.00-21.00
             li.header-contacts__item
               a.header-contacts__link(href="mailto:sales@euromatsport.ru") sales@euromatsport.ru
               span.header-contacts__notes Напишите нам на почту
@@ -47,7 +48,9 @@ header.header
               span.hamburger-inner
           
           button.button.button--call(
-            title="Заказать обратный звонок"
+            type="button",
+            title="Заказать обратный звонок",
+            data-micromodal-trigger="modal-form-call"
           )
             span.icon.icon-phone
 

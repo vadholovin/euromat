@@ -1,4 +1,4 @@
-section.banner.banner--equipment.banner-equipment(style="background-image: url(img/backgrounds/bg-equipment.jpg);")
+section.banner.banner--equipment.banner-equipment.lozad(data-background-image="img/backgrounds/bg-equipment.jpg")
   .container
     .banner-equipment__grid
       .banner-equipment__text
@@ -8,10 +8,23 @@ section.banner.banner--equipment.banner-equipment(style="background-image: url(i
           .banner-equipment__desc-media
             img(
               src="img/content/logo-forsthoff.png",
+              width="279",
               alt="логотип Forsthoff"
             )
           .banner-equipment__desc-body
             p
               | Высококачественное оборудование для сварки горячим воздухом. Надежность оборудования и удовлетворение потребностей клиента
 
-      img.banner-equipment__img(src="img/content/mark-guarantee.png", alt="")
+      img.banner-equipment__img.lozad(
+        data-src="img/content/mark-guarantee.png",
+        data-srcset="img/content/mark-guarantee.png 1x, img/content/mark-guarantee@2x.png 1.5x, img/content/mark-guarantee@2x.png 2x, img/content/mark-guarantee@2x.png 3x",
+        width="211",
+        alt=""
+      )
+      noscript
+        img.banner-equipment__img(
+          src="img/content/mark-guarantee.png",
+          srcset="img/content/mark-guarantee.png 1x, img/content/mark-guarantee@2x.png 1.5x, img/content/mark-guarantee@2x.png 2x, img/content/mark-guarantee@2x.png 3x",
+          width="211",
+          alt=""
+        )

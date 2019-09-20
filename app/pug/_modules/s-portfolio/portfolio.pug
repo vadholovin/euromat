@@ -63,6 +63,21 @@
     {
       link: 'img/content/portfolio/img-21.jpg'
     },
+    {
+      link: 'img/content/portfolio/img-22.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-23.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-24.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-25.jpg'
+    },
+    {
+      link: 'img/content/portfolio/img-26.jpg'
+    },
   ];
 
 section.portfolio(style="background-image: url(img/general/pattern-1.png);")
@@ -79,7 +94,7 @@ section.portfolio(style="background-image: url(img/general/pattern-1.png);")
                   href= image.link,
                   data-fancybox="portfolio"
                 )
-                  img(src=image.link, alt="")
+                  img(data-lazy= image.link, alt="")
               .card__foot
                 img(src="img/general/card-logo.png", alt="")
 

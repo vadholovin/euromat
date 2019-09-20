@@ -35,10 +35,15 @@
                 | Крепеж монтажный
 
         .ring-about__top-right
-          img.ring-about__img(
-            src="img/content/ring/ring-img-1.png",
+          img.ring-about__img.lozad(
+            data-src="img/content/ring/ring-img-1.png",
             alt=""
           )
+          noscript
+            img.ring-about__img(
+              src="img/content/ring/ring-img-1.png",
+              alt=""
+            )
 
       .ring-about__foot
         .ring-about__foot-module
@@ -58,7 +63,8 @@
               br
               | <span class="smaller">канатов и подушек в индивидуальных цветах</span>
             button.button(
-
+              type="button",
+              data-micromodal-trigger="modal-form-bid"
             ) Оставить заявку
 
   include ./ring-about-middle

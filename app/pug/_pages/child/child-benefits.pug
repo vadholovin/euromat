@@ -54,11 +54,18 @@ section.child-benefits
               p.child-benefits__item-text!= benefit.text
 
       .child-benefits__col-right
-        img.child-benefits__img(
-          src="img/content/child/child-img.png",
+        img.child-benefits__img.lozad(
+          data-src="img/content/child/child-img.jpg",
           alt=""
         )
+        noscript
+          img.child-benefits__img(
+            src="img/content/child/child-img.jpg",
+            alt=""
+          )
 
     .flex-center
-      button.button
-        | Оставить заявку <span class="button-extra-text">на рассчет детского пола</span>
+      button.button(
+        type="button",
+        data-micromodal-trigger="modal-form-bid"
+      ) Оставить заявку <span class="button-extra-text">на рассчет детского пола</span>

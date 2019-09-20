@@ -1,4 +1,4 @@
-.banner.banner-calculation.banner--calculation(style="background-image: url(img/backgrounds/bg-calculation.jpg);")
+.banner.banner-calculation.banner--calculation.lozad(data-background-image="img/backgrounds/bg-calculation.jpg")
   .container
     .banner-calculation__grid
       .banner-calculation__col-left
@@ -14,19 +14,25 @@
 
         .banner-calculation__foot
           .banner-calculation__foot-title
-            | Укажите площадь вашего покрытия
+            | Укажите площадь вашего покрытия (м<sup>2</sup>)
           .banner-calculation__foot-text
             | Чем больше площадь покрытия, тем ниже цена продукции
           .banner-calculation__foot-field
             input.form-control.form-control--banner-calculation-foot(
-              id="calculation-square",
-              name="calculation-square",
-              placeholder="Площадь покрытия (м2)"
+              id="calculation",
+              name="calculation",
+              placeholder="0"
             )
 
       .banner-calculation__col-right
         .banner-calculation__form-wrapper
           form.form.form--banner-calculation
+            input.visuallyhidden(
+              type="text",
+              id="client-features",
+              name="client-features",
+              value="0"
+            )
             p.form-lead
               | Мы вышлем прайс-лист на Вашу почту в ближайшее время
             .form-control__wrapper

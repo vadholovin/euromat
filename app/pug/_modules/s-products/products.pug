@@ -62,6 +62,8 @@
       link: 'child.html'
     },
   ];
+-
+  var offset = 0;
 
 
 
@@ -72,13 +74,19 @@ section.products
     ul.products__list
 
       each item in products
-        li.products-item
+        li.products-item(
+          data-aos="fade-up",
+          data-aos-offset= (offset += 50)
+        )
           .products-item__img
-            img(src=item.img, alt="")
+            img.lozad(data-src=item.img, alt="")
+            noscript
+              img(src=item.img, alt="")
           .products-item__body
             h3.products-item__title= item.title
             span.products-item__cost= item.cost
             button.button(
+              type="button",
               data-micromodal-trigger="modal-form-price"
             ) Скачать прайс
           .products-item__foot

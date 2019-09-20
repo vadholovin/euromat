@@ -7,11 +7,41 @@ section.quality
 
       .quality__col-right
         ul.quality__list
-          li.quality__item.quality__item--first
-            img(src="img/content/associations/iaks.png", alt="")
+          li.quality__item.quality__item--first(
+            data-aos="fade-up",
+          )
+            img.lozad(
+              data-src="img/content/associations/iaks.png",
+              data-srcset="img/content/associations/iaks.png 1x, img/content/associations/iaks@2x.png 1.5x, img/content/associations/iaks@2x.png 2x, img/content/associations/iaks@2x.png 3x",
+              width="195",
+              alt=""
+            )
+            noscript
+              img(
+                src="img/content/associations/iaks.png",
+                srcset="img/content/associations/iaks.png 1x, img/content/associations/iaks@2x.png 1.5x, img/content/associations/iaks@2x.png 2x, img/content/associations/iaks@2x.png 3x",
+                width="195",
+                alt=""
+              )
             p.quality__caption
               | Международная ассоциация  производителей спортивных товаров
-          li.quality__item
-            img(src="img/content/associations/apsi.png", alt="")
+          
+          li.quality__item(
+            data-aos="fade-up",
+            data-aos-offset= "100",
+          )
+            img.lozad(
+              data-src="img/content/associations/apsi.png",
+              data-srcset="img/content/associations/apsi.png 1x, img/content/associations/apsi@2x.png 1.5x, img/content/associations/apsi@2x.png 2x, img/content/associations/apsi@2x.png 3x",
+              width="72",
+              alt=""
+            )
+            noscript
+              img(
+                src="img/content/associations/apsi.png",
+                srcset="img/content/associations/apsi.png 1x, img/content/associations/apsi@2x.png 1.5x, img/content/associations/apsi@2x.png 2x, img/content/associations/apsi@2x.png 3x",
+                width="72",
+                alt=""
+              )
             p.quality__caption
               | Ассоциация Предприятий Спортивной индустрии  (АПСИ)

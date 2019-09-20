@@ -2,7 +2,7 @@ include ../_utils/mixins
 block variables
 
 doctype html
-html(lang="ru-RU")
+html.no-js(lang="ru-RU")
   head
     meta(charset="utf-8")
     title #{title}
@@ -11,7 +11,9 @@ html(lang="ru-RU")
     <![endif]-->
     meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="keywords" content="")
+    <script>document.documentElement.classList.remove("no-js");</script>
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic")
+    link(rel="stylesheet" type='text/css' href="libs/aos/aos.css")
     link(rel="stylesheet" type='text/css' href="libs/fancybox/jquery.fancybox.min.css")
     link(rel="stylesheet" type='text/css' href="css/styles.min.css")
     script(src="libs/prefixfree/prefixfree.min.js")
@@ -27,23 +29,10 @@ html(lang="ru-RU")
         block content
       include ../_modules/l-footer/footer
       include ../_modules/c-modals/_modal-form-general
-      //- include ../_modules/c-modals/modal-form-karate
-      //- include ../_modules/c-modals/modal-form-judo
-      //- include ../_modules/c-modals/modal-form-jujitsu
-      //- include ../_modules/c-modals/modal-form-aikido
-      //- include ../_modules/c-modals/modal-form-ushu
-      //- include ../_modules/c-modals/modal-form-thai
-      //- include ../_modules/c-modals/modal-form-mma
-      //- include ../_modules/c-modals/modal-form-freestyle
-      //- include ../_modules/c-modals/modal-form-kudo
-      //- include ../_modules/c-modals/modal-form-grappling
-      //- include ../_modules/c-modals/modal-form-greek
-      //- include ../_modules/c-modals/modal-form-taekwondo
-      //- include ../_modules/c-modals/modal-form-boxing
-      //- include ../_modules/c-modals/modal-form-hand
-      //- include ../_modules/c-modals/modal-form-yoga
-      //- include ../_modules/c-modals/modal-form-gymnastics
     script(src="js/jquery-3.3.1.min.js")
+    script(src="libs/intersection-observer/intersection-observer.js")
+    script(src="libs/lozad/lozad.min.js")
+    script(src="libs/aos/aos.js")
     script(src="libs/slick/slick.min.js")
     script(src="libs/fancybox/jquery.fancybox.min.js")
     script(src="libs/micromodal/micromodal.min.js")

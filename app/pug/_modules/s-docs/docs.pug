@@ -21,6 +21,14 @@ section.docs(style="background-image: url(img/general/pattern-3.png);")
           href= image.src,
           data-fancybox="certificats"
         )
-          img(src= image.src, alt="")
+          img.lozad(
+            data-src= image.src, 
+            alt=""
+          )
+          noscript
+            img(
+              src= image.src, 
+              alt=""
+            )
 
 

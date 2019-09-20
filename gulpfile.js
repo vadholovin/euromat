@@ -40,6 +40,7 @@ $.gulp.task('product', $.gulp.series(
     'svg'
   )
 ));
+
 $.gulp.task('default', $.gulp.series(
   'app',
   $.gulp.parallel(

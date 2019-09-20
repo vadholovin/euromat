@@ -37,13 +37,13 @@
 -
   var sorts = [
     {
-      image: 'img/content/tatami/material/img-4.jpg',
+      img: 'img/content/tatami/material/img-4.jpg',
       title: 'ППЭ',
       subtitle: 'Пенополиэтилен высокого качества',
       value: 'ППЭ'
     },
     {
-      image: 'img/content/tatami/material/img-3.jpg',
+      img: 'img/content/tatami/material/img-3.jpg',
       title: 'ПВВ',
       subtitle: 'Поролон вторичного вспенивания',
       value: 'ПВВ'
@@ -53,55 +53,55 @@
 -
   var colors_1 = [
     {
-      image: 'img/content/tatami/colors/red.png',
+      img: 'img/content/tatami/colors/red.png',
       title: 'Цвет 001',
       subtitle: 'Красный',
       value: 'Красный'
     },
     {
-      image: 'img/content/tatami/colors/yellow.png',
+      img: 'img/content/tatami/colors/yellow.png',
       title: 'Цвет 002',
       subtitle: 'Желтый',
       value: 'Желтый'
     },
     {
-      image: 'img/content/tatami/colors/olive.png',
+      img: 'img/content/tatami/colors/olive.png',
       title: 'Цвет 003',
       subtitle: 'Оливковый',
       value: 'Оливковый'
     },
     {
-      image: 'img/content/tatami/colors/green.png',
+      img: 'img/content/tatami/colors/green.png',
       title: 'Цвет 004',
       subtitle: 'Зеленый',
       value: 'Зеленый'
     },
     {
-      image: 'img/content/tatami/colors/darkblue.png',
+      img: 'img/content/tatami/colors/darkblue.png',
       title: 'Цвет 005',
       subtitle: 'Темно-синий',
       value: 'Темно-синий'
     },
     {
-      image: 'img/content/tatami/colors/lightblue.png',
+      img: 'img/content/tatami/colors/lightblue.png',
       title: 'Цвет 005',
       subtitle: 'Светло-синий',
       value: 'Светло-синий'
     },
     {
-      image: 'img/content/tatami/colors/white.png',
+      img: 'img/content/tatami/colors/white.png',
       title: 'Цвет 007',
       subtitle: 'Белый',
       value: 'Белый'
     },
     {
-      image: 'img/content/tatami/colors/grey.png',
+      img: 'img/content/tatami/colors/grey.png',
       title: 'Цвет 008',
       subtitle: 'Серый',
       value: 'Серый'
     },
     {
-      image: 'img/content/tatami/colors/black.png',
+      img: 'img/content/tatami/colors/black.png',
       title: 'Цвет 009',
       subtitle: 'Черный',
       value: 'Черный'
@@ -111,55 +111,55 @@
 -
   var colors_2 = [
     {
-      image: 'img/content/colors/red.png',
+      img: 'img/content/colors/red.png',
       title: 'Цвет 011',
       subtitle: 'Красный',
       value: 'Красный'
     },
     {
-      image: 'img/content/colors/yellow.png',
+      img: 'img/content/colors/yellow.png',
       title: 'Цвет 012',
       subtitle: 'Желтый',
       value: 'Желтый'
     },
     {
-      image: 'img/content/colors/beige.png',
+      img: 'img/content/colors/beige.png',
       title: 'Цвет 013',
       subtitle: 'Бежевый',
       value: 'Бежевый'
     },
     {
-      image: 'img/content/colors/blue.png',
+      img: 'img/content/colors/blue.png',
       title: 'Цвет 014',
       subtitle: 'Синий',
       value: 'Синий'
     },
     {
-      image: 'img/content/colors/lightblue.png',
+      img: 'img/content/colors/lightblue.png',
       title: 'Цвет 015',
       subtitle: 'Светло-синий',
       value: 'Светло-синий'
     },
     {
-      image: 'img/content/colors/green.png',
+      img: 'img/content/colors/green.png',
       title: 'Цвет 016',
       subtitle: 'Зеленый',
       value: 'Зеленый'
     },
     {
-      image: 'img/content/colors/white.png',
+      img: 'img/content/colors/white.png',
       title: 'Цвет 017',
       subtitle: 'Белый',
       value: 'Белый'
     },
     {
-      image: 'img/content/colors/grey.png',
+      img: 'img/content/colors/grey.png',
       title: 'Цвет 019',
       subtitle: 'Серый',
       value: 'Серый'
     },
     {
-      image: 'img/content/colors/black.png',
+      img: 'img/content/colors/black.png',
       title: 'Цвет 019',
       subtitle: 'Черный',
       value: 'Черный'
@@ -169,19 +169,19 @@
 -
   var backs = [
     {
-      image: 'img/content/tatami/material/img-1.jpg',
+      img: 'img/content/tatami/material/img-1.jpg',
       title: 'Antislip',
       subtitle: 'Натуральный каучук',
       value: 'antislip'
     },
     {
-      image: 'img/content/tatami/material/img-2.jpg',
+      img: 'img/content/tatami/material/img-2.jpg',
       title: 'закрытый низ',
       subtitle: 'Пупырчатый ПВХ',
       value: 'закрытый низ'
     },
     {
-      image: 'img/content/tatami/material/img-3.jpg',
+      img: 'img/content/tatami/material/img-3.jpg',
       title: 'открытый низ',
       subtitle: 'ПВВ',
       value: 'открытый низ'
@@ -248,7 +248,15 @@ section.tatami-calc(
                           .card.card--bg
                             figure.card-media
                               .card-media__content
-                                img(src=item.image, alt="")
+                                img.lozad(
+                                  data-src=item.img,
+                                  alt=""
+                                )
+                                noscript
+                                  img(
+                                    src=item.img,
+                                    alt=""
+                                  )
                             .card__foot
                               img(src="img/general/card-logo.png", alt="")
                           .card-list__item-foot
@@ -283,7 +291,15 @@ section.tatami-calc(
                         .card.card--bg
                           figure.card-media
                             .card-media__content
-                              img(src=item.image, alt="")
+                              img.lozad(
+                                data-src=item.img,
+                                alt=""
+                              )
+                              noscript
+                                img(
+                                  src=item.img,
+                                  alt=""
+                                )
                           .card__foot
                             img(src="img/general/card-logo.png", alt="")
                         .card-list__item-foot
@@ -292,7 +308,7 @@ section.tatami-calc(
                         .control-box
                           input.visuallyhidden(
                           type="radio",
-                          name="colors-1",
+                          name="colors",
                           id= "colors-1-" + (index+1),
                           value= item.value,
                           )
@@ -314,7 +330,15 @@ section.tatami-calc(
                         .card.card--bg
                           figure.card-media
                             .card-media__content
-                              img(src=item.image, alt="")
+                              img.lozad(
+                                data-src=item.img,
+                                alt=""
+                              )
+                              noscript
+                                img(
+                                  src=item.img,
+                                  alt=""
+                                )
                           .card__foot
                             img(src="img/general/card-logo.png", alt="")
                         .card-list__item-foot
@@ -323,7 +347,7 @@ section.tatami-calc(
                         .control-box
                           input.visuallyhidden(
                           type="radio",
-                          name="colors-2",
+                          name="colors",
                           id= "colors-2-" + (index+1),
                           value= item.value,
                           )
@@ -342,7 +366,15 @@ section.tatami-calc(
                     .card.card--bg
                       figure.card-media
                         .card-media__content
-                          img(src=item.image, alt="")
+                          img.lozad(
+                            data-src=item.img,
+                            alt=""
+                          )
+                          noscript
+                            img(
+                              src=item.img,
+                              alt=""
+                            )
                       .card__foot
                         img(src="img/general/card-logo.png", alt="")
                     .card-list__item-foot
@@ -394,7 +426,9 @@ section.tatami-calc(
           h3.content-box__title
             | Нужна консультация специалиста?
             button.button.button--call(
-              title="Заказать обратный звонок"
+              type="button",
+              title="Заказать обратный звонок",
+              data-micromodal-trigger="modal-form-call"
             )
               span.icon.icon-phone
 

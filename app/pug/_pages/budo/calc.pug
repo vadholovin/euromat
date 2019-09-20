@@ -49,7 +49,7 @@ section.budo-calc
     h2.title.title--budo-calc Расчет стоимости покрытия
 
     .budo-calc__content
-      form.budo-calculator
+      .budo-calculator
         .budo-calculator__top
           .budo-calculator__inner
             .budo-calculator__top-grid
@@ -67,7 +67,7 @@ section.budo-calc
                     input.quantity__input#square(
                       type='text',
                       name='square',
-                      placeholder='1',
+                      placeholder='0',
                       pattern='[0-9]*'
                     )
                     button.quantity__btn.quantity__btn--plus
@@ -144,8 +144,10 @@ section.budo-calc
                 span.del 1720 руб
                 span.highlight 1520 руб
 
-              button.button
-                | Оформить заказ со скидкой
+              button.button(
+                type="button",
+                data-micromodal-trigger="modal-form-storage"
+              ) Оформить заказ со скидкой
 
         .budo-calculator__colors
           .budo-calculator__inner
@@ -155,58 +157,82 @@ section.budo-calc
                 p.budo-calculator__colors-subtitle популярный цвет
 
                 ul.card-list.card-list--budo-calculator
-                  each color, index in colors_1
+                  each item, index in colors_1
                     li.card-list__item.js-check
                       .card-list__item-inner
                         .card.card--bg.card--budo-calculator
                           figure.card-media
                             .card-media__content
-                              img(src=color.img, alt="")
+                              img.lozad(
+                                data-src=item.img,
+                                alt=""
+                              )
+                              noscript
+                                img(
+                                  src=item.img,
+                                  alt=""
+                                )
                           .card__foot
                             img(src="img/general/card-logo.png", alt="")
                         .card-list__item-foot
-                          span.card-list__item-title= color.title
+                          span.card-list__item-title= item.title
                         .control-box
                           input.visuallyhidden(
                           type="radio",
-                          name="colors-1",
+                          name="colors",
                           id= "colors-1-" + (index+1),
-                          value= color.title,
+                          value= item.title,
                           )
                           label.control-box__label(
                             for="colors-1-" + (index+1)
                           )
                           span.control-box__flag
 
-                .flex-center
-                  .budo-calculator__colors-notes
-                    p.bigger
-                      | Хочу индивидуальный цвет
-                    p.smaller.highlight
-                      | Доступно при заказе от 50 м<sup>2</sup>
+                .budo-calculator__colors-notes
+                  p.bigger
+                    | Хочу индивидуальный цвет
+                  p.smaller.highlight
+                    | Доступно при заказе от 50 м<sup>2</sup>
+                  .budo-calculator__colors-notes-controls
+                    input#toggle.visuallyhidden(
+                      type='checkbox',
+                      name='my-color',
+                      data-toggle='colors',
+                    )
+                    label.switch.js-switch(
+                      for='toggle',
+                    )
 
               .pure-u-1.pure-u-lg-1-2
                 p.budo-calculator__colors-subtitle
                   span.bigger Эксклюзивный цвет
                   span.smaller.highlight (Заказ от 50 м<sup>2</sup>)
                 ul.card-list.card-list--budo-calculator
-                  each color, index in colors_2
+                  each item, index in colors_2
                     li.card-list__item.js-check
                       .card-list__item-inner
                         .card.card--bg.card--budo-calculator
                           figure.card-media
                             .card-media__content
-                              img(src=color.img, alt="")
+                              img.lozad(
+                                data-src=item.img,
+                                alt=""
+                              )
+                              noscript
+                                img(
+                                  src=item.img,
+                                  alt=""
+                                )
                           .card__foot
                             img(src="img/general/card-logo.png", alt="")
                         .card-list__item-foot
-                          span.card-list__item-title= color.title
+                          span.card-list__item-title= item.title
                         .control-box
                           input.visuallyhidden(
                           type="radio",
-                          name="colors-2",
+                          name="colors",
                           id= "colors-2-" + (index+1),
-                          value= color.title,
+                          value= item.title,
                           )
                           label.control-box__label(
                             for="colors-2-" + (index+1)
@@ -217,7 +243,7 @@ section.budo-calc
           .budo-calculator__inner
             p.budo-calculator__title
               | Вышлем расчет на вашу почту прямо сейчас
-            .budo-calculator__foot-row
+            form.budo-calculator__foot-row
               .form-control__wrapper
                 label.visuallyhidden(for="calc-name") Ваше имя
                 input.form-control(
@@ -248,7 +274,9 @@ section.budo-calc
             p.budo-calculator__title
               | Нужна консультация специалиста?
               button.button.button--call(
-                title="Заказать обратный звонок"
+                type="button",
+                title="Заказать обратный звонок",
+                data-micromodal-trigger="modal-form-call"
               )
                 span.icon.icon-phone
 

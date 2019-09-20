@@ -1,39 +1,36 @@
 'use strict';
 
-jQuery(document).ready(function($) {
+// jQuery(document).ready(function($) {
 
-});
+// });
 
 
-
-jQuery(document).ready(function($) {
-
-  $('.js-tile-colors .card-list__item').hover(function () {
-    let img = $(this).find('img').attr('src'),
-        text = $(this).find('.card-list__item-title').text(),
-        targetImg = $('.card--display-box').find('img'),
-        targeText = $('.card--display-box .card__title');
-
-    targetImg.attr('src', img);
-    targeText.text(text);
+(function () {
+  var observer = lozad('.lozad', {
+    loaded: function(el) {
+      el.classList.add('fade');
+    }
   });
+  observer.observe();
+})();
 
-  $('.js-tile-colors .card-list__item').click(function () {
-    let img = $(this).find('img').attr('src'),
-        text = $(this).find('.card-list__item-title').text(),
-        targetImg = $('.card--display-box').find('img'),
-        targeText = $('.card--display-box .card__title');
 
-    targetImg.attr('src', img);
-    targeText.text(text);
+/**
+ * #Animate on scroll
+ */
+(function () {
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: 'ease-in-out',
   });
-});
+})();
 
 
 /**
  * #Scroll Header
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   $(window).scroll(function () {
     var b = $(window).scrollTop();
 
@@ -49,8 +46,8 @@ jQuery(document).ready(function($) {
 /**
  * #Menu
  */
-jQuery(document).ready(function($) {
-  $('.hamburger').click(function(e) {
+jQuery(document).ready(function ($) {
+  $('.hamburger').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('is-active');
     if ($('.mobile-nav').is('[hidden]')) {
@@ -64,7 +61,7 @@ jQuery(document).ready(function($) {
     $('html, body').toggleClass('is-overflowed');
   });
 
-  $('.side-menu__close, .mobile-nav__overlay').click(function(e) {
+  $('.side-menu__close, .mobile-nav__overlay').click(function (e) {
     e.preventDefault();
     $('.hamburger').toggleClass('is-active');
     $('.mobile-nav, .mobile-nav__content, .mobile-nav__overlay').removeClass('is-visible');
@@ -79,7 +76,7 @@ jQuery(document).ready(function($) {
 /**
  * #Hero main Slider
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var slider = $('.js-hero-main-slider');
 
   slider.slick({
@@ -89,6 +86,7 @@ jQuery(document).ready(function($) {
     dots: false,
     prevArrow: $('#hero-main-nav .slider-nav__prev'),
     nextArrow: $('#hero-main-nav .slider-nav__next'),
+    lazyLoad: 'progressive',
     // pauseOnHover: false,
     // pauseOnFocus: false,
     // autoplay: true,
@@ -100,7 +98,7 @@ jQuery(document).ready(function($) {
 /**
  * #Hero Slider
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var slider = $('.js-hero-slider');
 
   slider.slick({
@@ -136,7 +134,7 @@ jQuery(document).ready(function($) {
     ],
   });
 
-  slider.on('wheel', (function(e) {
+  slider.on('wheel', (function (e) {
     e.preventDefault();
 
     if (e.originalEvent.deltaY < 0) {
@@ -153,7 +151,7 @@ jQuery(document).ready(function($) {
 /**
  * #Portfolio Slider
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var slider = $('.js-portfolio-slider');
 
   slider.slick({
@@ -167,6 +165,7 @@ jQuery(document).ready(function($) {
     pauseOnFocus: false,
     centerMode: true,
     centerPadding: '0px',
+    lazyLoad: 'ondemand',
     responsive: [
       {
         breakpoint: 991.98,
@@ -193,7 +192,7 @@ jQuery(document).ready(function($) {
     ],
   });
 
-  slider.on('wheel', (function(e) {
+  slider.on('wheel', (function (e) {
     e.preventDefault();
 
     if (e.originalEvent.deltaY < 0) {
@@ -210,7 +209,7 @@ jQuery(document).ready(function($) {
 /**
  * #Trust Slider
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var slider = $('.js-trust-slider');
 
   slider.slick({
@@ -220,10 +219,11 @@ jQuery(document).ready(function($) {
     dots: false,
     prevArrow: $('#trust-nav .slider-nav__prev'),
     nextArrow: $('#trust-nav .slider-nav__next'),
-    // pauseOnHover: false,
-    // pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
     autoplay: true,
     autoplaySpeed: 3000,
+    lazyLoad: 'progressive',
     responsive: [
       {
         breakpoint: 1280,
@@ -240,7 +240,7 @@ jQuery(document).ready(function($) {
     ],
   });
 
-  slider.on('wheel', (function(e) {
+  slider.on('wheel', (function (e) {
     e.preventDefault();
 
     if (e.originalEvent.deltaY < 0) {
@@ -257,7 +257,7 @@ jQuery(document).ready(function($) {
 /**
  * #Reviews Slider
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var slider = $('.js-reviews-slider');
 
   slider.slick({
@@ -295,7 +295,7 @@ jQuery(document).ready(function($) {
     ],
   });
 
-  slider.on('wheel', (function(e) {
+  slider.on('wheel', (function (e) {
     e.preventDefault();
 
     if (e.originalEvent.deltaY < 0) {
@@ -312,7 +312,7 @@ jQuery(document).ready(function($) {
 /**
  * #Team Slider
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var slider = $('.js-team-slider');
 
   slider.slick({
@@ -324,16 +324,17 @@ jQuery(document).ready(function($) {
     nextArrow: $('#team-nav .slider-nav__next'),
     pauseOnHover: false,
     pauseOnFocus: false,
+    lazyLoad: 'ondemand',
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: 991.98,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 767.98,
         settings: {
           dots: true,
           arrows: false,
@@ -342,7 +343,7 @@ jQuery(document).ready(function($) {
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 575.98,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -353,7 +354,7 @@ jQuery(document).ready(function($) {
     ],
   });
 
-  slider.on('wheel', (function(e) {
+  slider.on('wheel', (function (e) {
     e.preventDefault();
 
     if (e.originalEvent.deltaY < 0) {
@@ -367,12 +368,36 @@ jQuery(document).ready(function($) {
 
 
 /**
+ * Action button
+ */
+jQuery(document).ready(function ($) {
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 800) {
+      $('#back_to_top').removeClass('off');
+      $('#back_to_top').addClass('on');
+    } else {
+      $('#back_to_top').removeClass('on');
+      $('#back_to_top').addClass('off');
+    }
+  });
+
+  $(document).on('click', '#back_to_top', function (e) {
+    e.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0
+    }, 1000);
+  });
+});
+
+
+/**
  * #Fancybox init
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   $('[data-fancybox]').fancybox({
     buttons: [
       'close',
+      'zoom',
     ],
   });
 });
@@ -383,16 +408,16 @@ jQuery(document).ready(function($) {
  * Micromodal init
  * 1. Prevent page scrolling when a modal is open
  */
-(function() {
-  let body = document.body,
-      site = document.documentElement;
+(function () {
+  var body = document.body;
+  var site = document.documentElement;
 
   MicroModal.init({
-    onShow: function() {
+    onShow: function () {
       body.classList.add('is-overflowed'); /* 1 */
       site.classList.add('is-overflowed'); /* 1 */
     },
-    onClose: function() {
+    onClose: function () {
       body.classList.remove('is-overflowed'); /* 1 */
       site.classList.remove('is-overflowed'); /* 1 */
     },
@@ -403,21 +428,38 @@ jQuery(document).ready(function($) {
 /**
  * Calc
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   // Check Radios
-  $('.js-check').click(function() {
-    $(this).siblings().removeClass('checked').addClass('unchecked');
-    $('.js-check').has(':checked').removeClass('unchecked').addClass('checked');
+  $('.js-check').click(function () {
+    var name = $(this).find('input').attr('name');
+    var toggler = $('[data-toggle=' + name + ']');
+    if (!toggler.is(':checked')) {
+      $('.js-check').has('[name=' + name + ']').removeClass('checked').addClass('unchecked');
+      $('.js-check').has(':checked').removeClass('unchecked').addClass('checked');
+    }
+  });
+
+  $('.js-switch').click(function () {
+    var name = $(this).siblings('input').data('toggle');
+    var target = $('[name=' + name + ']');
+
+    if (target.attr('disabled')) {
+      target.removeAttr('disabled');
+      $('.js-check').has(target).removeClass('unchecked').removeClass('checked');
+    } else {
+      target.attr('disabled', 'disabled');
+      $('.js-check').has(target).removeClass('checked').addClass('unchecked');
+    }
   });
 
   // Increase quantity
-  $('.quantity').click(function(e) {
+  $('.quantity').click(function (e) {
     e.preventDefault();
     var plus = $(this).find('.quantity__btn--plus'),
-        minus = $(this).find('.quantity__btn--minus'),
-        field = $(this).find('.quantity__input'),
-        fieldVal = +field.val(),
-        target = $(event.target);
+      minus = $(this).find('.quantity__btn--minus'),
+      field = $(this).find('.quantity__input'),
+      fieldVal = +field.val(),
+      target = $(event.target);
 
     if (target.is(plus)) {
       field.val(fieldVal += 1);
@@ -434,15 +476,15 @@ jQuery(document).ready(function($) {
 /**
  * Show youtube video
  */
-jQuery(document).ready(function($) {
-  let link = $('.card-media__content [data-fancybox], .video-box [data-fancybox');
+jQuery(document).ready(function ($) {
+  var link = $('.card-media__content [data-fancybox], .video-box [data-fancybox]');
 
   link.each(function () {
-    let videoSrc       = $(this).attr('href');
-    let youtubeVideoId = videoSrc.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+    var videoSrc = $(this).attr('href');
+    var youtubeVideoId = videoSrc.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
 
     if (youtubeVideoId.length == 11) {
-      let imageUrl = '//img.youtube.com/vi/' + youtubeVideoId + '/0.jpg';
+      var imageUrl = '//img.youtube.com/vi/' + youtubeVideoId + '/0.jpg';
       $(this).siblings('.card-media__btn, .video-box__btn').css('background-image', 'url(' + imageUrl + ')');
     }
   });
@@ -453,33 +495,31 @@ jQuery(document).ready(function($) {
 /**
  * #Map
  */
-/*
-(function() {
-  ymaps.ready(function() {
-    var centerPoint = (window.innerWidth  < 1280) ?
-      [55.678707, 37.343568] : [55.678707, 37.3478];
+
+(function () {
+  ymaps.ready(function () {
+    var centerPoint = (window.innerWidth < 1280) ? [55.678707, 37.343568] : [55.678707, 37.3478];
 
     var myMap = new ymaps.Map('map', {
-          center: centerPoint,
-          zoom: 16,
-          controls: ['zoomControl']
-        }),
-        myPlacemark = new ymaps.Placemark([55.678707, 37.343568], {}, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: '../img/icons/place.png',
-          // Размеры метки.
-          iconImageSize: [47, 63],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-30, -70]
-        });
+        center: centerPoint,
+        zoom: 16,
+        controls: ['zoomControl']
+      }),
+      myPlacemark = new ymaps.Placemark([55.678707, 37.343568], {}, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: '../img/icons/place.png',
+        // Размеры метки.
+        iconImageSize: [47, 63],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-30, -70]
+      });
 
     myMap.geoObjects
       .add(myPlacemark);
     myMap.behaviors.disable('scrollZoom');
   });
 })();
-*/

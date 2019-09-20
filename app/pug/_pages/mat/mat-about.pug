@@ -13,13 +13,21 @@ section.mat-about(style="background-image: url(img/general/pattern-1.png), url(i
             | разместим на матах логотип вашей компании
           p.mat-about__notes
             | Оставьте заявку и наш специалист свяжется с вами для подробной консультации
-          button.button Оставить заявку
+          button.button(
+            type="button",
+            data-micromodal-trigger="modal-form-bid"
+          ) Оставить заявку
 
       .mat-about__col-right
-        img.mat-about__img(
-          src="img/content/mat/mat-img.png",
+        img.mat-about__img.lozad(
+          data-src="img/content/mat/mat-img.png",
           alt=""
         )
+        noscript
+          img.mat-about__img(
+            src="img/content/mat/mat-img.png",
+            alt=""
+          )
 
 
 
