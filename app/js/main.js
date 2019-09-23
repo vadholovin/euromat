@@ -1,10 +1,18 @@
 'use strict';
 
-// jQuery(document).ready(function($) {
 
-// });
+/**
+ * #Detect touch devices
+ */
+(function () {
+  document.documentElement.className +=
+    (('ontouchstart' in document.documentElement) ? ' touch' : ' no-touch');
+})();
 
 
+/**
+ * #Lazy loading for images
+ */
 (function () {
   var observer = lozad('.lozad', {
     loaded: function(el) {
@@ -87,10 +95,6 @@ jQuery(document).ready(function ($) {
     prevArrow: $('#hero-main-nav .slider-nav__prev'),
     nextArrow: $('#hero-main-nav .slider-nav__next'),
     lazyLoad: 'progressive',
-    // pauseOnHover: false,
-    // pauseOnFocus: false,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
   });
 });
 
@@ -114,21 +118,21 @@ jQuery(document).ready(function ($) {
     autoplaySpeed: 5000,
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: 991.98,
         settings: {
           slidesToShow: 5,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 767.98,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 575.98,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
     ],
@@ -176,8 +180,8 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 767.98,
         settings: {
-          dots: true,
-          arrows: false,
+          // dots: true,
+          // arrows: false,
           slidesToShow: 2,
         },
       },
@@ -185,7 +189,7 @@ jQuery(document).ready(function ($) {
         breakpoint: 575.98,
         settings: {
           slidesToShow: 1,
-          dots: true,
+          // dots: true,
           arrows: false,
         },
       },
@@ -279,8 +283,8 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 768,
         settings: {
-          dots: true,
-          arrows: false,
+          // dots: true,
+          // arrows: false,
           slidesToShow: 2,
         },
       },
@@ -288,8 +292,8 @@ jQuery(document).ready(function ($) {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
-          dots: true,
-          arrows: false,
+          // dots: true,
+          // arrows: false,
         },
       },
     ],
@@ -317,7 +321,7 @@ jQuery(document).ready(function ($) {
 
   slider.slick({
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     infinite: true,
     dots: false,
     prevArrow: $('#team-nav .slider-nav__prev'),
@@ -330,14 +334,14 @@ jQuery(document).ready(function ($) {
         breakpoint: 991.98,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 767.98,
         settings: {
-          dots: true,
-          arrows: false,
+          // dots: true,
+          // arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2,
         },
@@ -347,8 +351,8 @@ jQuery(document).ready(function ($) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
-          arrows: false,
+          // dots: true,
+          // arrows: false,
         },
       },
     ],
@@ -396,8 +400,8 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
   $('[data-fancybox]').fancybox({
     buttons: [
-      'close',
       'zoom',
+      'close',
     ],
   });
 });
@@ -411,6 +415,14 @@ jQuery(document).ready(function ($) {
 (function () {
   var body = document.body;
   var site = document.documentElement;
+  var buttons = document.querySelectorAll('.js-button-call');
+
+  if (site.classList.contains('touch')) {
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].setAttribute('href', 'tel:495');
+      buttons[i].removeAttribute('data-micromodal-trigger');
+    }
+  }
 
   MicroModal.init({
     onShow: function () {
@@ -422,6 +434,17 @@ jQuery(document).ready(function ($) {
       site.classList.remove('is-overflowed'); /* 1 */
     },
   });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.innerWidth < 992) {
+        setTimeout(function () {
+          MicroModal.show('modal-form-kill');
+        }, 10000);
+      }
+    });
+  }
+
 })();
 
 
@@ -484,7 +507,7 @@ jQuery(document).ready(function ($) {
     var youtubeVideoId = videoSrc.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
 
     if (youtubeVideoId.length == 11) {
-      var imageUrl = '//img.youtube.com/vi/' + youtubeVideoId + '/0.jpg';
+      var imageUrl = '//img.youtube.com/vi/' + youtubeVideoId + '/2.jpg';
       $(this).siblings('.card-media__btn, .video-box__btn').css('background-image', 'url(' + imageUrl + ')');
     }
   });
@@ -493,33 +516,64 @@ jQuery(document).ready(function ($) {
 
 
 /**
+ * Prevent image download
+ */
+jQuery(document).ready(function ($) {
+  $('img').mousedown(function (e) {
+    if (e.button === 2) {
+      return false;
+    }
+  });
+});
+
+/**
  * #Map
  */
 
 (function () {
   ymaps.ready(function () {
-    var centerPoint = (window.innerWidth < 1280) ? [55.678707, 37.343568] : [55.678707, 37.3478];
+    var centerPoint = (window.innerWidth < 1280) ?
+      [55.678707, 37.343568] :
+      [55.678707, 37.3478];
 
     var myMap = new ymaps.Map('map', {
-        center: centerPoint,
-        zoom: 16,
-        controls: ['zoomControl']
-      }),
-      myPlacemark = new ymaps.Placemark([55.678707, 37.343568], {}, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: '../img/icons/place.png',
-        // Размеры метки.
-        iconImageSize: [47, 63],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-30, -70]
-      });
+          center: centerPoint,
+          zoom: 16,
+          controls: ['zoomControl']
+        }),
+        myPlacemark = new ymaps.Placemark([55.678707, 37.343568], {}, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: '../img/icons/place.png',
+          // Размеры метки.
+          iconImageSize: [47, 63],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-30, -70]
+        });
 
     myMap.geoObjects
       .add(myPlacemark);
     myMap.behaviors.disable('scrollZoom');
+
+    ymaps.geolocation.get({
+      // Зададим способ определения геолокации
+      // на основе ip пользователя.
+      provider: 'yandex',
+      // Включим автоматическое геокодирование результата.
+      autoReverseGeocode: true
+    })
+      .then(function (res) {
+        // Выведем результат геокодирования.
+        var firstGeoObject = res.geoObjects.get(0);
+        var placement = firstGeoObject.getLocalities().join(', ');
+        var target = document.querySelectorAll('.js-place');
+
+        for (var i = 0; i < target.length; i++) {
+          target[i].textContent = placement;
+        }
+      });
   });
 })();

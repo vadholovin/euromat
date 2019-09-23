@@ -83,6 +83,11 @@ video {
   vertical-align: middle;
 }
 
+
+ul, ol {
+  list-style: none;
+}
+
 /*
 * Remove default fieldset styles.
 */
@@ -132,6 +137,7 @@ img {
   height: auto;
   vertical-align: middle;
   border-style: none;
+  pointer-events: none;
 }
 
 del {
@@ -171,4 +177,8 @@ del {
   to {
     opacity: 1;
   }
+}
+
+input:focus::placeholder{
+  color:transparent;
 }

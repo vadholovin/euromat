@@ -18,7 +18,7 @@
   position: relative;
   margin-right: auto;
 
-  @media (max-width: 35.99em) {
+  @media (max-width: 47.99em) {
     width: 100%;
     padding-bottom: 24px;
     margin-bottom: 36px;
@@ -50,6 +50,7 @@
 
 
 .footer-requisites__list {
+  margin-bottom: 12px;
 
   @media (min-width: 62em) {
     display: flex;
@@ -85,5 +86,10 @@
 
 .footer-requisites__item + .footer-requisites__item {
   margin-top: 12px;
+}
+
+
+.footer-address {
+  font-style: normal;
 }
 

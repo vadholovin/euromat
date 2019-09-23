@@ -3,9 +3,13 @@
    ========================================================================== */
 
 .quality {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 56px;
+  padding-bottom: 56px;
 
+  @media (min-width: 80em) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 
   @media (min-width: 100em) {
     padding-top: 100px;

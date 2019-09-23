@@ -61,6 +61,10 @@
   color: $secondary-color;
 }
 
+.slider .slick-dots li button:before {
+  content: '';
+}
+
 
 /* #Slider-nav--shevrons
    ========================================================================== */
@@ -179,8 +183,13 @@
 
 
 .slider--hero {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: 48em) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 
@@ -193,14 +202,22 @@
 
 
 .slider-nav--hero .slider-nav__prev {
-  left: 0;
+  left: -12px;
   transform: translate(0%, -50%) scale(0.65);
+
+  @media (min-width: 36em) {
+    left: 0;
+  }
 }
 
 
 .slider-nav--hero .slider-nav__next {
-  right: 0;
+  right: -12px;
   transform: translate(0%, -50%) scale(0.65);
+
+  @media (min-width: 36em) {
+    right: 0;
+  }
 }
 
 
@@ -213,12 +230,17 @@
 .slider--portfolio,
 .slider--reviews,
 .slider--team {
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -8px;
+  margin-right: -8px;
 
   @media (min-width: 48em) and (max-width: 79.99em) {
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  @media (min-width: 48em) {
+    margin-left: -20px;
+    margin-right: -20px;
   }
 }
 
@@ -226,8 +248,14 @@
 .slider-item--portfolio,
 .slider-item--reviews,
 .slider-item--team {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-bottom: 16px;
+
+  @media (min-width: 48em) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 
@@ -236,7 +264,13 @@
 .slider-nav--team {
 
   @media (max-width: 47.99em) {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 180px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -244,18 +278,25 @@
 .slider-nav--portfolio > *,
 .slider-nav--reviews > *,
 .slider-nav--team > * {
-  position: absolute;
-  top: 50%;
   width: 44px;
   height: 44px;
+
+  @media (min-width: 48em) {
+    position: absolute;
+    top: 50%;
+  }
 }
 
 
 .slider-nav--portfolio .slider-nav__prev,
 .slider-nav--reviews .slider-nav__prev,
 .slider-nav--team .slider-nav__prev {
-  left: 0;
-  transform: translate(0%, -50%);
+  transform: scale(0.65);
+
+  @media (min-width: 48em) {
+    left: 0;
+    transform: translate(0%, -50%);
+  }
 
   @media (min-width: 80em) {
     transform: translate(-150%, -50%)
@@ -266,19 +307,16 @@
 .slider-nav--portfolio .slider-nav__next,
 .slider-nav--reviews .slider-nav__next,
 .slider-nav--team .slider-nav__next {
-  right: 0;
-  transform: translate(0%, -50%);
+  transform: scale(0.65);
+  
+  @media (min-width: 48em) {
+    right: 0;
+    transform: translate(0%, -50%);
+  }
 
   @media (min-width: 80em) {
     transform: translate(150%, -50%);
   }
-}
-
-
-.slider--portfolio .slick-list,
-.slider--reviews .slick-list,
-.slider--team .slick-list {
-  padding-bottom: 10px !important;
 }
 
 
@@ -307,15 +345,10 @@
   margin-left: 8px;
   margin-right: 8px;
 
-  @media (min-width: 48em) {
+  @media (min-width: 80em) {
     margin-left: 15px;
     margin-right: 15px;
   }
-}
-
-
-.slider-nav--team {
-  margin-top: 20px;
 }
 
 
@@ -323,16 +356,6 @@
 .slider-nav--team .slider-nav__next {
   width: 44px;
   height: 44px;
-}
-
-
-.slider-nav--team .slider-nav__prev {
-  margin-left: auto;
-}
-
-
-.slider-nav--team .slider-nav__next {
-  margin-right: auto;
 }
 
 

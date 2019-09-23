@@ -307,3 +307,55 @@ each item, index in modals
                     | - Я даю согласие на обработку моих персональных данных
 
                 button.button(type="submit")= item.button
+
+.modal.modal--form(
+    id="modal-form-kill",
+    aria-hidden='true'
+  )
+    .modal__overlay(tabindex='-1', data-micromodal-close='')
+      .modal__container(role='dialog', aria-modal='true')
+        main.modal__content
+          button.modal__close(aria-label='Закрыть попап', data-micromodal-close='')
+          .hero-widget.hero-widget--modal
+            .hero-widget__inner
+              p.hero-widget__title
+                | Ликвидация склада
+                br
+                | до 30.08.2019
+              .hero-widget__timer
+                .hero-widget__timer-item
+                  span.hero-widget__timer-top 25
+                  span.hero-widget__timer-bottom Часов
+                .hero-widget__timer-item
+                  span.hero-widget__timer-top 13
+                  span.hero-widget__timer-bottom Минут
+                .hero-widget__timer-item
+                  span.hero-widget__timer-top 6
+                  span.hero-widget__timer-bottom Секунд
+              
+              form.form.form--hero-widget
+                .form-control__wrapper
+                  label.visuallyhidden(for="client-name-kill") Ваше имя
+                  input.form-control(
+                    type="text",
+                    id="client-name-kill",
+                    name="client-name-kill",
+                    placeholder="Ваше имя"
+                  )
+                .form-control__wrapper
+                  label.visuallyhidden(for="client-email-kill") Ваша почта
+                  input.form-control(
+                    type="text",
+                    id="client-email-kill",
+                    name="client-email-kill",
+                    placeholder="Ваша почта"
+                  )
+                .form-control__wrapper
+                  label.visuallyhidden(for="client-phone-kill") Номер телефона
+                  input.form-control(
+                    type="tel",
+                    id="client-phone-kill",
+                    name="client-phone-kill",
+                    placeholder="Ваш номер телефона"
+                  )
+                button.button(type="submit") Отправить заявку

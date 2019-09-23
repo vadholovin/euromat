@@ -39,7 +39,7 @@
 }
 
 
-.header-cities__link {
+.header-cities__text {
   font-weight: 600;
 }
 
@@ -118,22 +118,22 @@
 
 .header-main__content {
   height: 72px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  // padding-top: 12px;
+  // padding-bottom: 12px;
   align-items: center;
   
 
   @media (min-width: 62em) {
     height: 96px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    // padding-top: 14px;
+    // padding-bottom: 14px;
   }
 
 
   .is-scroll & {
     height: 64px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    // padding-top: 4px;
+    // padding-bottom: 4px;
 
 
     > * {

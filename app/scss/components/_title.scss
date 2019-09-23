@@ -25,13 +25,62 @@
 
 
 .title--hero {
-  @include fluid-type($min_width, $max_width, 24px, 42px);
-
-  margin-bottom: 12px;
+  @include fluid-type($min_width, $max_width, 24px, 40px);
+  margin-bottom: 8px;
+  // margin-bottom: 44px;
 
   @media (min-width: 62em) {
     text-align: left;
   }
+}
+
+
+.title--hero-home {
+  @include fluid-type($min_width, $max_width, 20px, 42px);
+
+  margin-bottom: 12px;
+}
+
+
+.title--hero-budo {
+  @include fluid-type($min_width, $max_width, 24px, 52px);
+}
+
+
+.title--hero-wall {
+  @include fluid-type($min_width, $max_width, 24px, 44px);
+}
+
+
+.title--hero-child .bigger {
+  @include fluid-type($min_width, $max_width, 24px, 50px);
+}
+
+
+.title--hero-child .smaller,
+.title--hero-mma .smaller {
+  @include fluid-type($min_width, $max_width, 20px, 38px);
+}
+
+
+.title--hero-tatami .bigger,
+.title--hero-roll .bigger {
+  @include fluid-type($min_width, $max_width, 24px, 58px);
+}
+
+
+.title--hero-tatami .smaller {
+  @include fluid-type($min_width, $max_width, 20px, 36px);
+}
+
+
+.title--hero-roll .smaller {
+  @include fluid-type($min_width, $max_width, 20px, 32px);
+}
+
+
+.title--hero-ring .smaller {
+  @include fluid-type($min_width, $max_width, 20px, 28px);
 }
 
 
@@ -115,7 +164,7 @@
 
 
 .title--portfolio {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 
   @media (min-width: 90em) {
     margin-bottom: 60px;
@@ -133,7 +182,7 @@
 
 
 .title--reviews {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 
   @media (min-width: 80em) {
     margin-bottom: 55px;
@@ -142,10 +191,11 @@
 
 
 .title--team {
-  margin-bottom: 18px;
+  margin-bottom: 40px;
 
   @media (min-width: 62em) {
     text-align: left;
+    margin-top: 24px;
   }
 }
 
@@ -199,7 +249,7 @@
 .title--contacts {
   @include fluid-type($min_width, $max_width, 24px, 36px);
 
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   text-align: left;
 
   @media (min-width: 80em) {

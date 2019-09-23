@@ -87,13 +87,14 @@ section.portfolio(style="background-image: url(img/general/pattern-1.png);")
     .slider__wrapper.slider__wrapper--portfolio
       .portfolio-slider.slider.slider--portfolio.js-portfolio-slider
         each image in images
-          .portfolio-slider__item.slider-item
+          .portfolio-slider__item.slider-item.slider-item--portfolio
             .card.card--portfolio.card--bg
               figure.card-media
                 a.card-media__content(
                   href= image.link,
                   data-fancybox="portfolio"
                 )
+                  img.card-media__mark(src="img/general/logo-white.png", alt="")
                   img(data-lazy= image.link, alt="")
               .card__foot
                 img(src="img/general/card-logo.png", alt="")

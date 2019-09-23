@@ -168,19 +168,9 @@ section.product-calc.product-calc--carpet-calc
                           .card.card--bg
                             figure.card-media
                               .card-media__content
-                                img.lozad(
-                                  data-src= item.img,
-                                  alt=""
-                                )
-                                noscript
-                                  img(
-                                    src= item.img,
-                                    alt=""
-                                  )
+                                span.card-list__item-title!= item.title
                             .card__foot
                               img(src="img/general/card-logo.png", alt="")
-                          .card-list__item-foot
-                            span.card-list__item-title!= item.title
                           .control-box
                             input.visuallyhidden(
                             type="radio",

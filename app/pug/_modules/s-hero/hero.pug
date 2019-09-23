@@ -1,206 +1,345 @@
+-
+  var heroMain = [
+    {
+      mod: 'home',
+      img: 'img/content/hero-slider/img-index-1.jpg',
+      bigTitle: `безусловный лидер <br> в сфере производства <br> спортивных покрытий`,
+      smallTitle: ``,
+      cost: ``,
+      text: `Поможем выбрать покрытие для вашего вида спорта`
+    },
+    {
+      mod: 'home',
+      img: 'img/content/hero-slider/img-index-2.jpg',
+      bigTitle: `безусловный лидер <br> в сфере производства <br> спортивных покрытий`,
+      smallTitle: ``,
+      cost: ``,
+      text: `Поможем выбрать покрытие для вашего вида спорта`
+    },
+  ];
+
+-
+  var heroBudo = [
+    {
+      mod: 'budo',
+      img: 'img/content/hero-slider/img-budo-1.jpg',
+      bigTitle: `Будо-Маты EVA <br> ласточкин хвост`,
+      smallTitle: ``,
+      cost: `от 590 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroCarpet = [
+    {
+      mod: 'carpet',
+      img: 'img/content/hero-slider/img-carpet-1.jpg',
+      bigTitle: `Классическое покрытие <br> для борцовских залов`,
+      smallTitle: ``,
+      cost: `от 860 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroChild = [
+    {
+      mod: 'child',
+      img: 'img/content/hero-slider/img-child-1.jpg',
+      bigTitle: `детский пол`,
+      smallTitle: `для будущих чемпионов`,
+      cost: `590 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroMat = [
+    {
+      mod: 'mat',
+      img: 'img/content/hero-slider/img-mat-1.jpg',
+      bigTitle: `Гимнастические маты`,
+      smallTitle: ``,
+      cost: `от 2680 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroMma = [
+    {
+      mod: 'mma',
+      img: 'img/content/hero-slider/img-mma-1.jpg',
+      bigTitle: `Клетки ММА`,
+      smallTitle: `международного уровня`,
+      cost: `от 128 000 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroRing = [
+    {
+      mod: 'ring',
+      img: 'img/content/hero-slider/img-ring-1.jpg',
+      bigTitle: `Ринги по нормам`,
+      smallTitle: `международной ассоциации Бокса`,
+      cost: `от 77 000 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroRoll = [
+    {
+      mod: 'roll',
+      img: 'img/content/hero-slider/img-roll-1.jpg',
+      bigTitle: `Ролл-маты`,
+      smallTitle: `для всех видов единоборств`,
+      cost: `от 1350 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroTatami = [
+    {
+      mod: 'tatami',
+      img: 'img/content/hero-slider/img-tatami-1.jpg',
+      bigTitle: `татами`,
+      smallTitle: `международного уровня`,
+      cost: `от 2160 рублей`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroTile = [
+    {
+      mod: 'tile',
+      img: 'img/content/hero-slider/img-tile-1.jpg',
+      bigTitle: `Напольное покрытие <br>Резиновая плитка`,
+      smallTitle: ``,
+      cost: `от 1280 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+-
+  var heroWall = [
+    {
+      mod: 'wall',
+      img: 'img/content/hero-slider/img-wall-1.jpg',
+      bigTitle: `Стеновые протекторы <br> и защита колон`,
+      smallTitle: ``,
+      cost: `от 3080 рублей/м<sup>2</sup>`,
+      text: `От официального производителя`
+    },
+  ];
+
+
 section.hero
   .slider__wrapper.slider__wrapper--hero-main
     .slider-nav.slider-nav--shevrons-big.slider-nav--hero-main#hero-main-nav
       button.slider-nav__prev(aria-label="Предыдущий слайд")
       button.slider-nav__next(aria-label="Следующий слайд")
     .hero-main__slider.slider.slider--hero-main.js-hero-main-slider
-      .hero-main__slider-item(
-        style="background-image: url(img/content/hero-slider/img-1.jpg)"
-      )
-        .container
-          .hero__top
-            .hero__text
-              h1.title.title--hero
-                | безусловный лидер
-                br
-                | в сфере производства
-                br
-                | спортивных покрытий
-              p.hero__subtitle
-                | Поможем выбрать покрытие для вашего вида спорта
+      if pageClass == 'home-page'
+        each item, index in heroMain
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                h1(class='title title--hero title--hero-' + item.mod)!= item.bigTitle
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
 
-      .hero-main__slider-item(
-        style="background-image: url(img/content/hero-slider/img-3.jpg)"
-      )
-        .container
-          .hero__top
-            .hero__text
-              h1.title.title--hero
-                | безусловный лидер
-                br
-                | в сфере производства
-                br
-                | спортивных покрытий
-              p.hero__subtitle
-                | Поможем выбрать покрытие для вашего вида спорта
+      if pageClass == 'budo-page'
+        each item, index in heroBudo
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)!= item.bigTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'carpet-page'
+        each item, index in heroCarpet
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)!= item.bigTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'child-page'
+        each item, index in heroChild
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)
+                  span.bigger!= item.bigTitle
+                  span.smaller!= item.smallTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'mat-page'
+        each item, index in heroMat
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)!= item.bigTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'mma-page'
+        each item, index in heroMma
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)
+                  span.bigger!= item.bigTitle
+                  span.smaller!= item.smallTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'ring-page'
+        each item, index in heroRing
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)
+                  span.bigger!= item.bigTitle
+                  span.smaller!= item.smallTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'roll-page'
+        each item, index in heroRoll
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)
+                  span.bigger!= item.bigTitle
+                  span.smaller!= item.smallTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'tatami-page'
+        each item, index in heroTatami
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)
+                  span.bigger!= item.bigTitle
+                  span.smaller!= item.smallTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'tile-page'
+        each item, index in heroTile
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)!= item.bigTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
+
+      if pageClass == 'wall-page'
+        each item, index in heroWall
+          div(
+            class='hero-main__slider-item hero-main__slider-item--' + item.mod,
+            style=`background-image: url(${item.img})`
+          )
+            .container
+              div(class='hero-content hero-content--' + item.mod)
+                p(class='hero-content__text hero-content__text--' + item.mod)!= item.text
+                h1(class='title title--hero title--hero-' + item.mod)!= item.bigTitle
+                p.hero-content__extra с доставкой в <span class='js-place'></span>
+                .hero-content-foot
+                  p.hero-content__cost!= item.cost
+                  button.button(
+                    type='button',
+                    data-micromodal-trigger="modal-form-bid"
+                  ) Рассчитать стоимость
 
     .container.pos-r
-      .hero-widget
-        .hero-widget__inner
-          p.hero-widget__title
-            | Ликвидация склада
-            br
-            | до 30.08.2019
-          .hero-widget__timer
-            .hero-widget__timer-item
-              span.hero-widget__timer-top 25
-              span.hero-widget__timer-bottom Дней
-            .hero-widget__timer-item
-              span.hero-widget__timer-top 13
-              span.hero-widget__timer-bottom Часов
-            .hero-widget__timer-item
-              span.hero-widget__timer-top 6
-              span.hero-widget__timer-bottom Минут
-          
-          form.form.form--hero-widget
-            .form-control__wrapper
-              label.visuallyhidden(for="client-name-hero") Ваше имя
-              input.form-control(
-                type="text",
-                id="client-name-hero",
-                name="client-name-hero",
-                placeholder="Ваше имя"
-              )
-            .form-control__wrapper
-              label.visuallyhidden(for="client-email-hero") Ваша почта
-              input.form-control(
-                type="text",
-                id="client-email-hero",
-                name="client-email-hero",
-                placeholder="Ваша почта"
-              )
-            .form-control__wrapper
-              label.visuallyhidden(for="client-phone-hero") Номер телефона
-              input.form-control(
-                type="tel",
-                id="client-phone-hero",
-                name="client-phone-hero",
-                placeholder="Ваш номер телефона"
-              )
-            button.button(type="submit") Отправить заявку
-
+      include ./hero-widget
   .container
-    .slider__wrapper.slider__wrapper--hero
-      .hero-slider.slider.slider--hero.js-hero-slider
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-karate"
-        )
-          span.icon-martial.icon-martial-karate
-          span.hero-slider__item-title Каратэ
+    include ./hero-carousel
 
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-judo"
-        )
-          span.icon-martial.icon-martial-judo
-          span.hero-slider__item-title Дзюдо
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-jujitsu"
-        )
-          span.icon-martial.icon-martial-jujitsu
-          span.hero-slider__item-title Джиу-джитсу
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-aikido"
-        )
-          span.icon-martial.icon-martial-aikido
-          span.hero-slider__item-title Айкидо
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-ushu"
-        )
-          span.icon-martial.icon-martial-ushu
-          span.hero-slider__item-title Ушу
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-thai"
-        )
-          span.icon-martial.icon-martial-thai
-          span.hero-slider__item-title Тайский бокс
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-mma"
-        )
-          span.icon-martial.icon-martial-mma
-          span.hero-slider__item-title MMA
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-freestyle"
-        )
-          span.icon-martial.icon-martial-freestyle
-          span.hero-slider__item-title Вольная борьба
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-kudo"
-        )
-          span.icon-martial.icon-martial-kudo
-          span.hero-slider__item-title Кудо
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-grappling"
-        )
-          span.icon-martial.icon-martial-grappling
-          span.hero-slider__item-title Грепплинг
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-greek"
-        )
-          span.icon-martial.icon-martial-greek
-          span.hero-slider__item-title
-
-            | Греко-Римская
-            br
-            | борьба
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-taekwondo"
-        )
-          span.icon-martial.icon-martial-taekwondo
-          span.hero-slider__item-title Тхэквандо
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-boxing"
-        )
-          span.icon-martial.icon-martial-boxing
-          span.hero-slider__item-title Бокс
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-hand"
-        )
-          span.icon-martial.icon-martial-hand-to-hand
-          span.hero-slider__item-title
-
-            | Рукопашный
-            br
-            | бой
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-yoga"
-        )
-          span.icon-martial.icon-martial-yoga
-          span.hero-slider__item-title Йога
-
-        a.hero-slider__item.slider-item(
-          href="#",
-          data-micromodal-trigger="modal-form-gymnastics"
-        )
-          span.icon-martial.icon-martial-gymnastics
-          span.hero-slider__item-title Гимнастика
-
-      .slider-nav.slider-nav--shevrons.slider-nav--hero#hero-nav
-        button.slider-nav__prev(aria-label="Предыдущий слайд")
-        button.slider-nav__next(aria-label="Следующий слайд")
 

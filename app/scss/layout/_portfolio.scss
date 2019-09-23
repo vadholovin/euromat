@@ -3,8 +3,8 @@
    ========================================================================== */
 
 .portfolio {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 56px;
+  padding-bottom: 56px;
   background-repeat: no-repeat;
   background-position: bottom 165px left 0;
 
@@ -16,10 +16,7 @@
 
 
 .portfolio-slider__item {
-  margin-left: 20px;
-  margin-right: 20px;
   padding-top: 16px;
-  padding-bottom: 16px;
 
   &:hover {
     .card-media__content > img {

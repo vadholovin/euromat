@@ -7,7 +7,7 @@ header.header
           span.header-cities__label Ваше местоположение:
           |
           |
-          span.header-cities__link Москва
+          span.header-cities__text.js-place
 
         .header-members.header-members--primary
           //- p.header-members__text
@@ -24,7 +24,7 @@ header.header
       .container.container--header
         .header-main__content.d-flex-wrapped
           .brand-wrapper.brand-wrapper--header
-            a.brand(href="/")
+            a.brand(href="index.html")
               img(
                 src="img/general/logo.png",
                 scrset="img/general/logo.png 1x, img/general/logo@2x.png 1.5x, img/general/logo@2x.png 2x, img/general/logo@2x.png 3x,"
@@ -47,8 +47,8 @@ header.header
             span.hamburger-box
               span.hamburger-inner
           
-          button.button.button--call(
-            type="button",
+          a.button.button--call.js-button-call(
+            href='#',
             title="Заказать обратный звонок",
             data-micromodal-trigger="modal-form-call"
           )

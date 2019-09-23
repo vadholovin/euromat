@@ -1,0 +1,98 @@
+-
+  var slides = [
+    {
+      title: `Каратэ`,
+      icon: 'karate',
+      trigger: 'karate'
+    },
+    {
+      title: `Дзюдо`,
+      icon: 'judo',
+      trigger: 'judo'
+    },
+    {
+      title: `Джиу-джитсу`,
+      icon: 'jujitsu',
+      trigger: 'jujitsu'
+    },
+    {
+      title: `Айкидо`,
+      icon: 'aikido',
+      trigger: 'aikido'
+    },
+    {
+      title: `Ушу`,
+      icon: 'ushu',
+      trigger: 'ushu'
+    },
+    {
+      title: `Тайский бокс`,
+      icon: 'thai',
+      trigger: 'thai'
+    },
+    {
+      title: `ММА`,
+      icon: 'mma',
+      trigger: 'mma'
+    },
+    {
+      title: `Вольная борьба`,
+      icon: 'freestyle',
+      trigger: 'freestyle'
+    },
+    {
+      title: `Кудо`,
+      icon: 'kudo',
+      trigger: 'kudo'
+    },
+    {
+      title: `Грепплинг`,
+      icon: 'grappling',
+      trigger: 'grappling'
+    },
+    {
+      title: `Греко-Римская <br> борьба`,
+      icon: 'greek',
+      trigger: 'greek'
+    },
+    {
+      title: `Тхэквандо`,
+      icon: 'taekwondo',
+      trigger: 'taekwondo'
+    },
+    {
+      title: `Бокс`,
+      icon: 'boxing',
+      trigger: 'boxing'
+    },
+    {
+      title: `Рукопашный <br> бой`,
+      icon: 'hand-to-hand',
+      trigger: 'hand'
+    },
+    {
+      title: `Йога`,
+      icon: 'yoga',
+      trigger: 'yoga'
+    },
+    {
+      title: `Гимнастика`,
+      icon: 'gymnastics',
+      trigger: 'gymnastics'
+    },
+  ];
+
+
+.slider__wrapper.slider__wrapper--hero
+  .hero-slider.slider.slider--hero.js-hero-slider
+    each item in slides
+      a.hero-slider__item.slider-item(
+        href="#",
+        data-micromodal-trigger="modal-form-" + item.trigger
+      )
+        span(class="icon-martial icon-martial-" + item.icon)
+        span.hero-slider__item-title!= item.title
+
+  .slider-nav.slider-nav--shevrons.slider-nav--hero#hero-nav
+    button.slider-nav__prev(aria-label="Предыдущий слайд")
+    button.slider-nav__next(aria-label="Следующий слайд")

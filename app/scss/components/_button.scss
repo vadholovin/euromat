@@ -34,7 +34,7 @@
 
   &:hover {
     color: #fff;
-    background-color: #ae2d31;
+    // background-color: #ae2d31;
     box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
   }
 
@@ -78,7 +78,10 @@
 
 
 .button--call .icon {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -157,7 +160,7 @@
 }
 
 
-.index-page .button-to-home {
+.home-page .button-to-home {
   display: none;
 }
 
@@ -247,12 +250,8 @@
     border-radius: 10px;
 
     .icon {
-      transform: scale(0.7);
+      transform: translate(-50%, -50%) scale(0.7);
     }
-  }
-
-  @media (min-width: 62em) {
-    align-self: flex-end;
   }
 }
 
