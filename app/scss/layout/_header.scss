@@ -193,6 +193,18 @@
 }
 
 
+.header-schedule {
+  display: none;
+  margin-left: 24px;
+  font-size: rem(12);
+  font-weight: 600;
+
+  @media (min-width: 36em) {
+    display: block;
+  }
+}
+
+
 .header-bottom {
   display: none;
 

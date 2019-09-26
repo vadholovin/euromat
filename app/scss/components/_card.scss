@@ -556,11 +556,13 @@
 .card-list--carpet-equipment {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 
 .card-list--carpet-equipment .card-list__item {
   width: 50%;
+  max-width: 160px;
   margin-bottom: 16px;
 
   @media (min-width: 36em) {
@@ -571,16 +573,19 @@
 
 
 .card-list--carpet-equipment .card-media__content {
-  padding-top: 61.6%;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 
 .card-list--carpet-equipment .card-list__item-title {
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translate(0, -50%);
-  height: auto;
+  position: relative;
+  display: block;
+  // top: 50%;
+  // left: 0;
+  // right: 0;
+  // transform: translate(0, -50%);
+  // height: auto;
   font-size: rem(13);
   text-align: center;
 }
